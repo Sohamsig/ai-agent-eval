@@ -1,0 +1,17 @@
+Implement the required functionality in validation_utils.py.
+
+Read the existing source code and tests carefully.
+
+Implement all required functions:
+
+- is_valid_email(email)
+- is_valid_phone(phone)
+- is_valid_username(username)
+- validate_required_fields(data, fields)
+
+Requirements:
+
+- Do not modify the test files.
+- Handle invalid input safely.
+- Consider empty strings, whitespace, wrong data types, malformed values, and boundary cases.
+- Make sure the implementation passes all provided tests.

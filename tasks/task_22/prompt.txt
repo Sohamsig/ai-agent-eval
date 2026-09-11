@@ -1,0 +1,59 @@
+Fix the bugs in cache_utils.py.
+
+Read the existing source code and tests carefully.
+
+The module contains several intentionally buggy functions related to
+a simple in-memory cache.
+
+Fix all functions so that they behave according to their names and
+the provided tests.
+
+Requirements:
+
+- Do not modify the test files.
+- Handle invalid input safely.
+- Preserve the expected return types.
+- Handle empty inputs correctly.
+- Do not introduce unnecessary dependencies.
+- Fix the existing implementation rather than replacing the tests.
+
+Functions to implement/fix:
+
+1. set_value(cache, key, value)
+   - Store value in the cache using key.
+   - Return True when the value is successfully stored.
+   - Return False for invalid cache or key.
+   - Empty string keys are invalid.
+   - None keys are invalid.
+
+2. get_value(cache, key, default=None)
+   - Return the value associated with key.
+   - Return default when key does not exist.
+   - Return default for an invalid cache or key.
+   - Do not modify the cache.
+
+3. delete_value(cache, key)
+   - Delete the key from the cache.
+   - Return True when the key existed and was deleted.
+   - Return False when the key does not exist or input is invalid.
+
+4. has_key(cache, key)
+   - Return True when key exists in the cache.
+   - Return False otherwise.
+   - Invalid cache or key must safely return False.
+
+5. clear_cache(cache)
+   - Remove all entries from the cache.
+   - Return True when cache is successfully cleared.
+   - Return False for an invalid cache.
+   - Preserve the cache object itself.
+
+Additional requirements:
+
+- Only dictionaries should be treated as valid caches.
+- Boolean values are valid cache values.
+- None is also a valid value to store.
+- Keys must be non-empty strings.
+- Do not replace the cache with a new dictionary inside clear_cache().
+- Preserve all public function names and signatures.
+- Make sure the implementation passes all provided tests.

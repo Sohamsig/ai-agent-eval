@@ -1,0 +1,24 @@
+Implement the required functionality in cache_utils.py.
+
+Read the existing source code and tests carefully.
+
+Implement all required functions:
+
+- get
+- set
+- delete
+- clear
+- contains
+
+Requirements:
+
+- Store key-value pairs in an in-memory cache.
+- Return the stored value for an existing key.
+- Return a default value when a key does not exist.
+- Allow values to be overwritten.
+- Delete existing keys safely.
+- Clear all cached values.
+- Handle invalid input safely.
+- Handle empty and missing keys.
+- Do not use external databases or files.
+- Make sure the implementation passes all provided tests.

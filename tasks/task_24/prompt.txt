@@ -1,0 +1,71 @@
+Task 24: JSON Data Utilities
+
+You need to fix the implementation in actual_task_file.py.
+
+The file contains utility functions for working with JSON-like Python data.
+
+Implement/fix the following functions:
+
+1. serialize_data(data)
+   - Convert a Python object into a JSON string.
+   - The returned value must be a string.
+   - Use standard JSON formatting.
+   - Dictionaries and lists must be serialized correctly.
+   - The function must support nested dictionaries/lists.
+   - The function should preserve normal JSON-compatible values such as:
+     strings, integers, floats, booleans, and None.
+
+2. deserialize_data(data)
+   - Convert a JSON string back into the corresponding Python object.
+   - Dictionaries must become Python dictionaries.
+   - Arrays must become Python lists.
+   - JSON strings, numbers, booleans, and null must be converted correctly.
+   - Invalid JSON should raise ValueError.
+
+3. get_json_value(data, path, default=None)
+   - Read a nested value from a dictionary using dot notation.
+   - Example:
+       data = {
+           "user": {
+               "profile": {
+                   "name": "Alice"
+               }
+           }
+       }
+
+       get_json_value(data, "user.profile.name")
+       should return "Alice".
+   - If the path does not exist, return default.
+   - If an intermediate value is missing or is not a dictionary, return default.
+   - A top-level key should also work.
+
+4. set_json_value(data, path, value)
+   - Set a nested value in a dictionary using dot notation.
+   - Create missing dictionaries when necessary.
+   - Example:
+       data = {}
+       set_json_value(data, "user.profile.name", "Alice")
+
+       data should become:
+       {
+           "user": {
+               "profile": {
+                   "name": "Alice"
+               }
+           }
+       }
+   - The function must modify the original dictionary.
+   - Return the same dictionary object.
+
+5. remove_json_value(data, path)
+   - Remove a nested value using dot notation.
+   - Return True when the value exists and is removed.
+   - Return False when the path does not exist.
+   - Do not raise an exception for a missing path.
+   - Do not remove parent dictionaries unnecessarily.
+
+Important:
+- Do not modify the tests.
+- Only modify actual_task_file.py.
+- Keep the functions as normal Python functions.
+- Do not use external packages.

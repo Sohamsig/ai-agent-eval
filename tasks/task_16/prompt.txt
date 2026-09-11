@@ -1,0 +1,23 @@
+Implement the required functionality in auth_utils.py.
+
+Read the existing source code and tests carefully.
+
+Implement all required functions:
+
+- hash_password(password)
+- verify_password(password, hashed_password)
+- generate_token(user_id)
+- validate_token(token)
+
+Requirements:
+
+- Handle invalid input safely.
+- Never store or expose plaintext passwords in the hash.
+- hash_password() should return a string.
+- verify_password() should correctly verify a password against its hash.
+- generate_token() should create a token containing the user ID.
+- validate_token() should return the user ID for a valid token.
+- Invalid or malformed tokens must be handled safely.
+- Do not use external packages.
+- Do not execute external commands.
+- Make sure the implementation passes all provided tests.

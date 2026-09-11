@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Environment and secrets
+.env
+.env.*
+
+# Editors
+.vscode/
+.idea/
+
+# Generated benchmark workspaces
+workspaces/
+
+# Raw benchmark logs
+results/results.csv
+results/attempts.csv

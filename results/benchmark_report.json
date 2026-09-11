@@ -1,0 +1,278 @@
+{
+    "generated_at": "2026-09-11T19:52:03.434237",
+    "benchmark": {
+        "total_csv_rows": 244,
+        "unique_benchmark_runs": 96,
+        "successful_runs": 96,
+        "failed_runs": 0,
+        "success_rate": 100.0,
+        "pass_at_1": 100.0,
+        "average_attempts": 1.0,
+        "average_runtime_seconds": 0.55
+    },
+    "agents": {
+        "agent_02": {
+            "runs": 96,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0
+        }
+    },
+    "tasks": {
+        "task_01": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.47
+        },
+        "task_02": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.59
+        },
+        "task_03": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.5
+        },
+        "task_04": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.48
+        },
+        "task_05": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.5
+        },
+        "task_06": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.52
+        },
+        "task_07": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.49
+        },
+        "task_08": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.51
+        },
+        "task_09": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.49
+        },
+        "task_10": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.49
+        },
+        "task_11": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.51
+        },
+        "task_12": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.51
+        },
+        "task_13": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.5
+        },
+        "task_14": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.54
+        },
+        "task_15": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.51
+        },
+        "task_16": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.89
+        },
+        "task_17": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.51
+        },
+        "task_18": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.5
+        },
+        "task_19": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.53
+        },
+        "task_20": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.51
+        },
+        "task_21": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.52
+        },
+        "task_22": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.55
+        },
+        "task_23": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.56
+        },
+        "task_24": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.54
+        },
+        "task_25": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.59
+        },
+        "task_26": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.55
+        },
+        "task_27": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.47
+        },
+        "task_28": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.63
+        },
+        "task_29": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.56
+        },
+        "task_30": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.55
+        },
+        "task_31": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 0.54
+        },
+        "task_32": {
+            "runs": 3,
+            "successful_runs": 3,
+            "success_rate": 100.0,
+            "pass_at_1": 100.0,
+            "average_attempts": 1.0,
+            "average_runtime_seconds": 1.01
+        }
+    }
+}

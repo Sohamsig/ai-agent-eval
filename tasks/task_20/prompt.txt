@@ -1,0 +1,33 @@
+Implement the required functionality in the existing feature modules.
+
+Read the existing source code and tests carefully before making changes.
+
+The project contains:
+- feature_utils.py
+- feature_service.py
+
+Implement and/or fix the existing functionality so that all provided tests pass.
+
+Requirements:
+
+- Implement add_numbers(a, b) in feature_utils.py.
+- Implement multiply_numbers(a, b) in feature_utils.py.
+- add_numbers must return the sum of two numeric values.
+- multiply_numbers must return the product of two numeric values.
+- Reject invalid inputs safely by returning None.
+- Boolean values must be treated as invalid numeric inputs.
+- Support both integers and floating-point numbers.
+- Implement calculate(a, b) in feature_service.py.
+- calculate must return a dictionary containing:
+  - "sum": the result of add_numbers
+  - "product": the result of multiply_numbers
+- calculate must return None when the inputs are invalid.
+- Implement calculate_sum(a, b) using the existing utility functionality.
+- Implement calculate_product(a, b) using the existing utility functionality.
+- Preserve the existing public function names and signatures.
+- Do not remove or rename add_numbers or multiply_numbers.
+- Do not modify the test files.
+- Do not introduce unnecessary dependencies.
+- Handle empty or None inputs safely.
+- Preserve the expected return types.
+- Make sure the implementation passes all provided tests.

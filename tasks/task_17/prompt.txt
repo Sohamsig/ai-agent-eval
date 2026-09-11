@@ -1,0 +1,21 @@
+Implement the required functionality in retry_utils.py.
+
+Read the existing source code and tests carefully.
+
+Implement all required functions:
+
+- retry
+- retry_with_backoff
+
+Requirements:
+
+- Retry failed operations safely.
+- Handle invalid input safely.
+- Respect the maximum number of retries.
+- Return the successful result when an operation eventually succeeds.
+- Raise the final exception when all retries are exhausted.
+- Support configurable delay between retries.
+- Support exponential backoff.
+- Do not modify the test files.
+- Do not execute operations unnecessarily.
+- Make sure the implementation passes all provided tests.

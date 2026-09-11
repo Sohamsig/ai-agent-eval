@@ -1,0 +1,40 @@
+Task 25: Date Utility Functions
+
+Implement the date utility functions in actual_task_file.py.
+
+The module should provide functions for parsing dates, formatting dates,
+calculating date differences, checking leap years, and adding days.
+
+Requirements:
+
+1. parse_date(date_string)
+   - Accept dates in YYYY-MM-DD format.
+   - Return a datetime.date object.
+   - Raise ValueError for invalid dates.
+
+2. format_date(date_obj)
+   - Accept a datetime.date object.
+   - Return the date in YYYY-MM-DD format.
+
+3. days_between(start_date, end_date)
+   - Accept two datetime.date objects.
+   - Return the absolute number of days between them.
+
+4. is_leap_year(year)
+   - Return True if the year is a leap year.
+   - Return False otherwise.
+   - Leap year rules must follow the Gregorian calendar.
+
+5. add_days(date_obj, days)
+   - Return a new date obtained by adding the specified number of days.
+   - The original date must not be modified.
+
+6. get_month_name(date_obj)
+   - Return the full English month name.
+   - Example: January, February, March, etc.
+
+7. get_weekday_name(date_obj)
+   - Return the full English weekday name.
+   - Example: Monday, Tuesday, Wednesday, etc.
+
+Use Python's standard datetime library.

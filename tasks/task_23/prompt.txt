@@ -1,0 +1,18 @@
+Fix the bugs in file_utils.py.
+
+Read the existing source code and tests carefully.
+
+The module contains several intentionally buggy functions.
+
+Fix all functions so that they behave according to their names and the provided tests.
+
+Requirements:
+
+- Do not modify the test files.
+- Handle invalid input safely.
+- Preserve the expected return types.
+- Handle empty inputs correctly.
+- Do not introduce unnecessary dependencies.
+- Fix the existing implementation rather than replacing the tests.
+- Make sure the implementation passes all provided tests.
+- Preserve all existing public function names and signatures.

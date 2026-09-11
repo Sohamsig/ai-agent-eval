@@ -1,0 +1,555 @@
+def evaluate_with_retries(
+    task_id,
+    agent,
+    repo_path,
+    test_command,
+    run_number,
+    max_attempts=3,
+):
+
+    logger = TrajectoryLogger()
+
+    # --------------------------------------------------------
+    # Protect benchmark tests
+    # --------------------------------------------------------
+
+    protected_test_hashes = get_protected_test_hashes(
+        repo_path
+    )
+
+    logger.log_event(
+        "benchmark_tests_protected",
+        {
+            "files": list(
+                protected_test_hashes.keys()
+            )
+        },
+    )
+
+    # --------------------------------------------------------
+    # Load agent
+    # --------------------------------------------------------
+
+    agent_module = load_agent(
+        agent
+    )
+
+    # --------------------------------------------------------
+    # Generate initial solution
+    # --------------------------------------------------------
+
+    print()
+    print(
+        "Generating solution..."
+    )
+
+    solution = agent_module.solve(
+        task_id,
+        repo_path,
+    )
+
+    print(
+        "Agent status:",
+        solution.get("status"),
+    )
+
+    logger.log_event(
+        "solution_generated",
+        {
+            "task_id": task_id,
+            "agent": agent,
+            "run": run_number,
+            "status": solution.get(
+                "status"
+            ),
+            "files": list(
+                solution.get(
+                    "files",
+                    {},
+                ).keys()
+            ),
+        },
+    )
+
+    # --------------------------------------------------------
+    # Check agent status
+    # --------------------------------------------------------
+
+    if solution.get(
+        "status"
+    ) != "completed":
+
+        print()
+        print(
+            "❌ Agent failed to generate solution."
+        )
+
+        return {
+            "passed": False,
+            "duration_seconds": 0,
+            "stdout": "",
+            "stderr": solution.get(
+                "message",
+                "Agent failed.",
+            ),
+            "returncode": 1,
+        }
+
+    # --------------------------------------------------------
+    # Apply initial solution
+    # --------------------------------------------------------
+
+    print()
+    print(
+        "Applying agent solution..."
+    )
+
+    apply_agent_solution(
+        repo_path,
+        solution,
+    )
+
+    # --------------------------------------------------------
+    # Verify benchmark integrity
+    # --------------------------------------------------------
+
+    modified_tests = check_protected_tests(
+        repo_path,
+        protected_test_hashes,
+    )
+
+    if modified_tests:
+
+        print()
+        print(
+            "❌ BENCHMARK INTEGRITY VIOLATION"
+        )
+
+        print()
+        print(
+            "Agent modified protected benchmark tests:"
+        )
+
+        for filename in modified_tests:
+
+            print(
+                f"  - {filename}"
+            )
+
+        logger.log_event(
+            "benchmark_integrity_violation",
+            {
+                "modified_tests": modified_tests,
+            },
+        )
+
+        trajectory_path = (
+            "results/"
+            f"trajectory_"
+            f"{task_id}_"
+            f"{agent}_"
+            f"run_"
+            f"{run_number}.json"
+        )
+
+        logger.save(
+            trajectory_path
+        )
+
+        return {
+            "passed": False,
+            "duration_seconds": 0,
+            "stdout": "",
+            "stderr": (
+                "Agent modified protected "
+                "benchmark tests: "
+                + ", ".join(
+                    modified_tests
+                )
+            ),
+            "returncode": 2,
+        }
+
+    logger.log_event(
+        "solution_applied",
+        {
+            "files": list(
+                solution.get(
+                    "files",
+                    {},
+                ).keys()
+            )
+        },
+    )
+
+    # --------------------------------------------------------
+    # Evaluation loop
+    # --------------------------------------------------------
+
+    result = None
+
+    for attempt in range(
+        1,
+        max_attempts + 1,
+    ):
+
+        print()
+        print(
+            f"Attempt {attempt}/{max_attempts}"
+        )
+
+        logger.log_event(
+            "attempt_started",
+            {
+                "task_id": task_id,
+                "agent": agent,
+                "run": run_number,
+                "attempt": attempt,
+            },
+        )
+
+        # ----------------------------------------------------
+        # Run tests
+        # ----------------------------------------------------
+
+        print(
+            "Running tests..."
+        )
+
+        result = run_tests(
+            repo_path,
+            test_command,
+            task_id=task_id,
+            include_hidden=True,
+        )
+
+        print(
+            "Passed:",
+            result["passed"],
+        )
+
+        print(
+            "Duration:",
+            result[
+                "duration_seconds"
+            ],
+            "seconds",
+        )
+
+        # ----------------------------------------------------
+        # Save attempt result
+        # ----------------------------------------------------
+
+        save_result(
+            result,
+            task_id,
+            agent,
+            run_number,
+            attempt,
+        )
+
+        # ----------------------------------------------------
+        # SUCCESS
+        # ----------------------------------------------------
+
+        if result["passed"]:
+
+            print()
+            print(
+                "✅ Task passed!"
+            )
+
+            logger.log_event(
+                "task_completed",
+                {
+                    "attempt": attempt,
+                    "passed": True,
+                    "duration_seconds":
+                        result[
+                            "duration_seconds"
+                        ],
+                },
+            )
+
+            trajectory_path = (
+                "results/"
+                f"trajectory_"
+                f"{task_id}_"
+                f"{agent}_"
+                f"run_"
+                f"{run_number}.json"
+            )
+
+            logger.save(
+                trajectory_path
+            )
+
+            return result
+
+        # ----------------------------------------------------
+        # FAILURE
+        # ----------------------------------------------------
+
+        print()
+        print(
+            "❌ Tests failed."
+        )
+
+        logger.log_event(
+            "test_failed",
+            {
+                "attempt": attempt,
+                "stdout": result[
+                    "stdout"
+                ],
+                "stderr": result[
+                    "stderr"
+                ],
+                "returncode":
+                    result[
+                        "returncode"
+                    ],
+            },
+        )
+
+        # ----------------------------------------------------
+        # Stop if this was the final attempt
+        # ----------------------------------------------------
+
+        if attempt >= max_attempts:
+
+            print()
+            print(
+                "Maximum attempts reached."
+            )
+
+            break
+
+        # ----------------------------------------------------
+        # Check whether agent supports repair()
+        # ----------------------------------------------------
+
+        repair_function = getattr(
+            agent_module,
+            "repair",
+            None,
+        )
+
+        if repair_function is None:
+
+            print()
+            print(
+                "⚠️ Agent does not support repair()."
+            )
+
+            logger.log_event(
+                "recovery_unavailable",
+                {
+                    "attempt": attempt,
+                },
+            )
+
+            break
+
+        # ----------------------------------------------------
+        # Recovery
+        # ----------------------------------------------------
+
+        print()
+        print(
+            "🔧 AGENT RECOVERY"
+        )
+
+        print(
+            f"Repair attempt {attempt}"
+        )
+
+        logger.log_event(
+            "recovery_started",
+            {
+                "attempt": attempt,
+            },
+        )
+
+        # ----------------------------------------------------
+        # Failure feedback
+        # ----------------------------------------------------
+
+        failure_feedback = {
+            "passed": result.get(
+                "passed",
+                False,
+            ),
+            "stdout": result.get(
+                "stdout",
+                "",
+            ),
+            "stderr": result.get(
+                "stderr",
+                "",
+            ),
+            "returncode": result.get(
+                "returncode",
+                1,
+            ),
+            "duration_seconds":
+                result.get(
+                    "duration_seconds",
+                    0,
+                ),
+        }
+
+        # ----------------------------------------------------
+        # Call repair()
+        # ----------------------------------------------------
+
+        try:
+
+            repaired_solution = (
+                repair_function(
+                    task_id,
+                    repo_path,
+                    failure_feedback,
+                )
+            )
+
+        except TypeError:
+
+            # ------------------------------------------------
+            # Compatibility fallback for repair()
+            # functions accepting only task_id and repo_path
+            # ------------------------------------------------
+
+            try:
+
+                repaired_solution = (
+                    repair_function(
+                        task_id,
+                        repo_path,
+                    )
+                )
+
+            except Exception as exc:
+
+                print()
+                print(
+                    "❌ Repair failed:"
+                )
+
+                print(
+                    str(exc)
+                )
+
+                logger.log_event(
+                    "recovery_failed",
+                    {
+                        "attempt": attempt,
+                        "error": str(exc),
+                    },
+                )
+
+                break
+
+        except Exception as exc:
+
+            print()
+            print(
+                "❌ Repair failed:"
+            )
+
+            print(
+                str(exc)
+            )
+
+            logger.log_event(
+                "recovery_failed",
+                {
+                    "attempt": attempt,
+                    "error": str(exc),
+                },
+            )
+
+            break
+
+        # ----------------------------------------------------
+        # Validate repair result
+        # ----------------------------------------------------
+
+        if not repaired_solution:
+
+            print()
+            print(
+                "❌ Repair returned no solution."
+            )
+
+            logger.log_event(
+                "recovery_failed",
+                {
+                    "attempt": attempt,
+                    "error":
+                        "Empty repair response",
+                },
+            )
+
+            break
+
+        print()
+        print(
+            "Repair status:",
+            repaired_solution.get(
+                "status"
+            ),
+        )
+
+        if repaired_solution.get(
+            "status"
+        ) != "completed":
+
+            print()
+            print(
+                "❌ Repair did not produce "
+                "a completed solution."
+            )
+
+            logger.log_event(
+                "recovery_failed",
+                {
+                    "attempt": attempt,
+                    "status":
+                        repaired_solution.get(
+                            "status"
+                        ),
+                },
+            )
+
+            break
+
+        # ----------------------------------------------------
+        # Apply repaired solution
+        # ----------------------------------------------------
+
+        print()
+        print(
+            "Applying repaired solution..."
+        )
+
+        apply_agent_solution(
+            repo_path,
+            repaired_solution,
+        )
+
+        # ----------------------------------------------------
+        # Verify benchmark integrity after repair
+        # ----------------------------------------------------
+
+        modified_tests = check_protected_tests(
+            repo_path,
+            protected_test_hashes,
+        )
+
+        if modified_tests:
+
+            print()
+            print(
+                "❌ BENCHMARK INTEGRITY "
+                "VIOL

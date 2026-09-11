@@ -1,0 +1,47 @@
+Fix the bugs in text_utils.py.
+
+Read the existing source code and tests carefully.
+
+The module contains several intentionally buggy text utility functions.
+
+Fix all functions so that they behave according to their names and the provided tests.
+
+Requirements:
+
+- Fix normalize_text(text).
+- normalize_text must:
+  - Accept strings.
+  - Remove leading and trailing whitespace.
+  - Convert text to lowercase.
+  - Return None for invalid input.
+
+- Fix word_count(text).
+- word_count must:
+  - Count words, not characters.
+  - Handle multiple spaces correctly.
+  - Ignore leading and trailing whitespace.
+  - Return 0 for empty or whitespace-only strings.
+  - Return None for invalid input.
+
+- Fix reverse_words(text).
+- reverse_words must:
+  - Reverse the order of words.
+  - Preserve each word's spelling.
+  - Ignore extra whitespace between words.
+  - Remove leading and trailing whitespace.
+  - Return None for invalid input.
+
+- Fix is_palindrome(text).
+- is_palindrome must:
+  - Ignore leading and trailing whitespace.
+  - Be case-insensitive.
+  - Return True when the cleaned text is a palindrome.
+  - Return False otherwise.
+  - Return None for invalid input.
+
+- Preserve all existing public function names and signatures.
+- Do not modify the test files.
+- Do not introduce unnecessary dependencies.
+- Handle empty inputs safely.
+- Preserve expected return types.
+- Make sure all provided tests pass.

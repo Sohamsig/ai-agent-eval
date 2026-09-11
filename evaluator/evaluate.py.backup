@@ -1,0 +1,2746 @@
+﻿import subprocess
+import time
+import csv
+import os
+import shutil
+import importlib.util
+import sys
+import argparse
+from pathlib import Path
+
+from trajectory import TrajectoryLogger
+
+
+# ============================================================
+# TASK CONFIGURATION
+# ============================================================
+
+TASKS = {
+    "task_01": {
+        "repo_path": "tasks/task_01",
+        "test_command": "python -m pytest test_calculator.py",
+    },
+
+    "task_02": {
+        "repo_path": "tasks/task_02",
+        "test_command": "python -m pytest test_string_utils.py",
+    },
+
+    "task_03": {
+        "repo_path": "tasks/task_03",
+        "test_command": "python -m pytest test_data_utils.py",
+    },
+
+    "task_04": {
+        "repo_path": "tasks/task_04",
+        "test_command": "python -m pytest test_json_utils.py",
+    },
+
+    "task_05": {
+        "repo_path": "tasks/task_05",
+        "test_command": "python -m pytest test_discount.py",
+    },
+
+    "task_06": {
+        "repo_path": "tasks/task_06",
+        "test_command": "python -m pytest test_list_utils.py",
+    },
+
+    "task_07": {
+        "repo_path": "tasks/task_07",
+        "test_command": "python -m pytest test_dict_utils.py",
+    },
+
+    "task_08": {
+        "repo_path": "tasks/task_08",
+        "test_command": "python -m pytest test_text_utils.py",
+    },
+
+    "task_09": {
+        "repo_path": "tasks/task_09",
+        "test_command": "python -m pytest test_url_utils.py",
+    },
+
+    "task_10": {
+        "repo_path": "tasks/task_10",
+        "test_command": "python -m pytest test_csv_utils.py",
+    },
+
+    "task_11": {
+        "repo_path": "tasks/task_11",
+        "test_command": "python -m pytest test_file_utils.py",
+    },
+
+    "task_12": {
+        "repo_path": "tasks/task_12",
+        "test_command": "python -m pytest test_config_utils.py",
+    },
+
+    "task_13": {
+        "repo_path": "tasks/task_13",
+        "test_command": "python -m pytest test_validation_utils.py",
+    },
+
+    "task_14": {
+        "repo_path": "tasks/task_14",
+        "test_command": "python -m pytest test_string_utils.py",
+    },
+
+    "task_15": {
+        "repo_path": "tasks/task_15",
+        "test_command": "python -m pytest test_sql_utils.py",
+    },
+
+    "task_16": {
+        "repo_path": "tasks/task_16",
+        "test_command": "python -m pytest test_auth_utils.py",
+    },
+
+    "task_17": {
+        "repo_path": "tasks/task_17",
+        "test_command": "python -m pytest test_retry_utils.py",
+    },
+
+    "task_18": {
+        "repo_path": "tasks/task_18",
+        "test_command": "python -m pytest test_cache_utils.py",
+    },
+
+    "task_19": {
+        "repo_path": "tasks/task_19",
+        "test_command": "python -m pytest test_bug_utils.py",
+    },
+
+    "task_20": {
+        "repo_path": "tasks/task_20",
+        "test_command": "python -m pytest test_feature.py",
+    },
+
+    "task_21": {
+        "repo_path": "tasks/task_21",
+        "test_command": "python -m pytest test_text_utils.py",
+    },
+
+    "task_22": {
+        "repo_path": "tasks/task_22",
+        "test_command": (
+            "python -m pytest "
+            "test_cache_utils.py "
+            "test_config_utils.py"
+        ),
+    },
+
+    "task_23": {
+        "repo_path": "tasks/task_23",
+        "test_command": "python -m pytest test_file_utils.py",
+    },
+
+    "task_24": {
+        "repo_path": "tasks/task_24",
+        "test_command": "python -m pytest test_json_utils.py",
+    },
+
+    "task_25": {
+        "repo_path": "tasks/task_25",
+        "test_command": "python -m pytest test_date_utils.py",
+    },
+
+    "task_26": {
+        "repo_path": "tasks/task_26",
+        "test_command": "python -m pytest test_price_utils.py",
+    },
+
+    "task_27": {
+        "repo_path": "tasks/task_27",
+        "test_command": "python -m pytest test_user_utils.py",
+    },
+
+    "task_28": {
+        "repo_path": "tasks/task_28",
+        "test_command": "python -m pytest test_number_utils.py",
+    },
+
+    "task_29": {
+        "repo_path": "tasks/task_29",
+        "test_command": "python -m pytest test_task_29.py",
+    },
+
+    "task_30": {
+        "repo_path": "tasks/task_30",
+        "test_command": "python -m pytest test_order.py",
+    },
+
+    "task_31": {
+        "repo_path": "tasks/task_31",
+        "test_command": "python -m pytest test_user_utils.py",
+    },
+
+    "task_32": {
+        "repo_path": "tasks/task_32",
+        "test_command": "python -m pytest test_client.py",
+    },
+}
+
+
+# ============================================================
+# AGENTS
+# ============================================================
+
+AGENTS = [
+    "baseline",
+    "agent_02",
+]
+
+
+# ============================================================
+# EVALUATION SETTINGS
+# ============================================================
+
+RUNS_PER_AGENT = 5
+MAX_ATTEMPTS = 3
+
+
+# ============================================================
+# LOAD AGENT
+# ============================================================
+
+def load_agent(agent_name):
+    """
+    Dynamically load an agent module.
+    """
+
+    agent_path = os.path.join(
+        "agents",
+        f"{agent_name}.py",
+    )
+
+    if not os.path.exists(agent_path):
+        raise FileNotFoundError(
+            f"Agent not found: {agent_path}"
+        )
+
+    spec = importlib.util.spec_from_file_location(
+        agent_name,
+        agent_path,
+    )
+
+    if spec is None or spec.loader is None:
+        raise ImportError(
+            f"Could not load agent: {agent_path}"
+        )
+
+    module = importlib.util.module_from_spec(
+        spec
+    )
+
+    sys.modules[agent_name] = module
+
+    spec.loader.exec_module(module)
+
+    return module
+
+
+# ============================================================
+# CLASSIFY TEST FAILURE
+# ============================================================
+
+def classify_test_failure(
+    task_id,
+    result,
+):
+    """
+    Classify a failed test execution.
+
+    Do not classify every ImportError or
+    ModuleNotFoundError as an evaluator error.
+
+    Missing functions from generated agent code are genuine
+    test/agent failures.
+
+    Example:
+
+        ImportError:
+        cannot import name 'retry_with_backoff'
+
+    is a test failure.
+
+    However:
+
+        ModuleNotFoundError:
+        No module named 'tasks'
+
+    indicates the isolated benchmark workspace is missing
+    the package expected by the benchmark tests.
+    """
+
+    combined_output = (
+        f"{result.get('stdout', '')}\n"
+        f"{result.get('stderr', '')}"
+    )
+
+    # --------------------------------------------------------
+    # Known evaluator isolation problem
+    # --------------------------------------------------------
+
+    if (
+        "ModuleNotFoundError: No module named 'tasks'"
+        in combined_output
+    ):
+        return "evaluator_error"
+
+    # --------------------------------------------------------
+    # Pytest internal failure
+    # --------------------------------------------------------
+
+    if "INTERNALERROR" in combined_output:
+        return "evaluator_error"
+
+    if "pytest internal error" in combined_output.lower():
+        return "evaluator_error"
+
+    # --------------------------------------------------------
+    # Everything else is a genuine test failure
+    # --------------------------------------------------------
+
+    return "test_failure"
+
+
+# ============================================================
+# HIDDEN TEST LAUNCHER
+# ============================================================
+
+def run_hidden_tests(
+    hidden_test_path,
+    workspace_path,
+):
+    """
+    Run hidden tests in an isolated workspace.
+
+    The original repository root is intentionally NOT added
+    to PYTHONPATH.
+    """
+
+    workspace_abs = os.path.abspath(
+        workspace_path
+    )
+
+    hidden_test_abs = os.path.abspath(
+        hidden_test_path
+    )
+
+    env = os.environ.copy()
+
+    existing_pythonpath = env.get(
+        "PYTHONPATH",
+        "",
+    )
+
+    if existing_pythonpath:
+        env["PYTHONPATH"] = (
+            workspace_abs
+            + os.pathsep
+            + existing_pythonpath
+        )
+    else:
+        env["PYTHONPATH"] = workspace_abs
+
+    # Remove Python caches.
+    for cache_dir in Path(
+        workspace_abs
+    ).rglob("__pycache__"):
+
+        shutil.rmtree(
+            cache_dir,
+            ignore_errors=True,
+        )
+
+    launcher = (
+        "import sys; "
+        "sys.path.insert(0, "
+        + repr(workspace_abs)
+        + "); "
+        "import pytest; "
+        "raise SystemExit("
+        "pytest.main(["
+        + repr(hidden_test_abs)
+        + ", "
+        "'--confcutdir', "
+        + repr(workspace_abs)
+        + "])"
+        ")"
+    )
+
+    return subprocess.run(
+        [
+            sys.executable,
+            "-c",
+            launcher,
+        ],
+        cwd=workspace_abs,
+        capture_output=True,
+        text=True,
+        env=env,
+    )
+
+
+# ============================================================
+# RUN TESTS
+# ============================================================
+
+def run_tests(
+    repo_path,
+    test_command,
+    task_id=None,
+    include_hidden=False,
+):
+    """
+    Run visible and optional hidden tests in an isolated
+    workspace.
+    """
+
+    start = time.time()
+
+    workspace_abs = os.path.abspath(
+        repo_path
+    )
+
+    env = os.environ.copy()
+
+    # --------------------------------------------------------
+    # Workspace must be first on PYTHONPATH.
+    #
+    # IMPORTANT:
+    # Do NOT add the original project root here.
+    # --------------------------------------------------------
+
+    existing_pythonpath = env.get(
+        "PYTHONPATH",
+        "",
+    )
+
+    if existing_pythonpath:
+        env["PYTHONPATH"] = (
+            workspace_abs
+            + os.pathsep
+            + existing_pythonpath
+        )
+    else:
+        env["PYTHONPATH"] = workspace_abs
+
+    # --------------------------------------------------------
+    # Remove Python cache.
+    # --------------------------------------------------------
+
+    for cache_dir in Path(
+        workspace_abs
+    ).rglob("__pycache__"):
+
+        shutil.rmtree(
+            cache_dir,
+            ignore_errors=True,
+        )
+
+    # --------------------------------------------------------
+    # Visible tests
+    # --------------------------------------------------------
+
+    visible_command = test_command
+
+    if isinstance(
+        visible_command,
+        str,
+    ):
+
+        if "pytest" in visible_command:
+
+            if "--confcutdir" not in visible_command:
+
+                visible_command = (
+                    visible_command
+                    + ' --confcutdir "'
+                    + workspace_abs
+                    + '"'
+                )
+
+    commands = [
+        visible_command
+    ]
+
+    # --------------------------------------------------------
+    # Hidden tests
+    # --------------------------------------------------------
+
+    if (
+        include_hidden
+        and task_id
+    ):
+
+        hidden_test = os.path.join(
+            "evaluator",
+            "hidden_tests",
+            f"test_{task_id}_hidden.py",
+        )
+
+        if os.path.exists(
+            hidden_test
+        ):
+
+            hidden_test_abs = os.path.abspath(
+                hidden_test
+            )
+
+            commands.append(
+                (
+                    "HIDDEN_TEST",
+                    hidden_test_abs,
+                )
+            )
+
+    outputs = []
+    errors = []
+    returncodes = []
+
+    all_passed = True
+
+    # Pytest was invoked.
+    tests_executed = True
+
+    # --------------------------------------------------------
+    # Execute commands
+    # --------------------------------------------------------
+
+    for command in commands:
+
+        if (
+            isinstance(
+                command,
+                tuple,
+            )
+            and command[0] == "HIDDEN_TEST"
+        ):
+
+            result = run_hidden_tests(
+                command[1],
+                repo_path,
+            )
+
+        else:
+
+            result = subprocess.run(
+                command,
+                cwd=workspace_abs,
+                shell=True,
+                capture_output=True,
+                text=True,
+                env=env,
+            )
+
+        returncodes.append(
+            result.returncode
+        )
+
+        if result.stdout:
+
+            outputs.append(
+                result.stdout
+            )
+
+        if result.stderr:
+
+            errors.append(
+                result.stderr
+            )
+
+        if result.returncode != 0:
+
+            all_passed = False
+
+    elapsed = time.time() - start
+
+    failed_returncode = next(
+        (
+            code
+            for code in returncodes
+            if code != 0
+        ),
+        0,
+    )
+
+    stdout = "\n".join(
+        outputs
+    )
+
+    stderr = "\n".join(
+        errors
+    )
+
+    # --------------------------------------------------------
+    # Failure classification
+    # --------------------------------------------------------
+
+    if all_passed:
+
+        failure_type = "success"
+
+    else:
+
+        failure_result = {
+            "stdout": stdout,
+            "stderr": stderr,
+        }
+
+        failure_type = classify_test_failure(
+            task_id,
+            failure_result,
+        )
+
+    return {
+        "passed": all_passed,
+        "duration_seconds": round(
+            elapsed,
+            2,
+        ),
+        "stdout": stdout,
+        "stderr": stderr,
+        "returncode": (
+            0
+            if all_passed
+            else failed_returncode
+        ),
+        "tests_executed": tests_executed,
+        "failure_type": failure_type,
+    }
+
+
+# ============================================================
+# CREATE CLEAN WORKSPACE
+# ============================================================
+
+def create_clean_workspace(
+    task_id,
+    agent,
+    run_number,
+):
+    """
+    Create a completely fresh isolated workspace.
+
+    Some benchmark tests import modules using:
+
+        from tasks.task_XX.module import ...
+
+    The original task repository is copied into the workspace.
+
+    A workspace-local compatibility package is then created:
+
+        workspace/
+        ├── actual_task_files...
+        └── tasks/
+            ├── __init__.py
+            └── task_XX/
+                └── __init__.py
+
+    The compatibility package receives copies of the
+    workspace's source files.
+
+    Therefore:
+
+        tasks.task_22.cache_utils
+
+    resolves to:
+
+        workspace/tasks/task_22/cache_utils.py
+
+    and never to the original repository.
+    """
+
+    source = TASKS[
+        task_id
+    ][
+        "repo_path"
+    ]
+
+    workspace_root = "workspaces"
+
+    os.makedirs(
+        workspace_root,
+        exist_ok=True,
+    )
+
+    workspace = os.path.join(
+        workspace_root,
+        f"{task_id}_{agent}_{run_number}",
+    )
+
+    if os.path.exists(
+        workspace
+    ):
+
+        shutil.rmtree(
+            workspace
+        )
+
+    # --------------------------------------------------------
+    # Copy original task into isolated workspace
+    # --------------------------------------------------------
+
+    shutil.copytree(
+        source,
+        workspace,
+    )
+
+    # --------------------------------------------------------
+    # Create workspace-local compatibility package
+    # --------------------------------------------------------
+
+    tasks_package = os.path.join(
+        workspace,
+        "tasks",
+    )
+
+    task_package = os.path.join(
+        tasks_package,
+        task_id,
+    )
+
+    os.makedirs(
+        task_package,
+        exist_ok=True,
+    )
+
+    # tasks/__init__.py
+    tasks_init = os.path.join(
+        tasks_package,
+        "__init__.py",
+    )
+
+    Path(
+        tasks_init
+    ).write_text(
+        "",
+        encoding="utf-8",
+    )
+
+    # tasks/task_XX/__init__.py
+    task_init = os.path.join(
+        task_package,
+        "__init__.py",
+    )
+
+    Path(
+        task_init
+    ).write_text(
+        "",
+        encoding="utf-8",
+    )
+
+    # --------------------------------------------------------
+    # Copy source files into compatibility package.
+    #
+    # Test files are deliberately excluded.
+    # --------------------------------------------------------
+
+    for filename in os.listdir(
+        workspace
+    ):
+
+        source_path = os.path.join(
+            workspace,
+            filename,
+        )
+
+        if filename == "tasks":
+            continue
+
+        if not os.path.isfile(
+            source_path
+        ):
+            continue
+
+        # Do not duplicate tests.
+        if (
+            filename.startswith("test_")
+            and filename.endswith(".py")
+        ):
+            continue
+
+        destination_path = os.path.join(
+            task_package,
+            filename,
+        )
+
+        shutil.copy2(
+            source_path,
+            destination_path,
+        )
+
+    return workspace
+
+
+# ============================================================
+# APPLY AGENT SOLUTION
+# ============================================================
+
+def apply_agent_solution(
+    repo_path,
+    solution,
+):
+    """
+    Write files generated by an agent into the isolated
+    workspace.
+
+    If a compatibility package exists:
+
+        tasks/task_XX/
+
+    synchronize root-level generated source files into it.
+
+    This ensures tests importing:
+
+        tasks.task_XX.module
+
+    execute the same code generated by the agent.
+    """
+
+    if not isinstance(
+        solution,
+        dict,
+    ):
+
+        print(
+            "Invalid solution returned by agent."
+        )
+
+        return
+
+    files = solution.get(
+        "files",
+        {},
+    )
+
+    if not files:
+
+        print(
+            "No files generated by agent."
+        )
+
+        return
+
+    absolute_repo = os.path.abspath(
+        repo_path
+    )
+
+    for filename, content in files.items():
+
+        file_path = os.path.join(
+            repo_path,
+            filename,
+        )
+
+        absolute_file = os.path.abspath(
+            file_path
+        )
+
+        print(
+            "Writing:",
+            file_path,
+        )
+
+        # ----------------------------------------------------
+        # Prevent path traversal
+        # ----------------------------------------------------
+
+        try:
+
+            common_path = os.path.commonpath(
+                [
+                    absolute_repo,
+                    absolute_file,
+                ]
+            )
+
+        except ValueError:
+
+            raise ValueError(
+                f"Invalid file path: {filename}"
+            )
+
+        if common_path != absolute_repo:
+
+            raise ValueError(
+                f"Invalid file path: {filename}"
+            )
+
+        # ----------------------------------------------------
+        # Create parent directories
+        # ----------------------------------------------------
+
+        parent = os.path.dirname(
+            file_path
+        )
+
+        os.makedirs(
+            parent,
+            exist_ok=True,
+        )
+
+        # ----------------------------------------------------
+        # Write generated file
+        # ----------------------------------------------------
+
+        with open(
+            file_path,
+            "w",
+            encoding="utf-8",
+        ) as file:
+
+            file.write(
+                content
+            )
+
+        # ----------------------------------------------------
+        # Synchronize compatibility package.
+        #
+        # Only root-level files are synchronized.
+        # ----------------------------------------------------
+
+        normalized_filename = filename.replace(
+            "\\",
+            "/",
+        )
+
+        if "/" in normalized_filename:
+
+            continue
+
+        tasks_dir = os.path.join(
+            repo_path,
+            "tasks",
+        )
+
+        if not os.path.isdir(
+            tasks_dir
+        ):
+
+            continue
+
+        for task_dir in os.listdir(
+            tasks_dir
+        ):
+
+            task_dir_path = os.path.join(
+                tasks_dir,
+                task_dir,
+            )
+
+            if not os.path.isdir(
+                task_dir_path
+            ):
+
+                continue
+
+            if not task_dir.startswith(
+                "task_"
+            ):
+
+                continue
+
+            compatibility_file = os.path.join(
+                task_dir_path,
+                filename,
+            )
+
+            try:
+
+                shutil.copy2(
+                    file_path,
+                    compatibility_file,
+                )
+
+                print(
+                    "Synchronized:",
+                    compatibility_file,
+                )
+
+            except OSError:
+
+                # Synchronization failure should not affect
+                # unrelated tasks.
+                pass
+
+
+# ============================================================
+# SAVE RESULT
+# ============================================================
+
+def save_result(
+    result,
+    task_id,
+    agent,
+    run_number,
+    attempt,
+):
+    """
+    Append one evaluation result to results.csv.
+
+    One row represents one attempt.
+
+    Generation failures and agent-not-implemented cases use
+    attempt=0.
+    """
+
+    os.makedirs(
+        "results",
+        exist_ok=True,
+    )
+
+    results_file = os.path.join(
+        "results",
+        "results.csv",
+    )
+
+    fieldnames = [
+        "task_id",
+        "agent",
+        "run",
+        "attempt",
+        "generation_success",
+        "tests_executed",
+        "passed",
+        "recovery_attempted",
+        "recovery_success",
+        "final_success",
+        "failure_type",
+        "attempts_used",
+        "duration_seconds",
+        "returncode",
+        "error",
+    ]
+
+    file_exists = os.path.exists(
+        results_file
+    )
+
+    with open(
+        results_file,
+        "a",
+        newline="",
+        encoding="utf-8",
+    ) as file:
+
+        writer = csv.DictWriter(
+            file,
+            fieldnames=fieldnames,
+        )
+
+        if not file_exists:
+
+            writer.writeheader()
+
+        row = {
+            field: result.get(
+                field,
+                "",
+            )
+            for field in fieldnames
+        }
+
+        writer.writerow(
+            row
+        )
+
+
+# ============================================================
+# BUILD RESULT
+# ============================================================
+
+def build_result(
+    *,
+    passed=False,
+    duration_seconds=0,
+    stdout="",
+    stderr="",
+    returncode=1,
+    generation_success=False,
+    tests_executed=False,
+    recovery_attempted=False,
+    recovery_success=False,
+    final_success=False,
+    failure_type="",
+    attempts_used=0,
+    error="",
+):
+    """
+    Build a consistent evaluation result.
+    """
+
+    return {
+        "passed": passed,
+        "duration_seconds": duration_seconds,
+        "stdout": stdout,
+        "stderr": stderr,
+        "returncode": returncode,
+        "generation_success": generation_success,
+        "tests_executed": tests_executed,
+        "recovery_attempted": recovery_attempted,
+        "recovery_success": recovery_success,
+        "final_success": final_success,
+        "failure_type": failure_type,
+        "attempts_used": attempts_used,
+        "error": error,
+    }
+
+
+# ============================================================
+# SAVE TRAJECTORY
+# ============================================================
+
+def save_trajectory(
+    logger,
+    task_id,
+    agent,
+    run_number,
+):
+    """
+    Save one trajectory file.
+    """
+
+    os.makedirs(
+        "results",
+        exist_ok=True,
+    )
+
+    trajectory_path = os.path.join(
+        "results",
+        (
+            f"trajectory_"
+            f"{task_id}_"
+            f"{agent}_"
+            f"run_{run_number}.json"
+        ),
+    )
+
+    logger.save(
+        trajectory_path
+    )
+
+
+# ============================================================
+# EVALUATE WITH RETRIES
+# ============================================================
+
+def evaluate_with_retries(
+    task_id,
+    agent,
+    repo_path,
+    test_command,
+    run_number,
+    max_attempts=3,
+):
+    """
+    Evaluate an agent with recovery attempts.
+    """
+
+    logger = TrajectoryLogger()
+
+    recovery_attempted = False
+    recovery_success = False
+    generation_success = False
+    attempts_used = 0
+
+    # --------------------------------------------------------
+    # Protect benchmark tests
+    # --------------------------------------------------------
+
+    logger.log_event(
+        "benchmark_tests_protected",
+        {
+            "task_id": task_id,
+            "agent": agent,
+            "run": run_number,
+        },
+    )
+
+    # --------------------------------------------------------
+    # Load agent
+    # --------------------------------------------------------
+
+    try:
+
+        agent_module = load_agent(
+            agent
+        )
+
+    except Exception as exc:
+
+        print()
+        print(
+            "❌ Failed to load agent:"
+        )
+        print(
+            str(exc)
+        )
+
+        result = build_result(
+            failure_type="generation_error",
+            tests_executed=False,
+            attempts_used=0,
+            error=str(exc),
+            stderr=str(exc),
+        )
+
+        save_result(
+            result,
+            task_id,
+            agent,
+            run_number,
+            0,
+        )
+
+        logger.log_event(
+            "agent_load_failed",
+            {
+                "task_id": task_id,
+                "agent": agent,
+                "run": run_number,
+                "error": str(exc),
+            },
+        )
+
+        save_trajectory(
+            logger,
+            task_id,
+            agent,
+            run_number,
+        )
+
+        return result
+
+    # --------------------------------------------------------
+    # Generate initial solution
+    # --------------------------------------------------------
+
+    print()
+    print(
+        "Generating solution..."
+    )
+
+    try:
+
+        solution = agent_module.solve(
+            task_id,
+            repo_path,
+        )
+
+        generation_success = True
+
+    except TypeError:
+
+        # Support agents whose solve() accepts only task_id.
+        try:
+
+            solution = agent_module.solve(
+                task_id
+            )
+
+            generation_success = True
+
+        except Exception as exc:
+
+            print()
+            print(
+                "❌ Agent crashed while generating solution:"
+            )
+            print(
+                str(exc)
+            )
+
+            logger.log_event(
+                "solution_generation_failed",
+                {
+                    "task_id": task_id,
+                    "agent": agent,
+                    "run": run_number,
+                    "error": str(exc),
+                },
+            )
+
+            result = build_result(
+                generation_success=False,
+                tests_executed=False,
+                failure_type="generation_error",
+                attempts_used=0,
+                error=str(exc),
+                stderr=str(exc),
+            )
+
+            save_result(
+                result,
+                task_id,
+                agent,
+                run_number,
+                0,
+            )
+
+            save_trajectory(
+                logger,
+                task_id,
+                agent,
+                run_number,
+            )
+
+            return result
+
+    except Exception as exc:
+
+        print()
+        print(
+            "❌ Agent crashed while generating solution:"
+        )
+        print(
+            str(exc)
+        )
+
+        logger.log_event(
+            "solution_generation_failed",
+            {
+                "task_id": task_id,
+                "agent": agent,
+                "run": run_number,
+                "error": str(exc),
+            },
+        )
+
+        result = build_result(
+            generation_success=False,
+            tests_executed=False,
+            failure_type="generation_error",
+            attempts_used=0,
+            error=str(exc),
+            stderr=str(exc),
+        )
+
+        save_result(
+            result,
+            task_id,
+            agent,
+            run_number,
+            0,
+        )
+
+        save_trajectory(
+            logger,
+            task_id,
+            agent,
+            run_number,
+        )
+
+        return result
+
+    # --------------------------------------------------------
+    # Validate generated response
+    # --------------------------------------------------------
+
+    if not isinstance(
+        solution,
+        dict,
+    ):
+
+        message = (
+            "Agent returned an invalid solution object."
+        )
+
+        print()
+        print(
+            "❌",
+            message,
+        )
+
+        result = build_result(
+            generation_success=True,
+            tests_executed=False,
+            failure_type="generation_error",
+            attempts_used=0,
+            error=message,
+            stderr=message,
+        )
+
+        save_result(
+            result,
+            task_id,
+            agent,
+            run_number,
+            0,
+        )
+
+        save_trajectory(
+            logger,
+            task_id,
+            agent,
+            run_number,
+        )
+
+        return result
+
+    print(
+        "Agent status:",
+        solution.get(
+            "status"
+        ),
+    )
+
+    logger.log_event(
+        "solution_generated",
+        {
+            "task_id": task_id,
+            "agent": agent,
+            "run": run_number,
+            "status": solution.get(
+                "status"
+            ),
+            "files": list(
+                solution.get(
+                    "files",
+                    {},
+                ).keys()
+            ),
+        },
+    )
+
+    # --------------------------------------------------------
+    # Check agent status
+    # --------------------------------------------------------
+
+    if solution.get(
+        "status"
+    ) != "completed":
+
+        message = solution.get(
+            "message",
+            "Agent failed to generate solution.",
+        )
+
+        print()
+        print(
+            "❌ Agent failed to generate solution."
+        )
+        print(
+            message
+        )
+
+        result = build_result(
+            generation_success=True,
+            tests_executed=False,
+            failure_type="agent_not_implemented",
+            attempts_used=0,
+            error=message,
+            stderr=message,
+        )
+
+        save_result(
+            result,
+            task_id,
+            agent,
+            run_number,
+            0,
+        )
+
+        logger.log_event(
+            "agent_not_implemented",
+            {
+                "task_id": task_id,
+                "agent": agent,
+                "run": run_number,
+                "message": message,
+            },
+        )
+
+        save_trajectory(
+            logger,
+            task_id,
+            agent,
+            run_number,
+        )
+
+        return result
+
+    # --------------------------------------------------------
+    # Apply initial solution
+    # --------------------------------------------------------
+
+    print()
+    print(
+        "Applying agent solution..."
+    )
+
+    try:
+
+        apply_agent_solution(
+            repo_path,
+            solution,
+        )
+
+    except Exception as exc:
+
+        print(
+            "❌ Failed to apply agent solution:"
+        )
+        print(
+            str(exc)
+        )
+
+        result = build_result(
+            generation_success=True,
+            tests_executed=False,
+            failure_type="generation_error",
+            attempts_used=0,
+            error=str(exc),
+            stderr=str(exc),
+        )
+
+        save_result(
+            result,
+            task_id,
+            agent,
+            run_number,
+            0,
+        )
+
+        logger.log_event(
+            "solution_application_failed",
+            {
+                "task_id": task_id,
+                "agent": agent,
+                "run": run_number,
+                "error": str(exc),
+            },
+        )
+
+        save_trajectory(
+            logger,
+            task_id,
+            agent,
+            run_number,
+        )
+
+        return result
+
+    logger.log_event(
+        "solution_applied",
+        {
+            "files": list(
+                solution.get(
+                    "files",
+                    {},
+                ).keys()
+            ),
+        },
+    )
+
+    # --------------------------------------------------------
+    # Attempt loop
+    # --------------------------------------------------------
+
+    result = None
+
+    for attempt in range(
+        1,
+        max_attempts + 1,
+    ):
+
+        attempts_used = attempt
+
+        print()
+        print(
+            f"Attempt {attempt}/{max_attempts}"
+        )
+
+        logger.log_event(
+            "attempt_started",
+            {
+                "task_id": task_id,
+                "agent": agent,
+                "run": run_number,
+                "attempt": attempt,
+            },
+        )
+
+        print(
+            "Running tests..."
+        )
+
+        result = run_tests(
+            repo_path=repo_path,
+            test_command=test_command,
+            task_id=task_id,
+            include_hidden=True,
+        )
+
+        print(
+            "Passed:",
+            result["passed"],
+        )
+
+        print(
+            "Duration:",
+            result["duration_seconds"],
+            "seconds",
+        )
+
+        # ----------------------------------------------------
+        # Attach metadata
+        # ----------------------------------------------------
+
+        result["recovery_attempted"] = (
+            recovery_attempted
+        )
+
+        result["recovery_success"] = (
+            recovery_success
+        )
+
+        result["final_success"] = (
+            result["passed"]
+        )
+
+        result["attempts_used"] = attempt
+
+        result["generation_success"] = (
+            generation_success
+        )
+
+        # ----------------------------------------------------
+        # Evaluator error
+        #
+        # Do not attempt agent recovery for evaluator errors.
+        # ----------------------------------------------------
+
+        if result.get(
+            "failure_type"
+        ) == "evaluator_error":
+
+            print()
+            print(
+                "⚠️ Evaluator error detected."
+            )
+
+            print(
+                "Tests executed:",
+                result.get(
+                    "tests_executed"
+                ),
+            )
+
+            print(
+                "Failure Type:",
+                result.get(
+                    "failure_type"
+                ),
+            )
+
+            result["final_success"] = False
+
+            # Save the evaluator-error attempt.
+            save_result(
+                result,
+                task_id,
+                agent,
+                run_number,
+                attempt,
+            )
+
+            logger.log_event(
+                "evaluator_error",
+                {
+                    "attempt": attempt,
+                    "failure_type": result.get(
+                        "failure_type"
+                    ),
+                    "stdout": result.get(
+                        "stdout",
+                        "",
+                    ),
+                    "stderr": result.get(
+                        "stderr",
+                        "",
+                    ),
+                },
+            )
+
+            break
+
+        # ----------------------------------------------------
+        # Save normal attempt
+        # ----------------------------------------------------
+
+        save_result(
+            result,
+            task_id,
+            agent,
+            run_number,
+            attempt,
+        )
+
+        # ----------------------------------------------------
+        # SUCCESS
+        # ----------------------------------------------------
+
+        if result["passed"]:
+
+            recovery_success = (
+                recovery_attempted
+            )
+
+            result["recovery_attempted"] = (
+                recovery_attempted
+            )
+
+            result["recovery_success"] = (
+                recovery_success
+            )
+
+            result["final_success"] = True
+
+            result["attempts_used"] = (
+                attempt
+            )
+
+            logger.log_event(
+                "attempt_passed",
+                {
+                    "attempt": attempt,
+                    "duration_seconds":
+                        result[
+                            "duration_seconds"
+                        ],
+                },
+            )
+
+            logger.log_event(
+                "task_completed",
+                {
+                    "attempts_used": attempt,
+                    "passed": True,
+                },
+            )
+
+            save_trajectory(
+                logger,
+                task_id,
+                agent,
+                run_number,
+            )
+
+            return result
+
+        # ----------------------------------------------------
+        # FAILURE
+        # ----------------------------------------------------
+
+        logger.log_event(
+            "attempt_failed",
+            {
+                "attempt": attempt,
+                "passed": False,
+                "failure_type":
+                    result.get(
+                        "failure_type"
+                    ),
+                "stdout":
+                    result[
+                        "stdout"
+                    ],
+                "stderr":
+                    result[
+                        "stderr"
+                    ],
+                "returncode":
+                    result[
+                        "returncode"
+                    ],
+            },
+        )
+
+        # ----------------------------------------------------
+        # No more attempts
+        # ----------------------------------------------------
+
+        if attempt >= max_attempts:
+
+            break
+
+        # ----------------------------------------------------
+        # Recovery
+        # ----------------------------------------------------
+
+        print()
+        print(
+            "Test failed."
+        )
+
+        if not hasattr(
+            agent_module,
+            "repair",
+        ):
+
+            print(
+                "Agent does not implement repair()."
+            )
+
+            logger.log_event(
+                "recovery_failed",
+                {
+                    "attempt": attempt,
+                    "reason":
+                        "repair() not implemented",
+                },
+            )
+
+            result["failure_type"] = (
+                "recovery_not_implemented"
+            )
+
+            break
+
+        recovery_attempted = True
+
+        print(
+            "Starting recovery..."
+        )
+
+        failure_feedback = {
+            "task_id": task_id,
+            "agent": agent,
+            "run": run_number,
+            "attempt": attempt,
+            "passed": result[
+                "passed"
+            ],
+            "stdout": result[
+                "stdout"
+            ],
+            "stderr": result[
+                "stderr"
+            ],
+            "returncode": result[
+                "returncode"
+            ],
+            "failure_type": result.get(
+                "failure_type"
+            ),
+        }
+
+        logger.log_event(
+            "recovery_started",
+            failure_feedback,
+        )
+
+        # ----------------------------------------------------
+        # Run repair
+        # ----------------------------------------------------
+
+        try:
+
+            repaired_solution = (
+                agent_module.repair(
+                    task_id,
+                    repo_path,
+                    failure_feedback,
+                )
+            )
+
+        except TypeError:
+
+            try:
+
+                repaired_solution = (
+                    agent_module.repair(
+                        task_id,
+                        failure_feedback,
+                    )
+                )
+
+            except Exception as exc:
+
+                print(
+                    "Recovery failed:",
+                    str(exc),
+                )
+
+                logger.log_event(
+                    "recovery_failed",
+                    {
+                        "attempt": attempt,
+                        "error": str(exc),
+                    },
+                )
+
+                result["failure_type"] = (
+                    "recovery_error"
+                )
+
+                result["error"] = str(
+                    exc
+                )
+
+                break
+
+        except Exception as exc:
+
+            print(
+                "Recovery failed:",
+                str(exc),
+            )
+
+            logger.log_event(
+                "recovery_failed",
+                {
+                    "attempt": attempt,
+                    "error": str(exc),
+                },
+            )
+
+            result["failure_type"] = (
+                "recovery_error"
+            )
+
+            result["error"] = str(
+                exc
+            )
+
+            break
+
+        # ----------------------------------------------------
+        # Validate repair response
+        # ----------------------------------------------------
+
+        if not isinstance(
+            repaired_solution,
+            dict,
+        ):
+
+            message = (
+                "Recovery returned invalid response."
+            )
+
+            print(
+                message
+            )
+
+            logger.log_event(
+                "recovery_failed",
+                {
+                    "attempt": attempt,
+                    "reason": message,
+                },
+            )
+
+            result["failure_type"] = (
+                "recovery_error"
+            )
+
+            result["error"] = message
+
+            break
+
+        repair_status = (
+            repaired_solution.get(
+                "status"
+            )
+        )
+
+        print(
+            "Recovery status:",
+            repair_status,
+        )
+
+        if repair_status != "completed":
+
+            message = repaired_solution.get(
+                "message",
+                "Recovery failed.",
+            )
+
+            print(
+                message
+            )
+
+            logger.log_event(
+                "recovery_failed",
+                {
+                    "attempt": attempt,
+                    "reason": message,
+                },
+            )
+
+            result["failure_type"] = (
+                "recovery_error"
+            )
+
+            result["error"] = message
+
+            break
+
+        # ----------------------------------------------------
+        # Apply repaired solution
+        # ----------------------------------------------------
+
+        print(
+            "Applying repaired solution..."
+        )
+
+        try:
+
+            apply_agent_solution(
+                repo_path,
+                repaired_solution,
+            )
+
+        except Exception as exc:
+
+            print(
+                "❌ Failed to apply repaired solution:",
+                str(exc),
+            )
+
+            logger.log_event(
+                "recovery_failed",
+                {
+                    "attempt": attempt,
+                    "error": str(exc),
+                },
+            )
+
+            result["failure_type"] = (
+                "recovery_error"
+            )
+
+            result["error"] = str(
+                exc
+            )
+
+            break
+
+        solution = repaired_solution
+
+        logger.log_event(
+            "recovery_completed",
+            {
+                "attempt": attempt,
+                "status": repair_status,
+                "files": list(
+                    repaired_solution.get(
+                        "files",
+                        {},
+                    ).keys()
+                ),
+            },
+        )
+
+        logger.log_event(
+            "repaired_solution_applied",
+            {
+                "attempt": attempt,
+                "files": list(
+                    repaired_solution.get(
+                        "files",
+                        {},
+                    ).keys()
+                ),
+            },
+        )
+
+    # --------------------------------------------------------
+    # Final failure
+    # --------------------------------------------------------
+
+    if result is None:
+
+        result = build_result(
+            generation_success=generation_success,
+            tests_executed=False,
+            failure_type="generation_error",
+            attempts_used=attempts_used,
+        )
+
+    result["recovery_attempted"] = (
+        recovery_attempted
+    )
+
+    result["recovery_success"] = False
+
+    result["final_success"] = False
+
+    result["attempts_used"] = attempts_used
+
+    result["generation_success"] = (
+        generation_success
+    )
+
+    logger.log_event(
+        "task_completed",
+        {
+            "attempts_used": attempts_used,
+            "passed": False,
+            "max_attempts_reached":
+                attempts_used >= max_attempts,
+            "failure_type":
+                result.get(
+                    "failure_type"
+                ),
+        },
+    )
+
+    save_trajectory(
+        logger,
+        task_id,
+        agent,
+        run_number,
+    )
+
+    return result
+
+
+# ============================================================
+# RUN ONE AGENT
+# ============================================================
+
+def run_agent(
+    task_id,
+    agent,
+    run_number,
+):
+    """
+    Run one agent on one task for one benchmark run.
+    """
+
+    print()
+    print(
+        "=" * 60
+    )
+
+    print(
+        "Running agent:",
+        agent,
+    )
+
+    print(
+        "Task:",
+        task_id,
+    )
+
+    print(
+        "Run:",
+        run_number,
+    )
+
+    print(
+        "=" * 60
+    )
+
+    workspace = create_clean_workspace(
+        task_id,
+        agent,
+        run_number,
+    )
+
+    print(
+        "Workspace:",
+        workspace,
+    )
+
+    task = TASKS[
+        task_id
+    ]
+
+    result = evaluate_with_retries(
+        task_id=task_id,
+        agent=agent,
+        repo_path=workspace,
+        test_command=task[
+            "test_command"
+        ],
+        run_number=run_number,
+        max_attempts=MAX_ATTEMPTS,
+    )
+
+    print()
+    print(
+        "-" * 60
+    )
+
+    print(
+        "Agent:",
+        agent,
+    )
+
+    print(
+        "Task:",
+        task_id,
+    )
+
+    print(
+        "Run:",
+        run_number,
+    )
+
+    print(
+        "Passed:",
+        result["passed"],
+    )
+
+    print(
+        "Failure Type:",
+        result.get(
+            "failure_type",
+            "",
+        ),
+    )
+
+    print(
+        "Generation Success:",
+        result.get(
+            "generation_success",
+            False,
+        ),
+    )
+
+    print(
+        "Tests Executed:",
+        result.get(
+            "tests_executed",
+            False,
+        ),
+    )
+
+    print(
+        "Recovery Attempted:",
+        result.get(
+            "recovery_attempted",
+            False,
+        ),
+    )
+
+    print(
+        "Recovery Success:",
+        result.get(
+            "recovery_success",
+            False,
+        ),
+    )
+
+    print(
+        "Attempts Used:",
+        result.get(
+            "attempts_used",
+            0,
+        ),
+    )
+
+    print(
+        "Duration:",
+        result[
+            "duration_seconds"
+        ],
+        "seconds",
+    )
+
+    print(
+        "-" * 60
+    )
+
+    print()
+
+    print(
+        "Test Output:"
+    )
+
+    print(
+        result[
+            "stdout"
+        ]
+    )
+
+    if result[
+        "stderr"
+    ]:
+
+        print()
+
+        print(
+            "Errors:"
+        )
+
+        print(
+            result[
+                "stderr"
+            ]
+        )
+
+    return result
+
+
+# ============================================================
+# PRE-CHECK ALL TASKS
+# ============================================================
+
+def validate_tasks(
+    task_filter=None,
+):
+    """
+    Validate task repositories one at a time using isolated
+    workspaces.
+
+    Only visible tests are used during pre-check.
+    """
+
+    print()
+    print(
+        "=" * 70
+    )
+
+    print(
+        "PRE-CHECKING TASKS (ISOLATED)"
+    )
+
+    print(
+        "=" * 70
+    )
+
+    if task_filter:
+
+        if task_filter not in TASKS:
+
+            print()
+            print(
+                f"ERROR: Unknown task: {task_filter}"
+            )
+
+            print()
+            print(
+                "Available tasks:"
+            )
+
+            for task_id in TASKS:
+
+                print(
+                    f"  {task_id}"
+                )
+
+            return False
+
+        tasks_to_check = {
+            task_filter:
+                TASKS[
+                    task_filter
+                ]
+        }
+
+    else:
+
+        tasks_to_check = TASKS
+
+    all_passed = True
+
+    for task_id, task in (
+        tasks_to_check.items()
+    ):
+
+        print()
+        print(
+            "-" * 70
+        )
+
+        print(
+            f"Checking {task_id}"
+        )
+
+        print(
+            "-" * 70
+        )
+
+        source_repo = task[
+            "repo_path"
+        ]
+
+        test_command = task[
+            "test_command"
+        ]
+
+        if not os.path.isdir(
+            source_repo
+        ):
+
+            print(
+                "ERROR: Repository not found:",
+                source_repo,
+            )
+
+            all_passed = False
+
+            continue
+
+        workspace = create_clean_workspace(
+            task_id,
+            "precheck",
+            1,
+        )
+
+        print(
+            "Repository:",
+            source_repo,
+        )
+
+        print(
+            "Isolated workspace:",
+            workspace,
+        )
+
+        print(
+            "Test command:",
+            test_command,
+        )
+
+        print()
+
+        print(
+            "Running tests..."
+        )
+
+        result = run_tests(
+            repo_path=workspace,
+            test_command=test_command,
+            task_id=task_id,
+            include_hidden=False,
+        )
+
+        print()
+
+        print(
+            "Passed:",
+            result[
+                "passed"
+            ],
+        )
+
+        print(
+            "Failure Type:",
+            result.get(
+                "failure_type"
+            ),
+        )
+
+        print(
+            "Tests Executed:",
+            result.get(
+                "tests_executed"
+            ),
+        )
+
+        print(
+            "Duration:",
+            result[
+                "duration_seconds"
+            ],
+            "seconds",
+        )
+
+        print()
+
+        print(
+            "Test Output:"
+        )
+
+        print(
+            result[
+                "stdout"
+            ]
+        )
+
+        if result[
+            "stderr"
+        ]:
+
+            print()
+
+            print(
+                "Errors:"
+            )
+
+            print(
+                result[
+                    "stderr"
+                ]
+            )
+
+        if result[
+            "passed"
+        ]:
+
+            print(
+                f"✅ {task_id} PRE-CHECK PASSED"
+            )
+
+        else:
+
+            print(
+                f"❌ {task_id} PRE-CHECK FAILED"
+            )
+
+            all_passed = False
+
+        try:
+
+            shutil.rmtree(
+                workspace
+            )
+
+        except OSError as exc:
+
+            print(
+                "WARNING: Could not remove workspace:",
+                exc,
+            )
+
+    print()
+    print(
+        "=" * 70
+    )
+
+    if all_passed:
+
+        print(
+            "✅ ALL TASK PRE-CHECKS PASSED"
+        )
+
+    else:
+
+        print(
+            "❌ ONE OR MORE TASK PRE-CHECKS FAILED"
+        )
+
+    print(
+        "=" * 70
+    )
+
+    print()
+
+    return all_passed
+
+
+# ============================================================
+# EVALUATE ONE TASK
+# ============================================================
+
+def evaluate_task(
+    task_id,
+):
+    """
+    Evaluate one task against all configured agents.
+    """
+
+    if task_id not in TASKS:
+
+        raise ValueError(
+            f"Unknown task: {task_id}"
+        )
+
+    print()
+    print(
+        "#" * 70
+    )
+
+    print(
+        f"EVALUATING TASK: {task_id}"
+    )
+
+    print(
+        "#" * 70
+    )
+
+    for agent in AGENTS:
+
+        for run_number in range(
+            1,
+            RUNS_PER_AGENT + 1,
+        ):
+
+            run_agent(
+                task_id,
+                agent,
+                run_number,
+            )
+
+
+# ============================================================
+# MAIN
+# ============================================================
+
+if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser(
+        description="AI Agent Evaluation"
+    )
+
+    parser.add_argument(
+        "--task",
+        help=(
+            "Run only a specific task, "
+            "e.g. task_10"
+        ),
+    )
+
+    parser.add_argument(
+        "--skip-precheck",
+        action="store_true",
+        help="Skip task pre-check",
+    )
+
+    args = parser.parse_args()
+
+    # --------------------------------------------------------
+    # Validate task argument
+    # --------------------------------------------------------
+
+    if (
+        args.task
+        and args.task not in TASKS
+    ):
+
+        print()
+        print(
+            f"ERROR: Unknown task: {args.task}"
+        )
+
+        print()
+        print(
+            "Available tasks:"
+        )
+
+        for task_id in TASKS:
+
+            print(
+                f"  {task_id}"
+            )
+
+        sys.exit(1)
+
+    # --------------------------------------------------------
+    # Header
+    # --------------------------------------------------------
+
+    print()
+    print(
+        "=" * 70
+    )
+
+    print(
+        "AI AGENT EVALUATION"
+    )
+
+    print(
+        "=" * 70
+    )
+
+    print(
+        "Tasks:",
+        len(TASKS),
+    )
+
+    print(
+        "Agents:",
+        len(AGENTS),
+    )
+
+    print(
+        "Runs per agent:",
+        RUNS_PER_AGENT,
+    )
+
+    print(
+        "Maximum attempts:",
+        MAX_ATTEMPTS,
+    )
+
+    if args.task:
+
+        print(
+            "Selected task:",
+            args.task,
+        )
+
+    else:
+
+        print(
+            "Selected task: ALL"
+        )
+
+    print(
+        "=" * 70
+    )
+
+    # --------------------------------------------------------
+    # Pre-check
+    # --------------------------------------------------------
+
+    if not args.skip_precheck:
+
+        if not validate_tasks(
+            args.task
+        ):
+
+            print()
+            print(
+                "Evaluation stopped."
+            )
+
+            print(
+                "Fix the failing task first."
+            )
+
+            sys.exit(1)
+
+    # --------------------------------------------------------
+    # Evaluate
+    # --------------------------------------------------------
+
+    if args.task:
+
+        evaluate_task(
+            args.task
+        )
+
+    else:
+
+        for task_id in TASKS:
+
+            evaluate_task(
+                task_id
+            )
+
+    # --------------------------------------------------------
+    # Done
+    # --------------------------------------------------------
+
+    print()
+    print(
+        "=" * 70
+    )
+
+    print(
+        "ALL TASKS AND AGENTS EVALUATED"
+    )
+
+    print(
+        "=" * 70
+    )
+
+    print()
+
+    print(
+        "Results saved to:"
+    )
+
+    print(
+        "results/results.csv"
+    )
+

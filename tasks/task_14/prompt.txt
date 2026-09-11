@@ -1,0 +1,18 @@
+Implement the required functionality in string_utils.py.
+
+Read the existing source code and tests carefully.
+
+Implement all required functions:
+
+- reverse_string(value)
+- is_palindrome(value)
+- count_vowels(value)
+- remove_whitespace(value)
+- capitalize_words(value)
+
+Requirements:
+
+- Do not modify the test files.
+- Handle invalid input safely.
+- Consider empty strings, whitespace, mixed case, and non-string values.
+- Make sure the implementation passes all provided tests.

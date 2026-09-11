@@ -1,0 +1,21 @@
+Implement the required functionality in sql_utils.py.
+
+Read the existing source code and tests carefully.
+
+Implement all required functions:
+
+- build_select_query(table, columns=None, where=None)
+- build_insert_query(table, data)
+- build_update_query(table, data, where)
+- build_delete_query(table, where)
+
+Requirements:
+
+- Do not modify the test files.
+- Handle invalid input safely.
+- Validate table and column names.
+- Properly construct SQL queries.
+- Use parameterized placeholders for values.
+- Handle empty and missing inputs.
+- Do not execute SQL queries.
+- Make sure the implementation passes all provided tests.

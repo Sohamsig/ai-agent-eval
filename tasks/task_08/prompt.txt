@@ -1,0 +1,8 @@
+﻿Implement the required functionality in text_utils.py.
+
+Read the existing source code and tests.
+
+Make sure the implementation passes all provided tests.
+
+Do not modify the test files.
+

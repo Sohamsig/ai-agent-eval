@@ -1,0 +1,54 @@
+# Bug Report: Client accepts invalid timeout values
+
+## Description
+
+The client configuration supports an optional `timeout` value.
+
+A timeout must be a non-negative integer.
+
+However, invalid timeout values can currently cause unexpected
+behavior when creating a client.
+
+## Examples
+
+These configurations should be rejected:
+
+    {"host": "localhost", "port": 8080, "timeout": -5}
+
+    {"host": "localhost", "port": 8080, "timeout": "10"}
+
+    {"host": "localhost", "port": 8080, "timeout": True}
+
+A valid configuration such as:
+
+    {"host": "localhost", "port": 8080, "timeout": 10}
+
+must continue to work.
+
+## Expected behavior
+
+`create_client()` should return `None` when the timeout is invalid.
+
+The following rules apply:
+
+1. Timeout must be an integer.
+2. Boolean values must not be accepted as timeout values.
+3. Timeout must be greater than or equal to zero.
+4. Missing timeout should continue to use the default value of 30.
+5. Existing host and port validation must continue to work.
+6. Existing valid configurations must not change behavior.
+
+## Engineering requirements
+
+1. Reproduce the bug before fixing it.
+2. Inspect both actual_task_file.py and helpers.py.
+3. Identify the root cause.
+4. Fix the implementation in the appropriate location.
+5. Do not remove existing tests.
+6. Add regression tests for the discovered bug.
+7. Test boundary cases.
+8. Run the complete test suite.
+9. Do not modify tests simply to hide the bug.
+
+The goal is to demonstrate debugging, root-cause analysis,
+implementation, regression testing, and verification.
