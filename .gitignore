@@ -1,6 +1,9 @@
-# Python
+# Python cache
 __pycache__/
+.pytest_cache/
 *.pyc
+
+# Virtual environments
 .venv/
 venv/
 
@@ -12,9 +15,20 @@ venv/
 .vscode/
 .idea/
 
-# Generated benchmark workspaces
+# Generated evaluator outputs
+results/
+
+# Workspaces
 workspaces/
 
 # Raw benchmark logs
 results/results.csv
 results/attempts.csv
+
+# Evaluator backups and temporary files
+*.bak
+*.backup
+*.before*
+backups/
+
+parser_snippet.txt
