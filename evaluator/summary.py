@@ -1,69 +1,12 @@
-import json
+from __future__ import annotations
+import argparse,json
 from pathlib import Path
-
-
-BASE_DIR = Path(__file__).resolve().parent.parent
-REPORT_FILE = BASE_DIR / "results" / "benchmark_report.json"
-SUMMARY_FILE = BASE_DIR / "results" / "benchmark_summary.md"
-
-
+from evaluator.reporting import PROJECT_ROOT
+DEFAULT_REPORT=PROJECT_ROOT/'results'/'benchmark_report_v2.json'; DEFAULT_SUMMARY=PROJECT_ROOT/'results'/'benchmark_summary_v2.md'
+def render_summary(report):
+    lines=['# AI Coding Agent Evaluation Report','',f"Generated: {report['generated_at']}",f"Source CSV: {report['source_csv']}",'','## Data integrity','',f"- Raw rows: {report['raw_rows']}",f"- Unique logical runs: {report['unique_logical_runs']}",f"- Duplicate groups: {report['duplicate_analysis']['duplicate_groups']}",f"- Duplicate rows: {report['duplicate_analysis']['duplicate_rows']}",f"- Excluded ambiguous rows: {report['excluded_ambiguous_rows']}",'','## Outcomes','',f"- Known outcomes: {report['known_outcomes']}",f"- Success rate among known, unambiguous outcomes: {report['success_rate']}",'','## Agents','','| Agent | Runs | Known outcomes | Success rate |','|---|---:|---:|---:|']
+    for agent,data in sorted(report['agents'].items()): lines.append(f"| {agent} | {data['unique_unambiguous_runs']} | {data['known_outcomes']} | {data['success_rate']} |")
+    return '\n'.join(lines)+'\n'
 def main():
-    with open(REPORT_FILE, "r", encoding="utf-8") as file:
-        report = json.load(file)
-
-    benchmark = report["benchmark"]
-    agent = report["agents"]["agent_02"]
-
-    summary = f"""# SWE-Agent Benchmark Report
-
-## Overall Results
-
-| Metric | Result |
-|---|---:|
-| Total CSV rows | {benchmark["total_csv_rows"]} |
-| Unique benchmark runs | {benchmark["unique_benchmark_runs"]} |
-| Successful runs | {benchmark["successful_runs"]} |
-| Failed runs | {benchmark["failed_runs"]} |
-| Success rate | {benchmark["success_rate"]}% |
-| Pass@1 | {benchmark["pass_at_1"]}% |
-| Average attempts | {benchmark["average_attempts"]} |
-| Average runtime | {benchmark["average_runtime_seconds"]} seconds |
-
-## Agent Results
-
-| Agent | Runs | Success Rate | Pass@1 |
-|---|---:|---:|---:|
-| agent_02 | {agent["runs"]} | {agent["success_rate"]}% | {agent["pass_at_1"]}% |
-
-## Task Results
-
-| Task | Runs | Success Rate | Pass@1 | Avg Attempts | Avg Runtime |
-|---|---:|---:|---:|---:|---:|
-"""
-
-    for task_id, task in report["tasks"].items():
-        summary += (
-            f'| {task_id} '
-            f'| {task["runs"]} '
-            f'| {task["success_rate"]}% '
-            f'| {task["pass_at_1"]}% '
-            f'| {task["average_attempts"]} '
-            f'| {task["average_runtime_seconds"]} seconds |\n'
-        )
-
-    summary += """
-## Interpretation
-
-The evaluated agent completed all benchmark runs successfully.
-Every task achieved a 100% success rate and 100% Pass@1.
-The average number of attempts was 1.0, meaning tasks succeeded
-without requiring a recovery attempt in this benchmark sample.
-"""
-
-    SUMMARY_FILE.write_text(summary, encoding="utf-8")
-
-    print(f"Summary saved to: {SUMMARY_FILE}")
-
-
-if __name__ == "__main__":
-    main()
+    parser=argparse.ArgumentParser(); parser.add_argument('--report',type=Path,default=DEFAULT_REPORT); parser.add_argument('--output',type=Path,default=DEFAULT_SUMMARY); args=parser.parse_args(); args.output.write_text(render_summary(json.loads(args.report.read_text(encoding='utf-8'))),encoding='utf-8'); print(f'Summary saved to: {args.output}')
+if __name__=='__main__': main()
