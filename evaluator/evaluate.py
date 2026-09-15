@@ -5,6 +5,7 @@ import csv
 import importlib.util
 import json
 import os
+import re
 import shlex
 import shutil
 import subprocess
@@ -1051,15 +1052,14 @@ def run_tests(
     env["PYTEST_DISABLE_PLUGIN_AUTOLOAD"] = "1"
 
     # Only the isolated workspace and its task package are importable.
-
     task_package = workspace / "tasks" / task_id
 
-    python_paths = []
+    python_paths = [
+        str(workspace),
+    ]
 
     if task_package.exists() and task_package.is_dir():
         python_paths.append(str(task_package))
-
-    python_paths.append(str(workspace))
 
     env["PYTHONPATH"] = os.pathsep.join(python_paths)
 
@@ -1306,7 +1306,7 @@ def run_tests(
     - The evaluator project is not added to PYTHONPATH.
     - Third-party pytest plugins are disabled.
     - The command runs from the isolated workspace.
-    - No pytest.ini or other configuration file is written into the workspace.
+    - A temporary isolated pytest configuration is written into the workspace.
     - shell=False prevents shell interpretation.
     """
 
@@ -3447,12 +3447,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
-
-
-
-
