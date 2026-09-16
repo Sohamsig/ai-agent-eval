@@ -1,0 +1,2 @@
+TotalTasks,TotalEvaluations,Agents,BaselineEvaluations,Agent02Evaluations,BaselineAverageSeconds,Agent02AverageSeconds,BaselineSuccessRate,Agent02SuccessRate,BaselineFasterTasks,Agent02FasterTasks
+32,320,"agent_02, baseline",160,160,1.064,1.107,100,100,17,15

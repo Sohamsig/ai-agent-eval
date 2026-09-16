@@ -2,28 +2,28 @@
   "task_id": "task_31",
   "agent": "agent_02",
   "run_number": 1,
-  "started_at": "2026-09-11T14:10:36.047490+00:00",
-  "finished_at": "2026-09-11T14:10:36.542111+00:00",
+  "started_at": "2026-09-16T11:57:47.527213+00:00",
+  "finished_at": "2026-09-16T11:57:48.871562+00:00",
   "events": [
     {
-      "timestamp": "2026-09-11T14:10:36.047506+00:00",
+      "timestamp": "2026-09-16T11:57:47.527310+00:00",
       "event": "agent_load_started",
       "data": {
         "agent": "agent_02"
       }
     },
     {
-      "timestamp": "2026-09-11T14:10:36.048179+00:00",
+      "timestamp": "2026-09-16T11:57:47.530638+00:00",
       "event": "agent_loaded",
       "data": {}
     },
     {
-      "timestamp": "2026-09-11T14:10:36.048268+00:00",
+      "timestamp": "2026-09-16T11:57:47.531687+00:00",
       "event": "generation_started",
       "data": {}
     },
     {
-      "timestamp": "2026-09-11T14:10:36.049530+00:00",
+      "timestamp": "2026-09-16T11:57:47.554819+00:00",
       "event": "generation_completed",
       "data": {
         "status": "completed",
@@ -34,7 +34,7 @@
       }
     },
     {
-      "timestamp": "2026-09-11T14:10:36.052688+00:00",
+      "timestamp": "2026-09-16T11:57:47.612383+00:00",
       "event": "solution_applied",
       "data": {
         "files": [
@@ -43,25 +43,25 @@
       }
     },
     {
-      "timestamp": "2026-09-11T14:10:36.052903+00:00",
+      "timestamp": "2026-09-16T11:57:47.617602+00:00",
       "event": "test_started",
       "data": {
         "attempt": 1
       }
     },
     {
-      "timestamp": "2026-09-11T14:10:36.540672+00:00",
+      "timestamp": "2026-09-16T11:57:48.704317+00:00",
       "event": "test_completed",
       "data": {
         "attempt": 1,
         "passed": true,
         "return_code": 0,
-        "duration_seconds": 0.4875,
+        "duration_seconds": 1.0836,
         "failure_type": "success"
       }
     },
     {
-      "timestamp": "2026-09-11T14:10:36.541853+00:00",
+      "timestamp": "2026-09-16T11:57:48.870415+00:00",
       "event": "evaluation_finished",
       "data": {
         "final_success": true,
