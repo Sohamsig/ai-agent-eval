@@ -62,3 +62,26 @@ The benchmark evaluated two agents across 32 tasks, with 5 runs per agent.
 - `results/benchmark_summary.md`
 - `results/benchmark_report.json`
 - `results/FINAL_BENCHMARK_REPORT.md`
+
+## 📊 Agent Benchmark Results
+
+The evaluation framework was tested across 32 software-engineering tasks.
+
+| Metric | Baseline | Agent 02 |
+|--------|----------|----------|
+| Total Evaluations | 160 | 160 |
+| Success Rate | 100% | 100% |
+| Average Execution Time | 1.064s | 1.107s |
+
+### Summary
+
+- Total tasks: 32
+- Total evaluations: 320
+- Baseline faster on 17 tasks
+- Agent 02 faster on 15 tasks
+- Both agents achieved a 100% success rate
+
+![Benchmark Chart](results/benchmark_chart.png)
+
+📄 [Read the full benchmark report](results/FINAL_BENCHMARK_REPORT.md)
+
