@@ -26,6 +26,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
 
-      - name: Run task tests
+      - name: Run each task independently
+        shell: bash
         run: |
-          python -m pytest tasks -q
+          set -e
+
+          for task_dir in tasks/task_*; do
+            if [ -d "$task_dir" ]; then
+              echo "Running tests in $task_dir"
+              (
+                cd "$task_dir"
+                python -m pytest -q
+              )
+            fi
+          done
