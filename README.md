@@ -87,3 +87,10 @@ The evaluation framework was tested across 32 software-engineering tasks.
 
 📄 [Read the full benchmark report](results/FINAL_BENCHMARK_REPORT.md)
 
+## Run Tests Locally
+
+Run all 33 task test suites independently:
+
+```powershell
+.\run_all_tests.ps1
+
