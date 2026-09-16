@@ -1,0 +1,3291 @@
+schema_version,timestamp,run_id,task_id,agent,run_number,generation_success,tests_executed,tests_passed,tests_total,tests_passed_count,tests_failed_count,tests_skipped_count,final_success,failure_type,error_message,exit_code,timed_out,stdout,stderr,recovery_attempted,recovery_success,attempts_used,max_attempts,duration_seconds
+2,2026-09-16T13:06:30.060628+00:00,ba705e11-9cda-483c-9cdc-59c452f9593c,task_01,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_01_baseline_1
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_calculator.py .                                                     [100%]
+
+============================== 1 passed in 0.02s ==============================
+",,False,False,1,3,0.4722
+2,2026-09-16T13:06:30.614895+00:00,1d0b8618-8c90-4367-b0ca-4049ed22b27d,task_01,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_01_baseline_2
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_calculator.py .                                                     [100%]
+
+============================== 1 passed in 0.02s ==============================
+",,False,False,1,3,0.5359
+2,2026-09-16T13:06:31.181959+00:00,ae71128c-44dc-46e3-a360-2c41fab10e7d,task_01,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_01_baseline_3
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_calculator.py .                                                     [100%]
+
+============================== 1 passed in 0.02s ==============================
+",,False,False,1,3,0.5378
+2,2026-09-16T13:06:31.874471+00:00,615d0d2a-908c-4cf7-808d-5af256f68b26,task_01,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_01_baseline_4
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_calculator.py .                                                     [100%]
+
+============================== 1 passed in 0.03s ==============================
+",,False,False,1,3,0.6733
+2,2026-09-16T13:06:32.581317+00:00,e5974c28-5211-4891-aee8-3ca44095e634,task_01,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_01_baseline_5
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_calculator.py .                                                     [100%]
+
+============================== 1 passed in 0.02s ==============================
+",,False,False,1,3,0.6548
+2,2026-09-16T13:06:33.252687+00:00,a48555c5-a2d9-4767-9a6d-65c48043dfe8,task_01,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_01_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_calculator.py .                                                     [100%]
+
+============================== 1 passed in 0.03s ==============================
+",,False,False,1,3,0.6168
+2,2026-09-16T13:06:33.956336+00:00,35423a4c-bf42-48d5-92f3-c5121fca6ea3,task_01,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_01_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_calculator.py .                                                     [100%]
+
+============================== 1 passed in 0.02s ==============================
+",,False,False,1,3,0.6557
+2,2026-09-16T13:06:34.594494+00:00,d9eacce5-e415-4061-8dd6-4ba4e1e78411,task_01,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_01_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_calculator.py .                                                     [100%]
+
+============================== 1 passed in 0.02s ==============================
+",,False,False,1,3,0.6177
+2,2026-09-16T13:06:35.171436+00:00,ad45703f-3bcf-425f-a27c-8d9e8aaff592,task_01,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_01_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_calculator.py .                                                     [100%]
+
+============================== 1 passed in 0.03s ==============================
+",,False,False,1,3,0.5585
+2,2026-09-16T13:06:35.755174+00:00,b893ff45-d4dc-489e-8ae1-7c4812240b46,task_01,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_01_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_calculator.py .                                                     [100%]
+
+============================== 1 passed in 0.02s ==============================
+",,False,False,1,3,0.5636
+2,2026-09-16T13:06:36.337551+00:00,4c5198f8-e22d-4839-8126-9e241b38c0f8,task_02,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_02_baseline_1
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_string_utils.py .                                                   [100%]
+
+============================== 1 passed in 0.03s ==============================
+",,False,False,1,3,0.5512
+2,2026-09-16T13:06:37.044481+00:00,39d25fb0-6fd9-4593-b15d-78e68ae7005f,task_02,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_02_baseline_2
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_string_utils.py .                                                   [100%]
+
+============================== 1 passed in 0.02s ==============================
+",,False,False,1,3,0.6706
+2,2026-09-16T13:06:37.769526+00:00,a1911a79-2703-424e-8d68-449969a07d9f,task_02,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_02_baseline_3
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_string_utils.py .                                                   [100%]
+
+============================== 1 passed in 0.04s ==============================
+",,False,False,1,3,0.6787
+2,2026-09-16T13:06:38.421358+00:00,abbe0f9c-9c95-4fc7-bc37-151271a3c4c4,task_02,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_02_baseline_4
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_string_utils.py .                                                   [100%]
+
+============================== 1 passed in 0.06s ==============================
+",,False,False,1,3,0.6034
+2,2026-09-16T13:06:39.000915+00:00,18b2a199-7d7d-4040-97b2-3970d1d15744,task_02,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_02_baseline_5
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_string_utils.py .                                                   [100%]
+
+============================== 1 passed in 0.04s ==============================
+",,False,False,1,3,0.5404
+2,2026-09-16T13:06:39.773676+00:00,7b0f2e77-d35f-4cca-b3bc-1852e7341e4f,task_02,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_02_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_string_utils.py .                                                   [100%]
+
+============================== 1 passed in 0.05s ==============================
+",,False,False,1,3,0.7351
+2,2026-09-16T13:06:40.411783+00:00,6669a8c7-1542-4f01-9f9e-eb5eb5ce3260,task_02,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_02_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_string_utils.py .                                                   [100%]
+
+============================== 1 passed in 0.04s ==============================
+",,False,False,1,3,0.5862
+2,2026-09-16T13:06:41.087376+00:00,5509cbcb-239c-4809-9342-08f72f244d90,task_02,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_02_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_string_utils.py .                                                   [100%]
+
+============================== 1 passed in 0.03s ==============================
+",,False,False,1,3,0.6395
+2,2026-09-16T13:06:41.589541+00:00,53c37640-100c-49a1-a5d9-8b214c865915,task_02,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_02_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_string_utils.py .                                                   [100%]
+
+============================== 1 passed in 0.02s ==============================
+",,False,False,1,3,0.4612
+2,2026-09-16T13:06:42.085124+00:00,656c63f2-e2d7-4d9f-9349-5b4e03b066de,task_02,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_02_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_string_utils.py .                                                   [100%]
+
+============================== 1 passed in 0.03s ==============================
+",,False,False,1,3,0.4692
+2,2026-09-16T13:06:42.627829+00:00,94d5acb4-395d-46dc-8da0-302061c3e933,task_03,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_03_baseline_1
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_data_utils.py .                                                     [100%]
+
+============================== 1 passed in 0.03s ==============================
+",,False,False,1,3,0.5236
+2,2026-09-16T13:06:43.136992+00:00,d587bb33-50ca-42c4-9070-60f75d195099,task_03,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_03_baseline_2
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_data_utils.py .                                                     [100%]
+
+============================== 1 passed in 0.02s ==============================
+",,False,False,1,3,0.4844
+2,2026-09-16T13:06:43.565651+00:00,0fd139ea-912a-4d38-bd13-58c3acba0703,task_03,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_03_baseline_3
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_data_utils.py .                                                     [100%]
+
+============================== 1 passed in 0.02s ==============================
+",,False,False,1,3,0.404
+2,2026-09-16T13:06:44.031273+00:00,3488fa6f-4a44-4cc1-a388-8e45e4b95882,task_03,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_03_baseline_4
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_data_utils.py .                                                     [100%]
+
+============================== 1 passed in 0.02s ==============================
+",,False,False,1,3,0.4327
+2,2026-09-16T13:06:44.471389+00:00,c484413b-d49e-47a5-ac48-fd8158978901,task_03,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_03_baseline_5
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_data_utils.py .                                                     [100%]
+
+============================== 1 passed in 0.02s ==============================
+",,False,False,1,3,0.4038
+2,2026-09-16T13:06:44.952700+00:00,80fec1ce-8644-4edf-9e1b-63ea1ff4f644,task_03,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_03_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_data_utils.py .                                                     [100%]
+
+============================== 1 passed in 0.02s ==============================
+",,False,False,1,3,0.4599
+2,2026-09-16T13:06:45.434507+00:00,8a9d0d28-b3ac-496f-a4da-8a54412de0fa,task_03,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_03_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_data_utils.py .                                                     [100%]
+
+============================== 1 passed in 0.02s ==============================
+",,False,False,1,3,0.4627
+2,2026-09-16T13:06:45.860414+00:00,16520d60-ed9a-434d-b521-7e6dd7b30295,task_03,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_03_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_data_utils.py .                                                     [100%]
+
+============================== 1 passed in 0.02s ==============================
+",,False,False,1,3,0.407
+2,2026-09-16T13:06:46.408282+00:00,5a59d5a7-f549-41f0-b948-cb159665fd13,task_03,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_03_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_data_utils.py .                                                     [100%]
+
+============================== 1 passed in 0.01s ==============================
+",,False,False,1,3,0.5173
+2,2026-09-16T13:06:47.017138+00:00,76461598-7b27-405b-bc26-bb4e5f9f83f0,task_03,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_03_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_data_utils.py .                                                     [100%]
+
+============================== 1 passed in 0.02s ==============================
+",,False,False,1,3,0.5928
+2,2026-09-16T13:06:47.544091+00:00,56c8e4a3-ee2a-4b85-857b-c63a92612b1c,task_04,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_04_baseline_1
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_json_utils.py .                                                     [100%]
+
+============================== 1 passed in 0.01s ==============================
+",,False,False,1,3,0.4964
+2,2026-09-16T13:06:48.059211+00:00,bfc96830-13b0-4795-9510-a6166967d729,task_04,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_04_baseline_2
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_json_utils.py .                                                     [100%]
+
+============================== 1 passed in 0.03s ==============================
+",,False,False,1,3,0.4975
+2,2026-09-16T13:06:48.595593+00:00,3c50dc5e-7414-45e0-9641-1aed99c95908,task_04,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_04_baseline_3
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_json_utils.py .                                                     [100%]
+
+============================== 1 passed in 0.02s ==============================
+",,False,False,1,3,0.5033
+2,2026-09-16T13:06:49.133711+00:00,701d4f65-7395-447d-a157-54ef7d7259d7,task_04,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_04_baseline_4
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_json_utils.py .                                                     [100%]
+
+============================== 1 passed in 0.03s ==============================
+",,False,False,1,3,0.5213
+2,2026-09-16T13:06:49.760736+00:00,9942e906-3bac-43c2-ac28-c10c7ac05ed5,task_04,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_04_baseline_5
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_json_utils.py .                                                     [100%]
+
+============================== 1 passed in 0.02s ==============================
+",,False,False,1,3,0.5737
+2,2026-09-16T13:06:50.330746+00:00,6a1992f1-c291-4413-95f2-468cc6cdbd9a,task_04,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_04_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_json_utils.py .                                                     [100%]
+
+============================== 1 passed in 0.02s ==============================
+",,False,False,1,3,0.5251
+2,2026-09-16T13:06:50.806028+00:00,91c7aa25-527a-410b-b876-4193ada74662,task_04,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_04_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_json_utils.py .                                                     [100%]
+
+============================== 1 passed in 0.03s ==============================
+",,False,False,1,3,0.4591
+2,2026-09-16T13:06:51.318801+00:00,1adb484b-97d6-4723-bc86-4599612b3565,task_04,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_04_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_json_utils.py .                                                     [100%]
+
+============================== 1 passed in 0.02s ==============================
+",,False,False,1,3,0.4876
+2,2026-09-16T13:06:51.786777+00:00,020024ef-e51b-446c-9c14-028cedc53b4d,task_04,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_04_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_json_utils.py .                                                     [100%]
+
+============================== 1 passed in 0.02s ==============================
+",,False,False,1,3,0.4488
+2,2026-09-16T13:06:52.218077+00:00,89ff50f1-6a09-4d13-9e71-a2834c225ba8,task_04,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_04_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 1 item
+
+test_json_utils.py .                                                     [100%]
+
+============================== 1 passed in 0.01s ==============================
+",,False,False,1,3,0.4122
+2,2026-09-16T13:06:52.744453+00:00,4fe0c971-8d63-4bd2-846d-7a0a37d1149c,task_05,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_05_baseline_1
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_discount.py ...                                                     [100%]
+
+============================== 3 passed in 0.04s ==============================
+",,False,False,1,3,0.5048
+2,2026-09-16T13:06:53.265277+00:00,6944d19b-4c64-4b38-8242-77a9aeda22a2,task_05,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_05_baseline_2
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_discount.py ...                                                     [100%]
+
+============================== 3 passed in 0.02s ==============================
+",,False,False,1,3,0.472
+2,2026-09-16T13:06:53.752415+00:00,050812f0-f4e8-43a5-bb2c-d070e48062c0,task_05,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_05_baseline_3
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_discount.py ...                                                     [100%]
+
+============================== 3 passed in 0.03s ==============================
+",,False,False,1,3,0.4704
+2,2026-09-16T13:06:54.197329+00:00,7e33ce11-9817-4622-91c1-239e6ba62c4e,task_05,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_05_baseline_4
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_discount.py ...                                                     [100%]
+
+============================== 3 passed in 0.02s ==============================
+",,False,False,1,3,0.4314
+2,2026-09-16T13:06:54.716102+00:00,98d01190-897e-457a-9122-c12125790aa5,task_05,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_05_baseline_5
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_discount.py ...                                                     [100%]
+
+============================== 3 passed in 0.03s ==============================
+",,False,False,1,3,0.5022
+2,2026-09-16T13:06:55.225166+00:00,1fddc374-1753-4c1c-9f4a-b25cded32644,task_05,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_05_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_discount.py ...                                                     [100%]
+
+============================== 3 passed in 0.02s ==============================
+",,False,False,1,3,0.4931
+2,2026-09-16T13:06:55.741072+00:00,ab4374bb-8957-4cbb-acf2-dbdb45f3ed16,task_05,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_05_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_discount.py ...                                                     [100%]
+
+============================== 3 passed in 0.02s ==============================
+",,False,False,1,3,0.4996
+2,2026-09-16T13:06:56.170782+00:00,57b6b31f-3720-4d8a-a5e4-915727d2f27a,task_05,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_05_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_discount.py ...                                                     [100%]
+
+============================== 3 passed in 0.03s ==============================
+",,False,False,1,3,0.4024
+2,2026-09-16T13:06:56.646180+00:00,7861c2ff-746c-4464-aa4c-ad12265a65dd,task_05,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_05_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_discount.py ...                                                     [100%]
+
+============================== 3 passed in 0.02s ==============================
+",,False,False,1,3,0.457
+2,2026-09-16T13:06:57.115082+00:00,ad3039bd-3ff6-450c-b584-dceae333928b,task_05,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_05_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_discount.py ...                                                     [100%]
+
+============================== 3 passed in 0.03s ==============================
+",,False,False,1,3,0.4539
+2,2026-09-16T13:06:57.593339+00:00,046f41e4-675f-4a51-8c10-38b7d4b1845f,task_06,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_06_baseline_1
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_list_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.05s ==============================
+",,False,False,1,3,0.4607
+2,2026-09-16T13:06:58.037145+00:00,573eaee3-6407-448e-bd18-67194d29826e,task_06,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_06_baseline_2
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_list_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.02s ==============================
+",,False,False,1,3,0.4182
+2,2026-09-16T13:06:58.507834+00:00,6e106664-82cb-454c-afe1-2ef5012baef7,task_06,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_06_baseline_3
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_list_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.03s ==============================
+",,False,False,1,3,0.4504
+2,2026-09-16T13:06:58.963730+00:00,59c6a586-1557-41dd-837c-05c39561f3cf,task_06,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_06_baseline_4
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_list_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.03s ==============================
+",,False,False,1,3,0.4276
+2,2026-09-16T13:06:59.685123+00:00,ec9f0822-a113-4ccd-912a-9a28514538bf,task_06,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_06_baseline_5
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_list_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.04s ==============================
+",,False,False,1,3,0.6736
+2,2026-09-16T13:07:00.171862+00:00,3f862dbf-8169-448b-8b2b-66cd5c517abb,task_06,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_06_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_list_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.03s ==============================
+",,False,False,1,3,0.4628
+2,2026-09-16T13:07:00.738869+00:00,21b6d1ea-6f71-4587-8fee-bb8fd6b7f279,task_06,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_06_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_list_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.02s ==============================
+",,False,False,1,3,0.5463
+2,2026-09-16T13:07:01.293930+00:00,bfff66a0-7936-412e-a3a0-73d8c072ee8f,task_06,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_06_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_list_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.03s ==============================
+",,False,False,1,3,0.5349
+2,2026-09-16T13:07:01.935853+00:00,0dc09fc4-6508-43a1-aca8-b66822c2bb80,task_06,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_06_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_list_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.03s ==============================
+",,False,False,1,3,0.6056
+2,2026-09-16T13:07:02.479396+00:00,91530b28-ccce-41c9-a822-554c76182065,task_06,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_06_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_list_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.03s ==============================
+",,False,False,1,3,0.5158
+2,2026-09-16T13:07:02.968439+00:00,2f34f046-0c76-4519-8334-af70aa1ddda7,task_07,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_07_baseline_1
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_dict_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.02s ==============================
+",,False,False,1,3,0.4496
+2,2026-09-16T13:07:03.539286+00:00,58459d00-b54a-407e-95e3-16120cc80450,task_07,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_07_baseline_2
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_dict_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.02s ==============================
+",,False,False,1,3,0.5564
+2,2026-09-16T13:07:04.018349+00:00,e35cc032-aca9-447a-bb5d-afc393cadd8e,task_07,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_07_baseline_3
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_dict_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.03s ==============================
+",,False,False,1,3,0.4498
+2,2026-09-16T13:07:04.491774+00:00,1dbc2f06-1a64-4c57-bfb2-cb2d0d667090,task_07,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_07_baseline_4
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_dict_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.02s ==============================
+",,False,False,1,3,0.452
+2,2026-09-16T13:07:05.041966+00:00,3e8723b9-ae9a-47f5-8d29-52fc04134c86,task_07,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_07_baseline_5
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_dict_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.02s ==============================
+",,False,False,1,3,0.5064
+2,2026-09-16T13:07:05.600000+00:00,cb985cd9-60f8-41a3-b215-65d18d8d6112,task_07,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_07_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_dict_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.03s ==============================
+",,False,False,1,3,0.5382
+2,2026-09-16T13:07:06.184025+00:00,0b64cbc5-e6c9-4418-8739-ac14691a500c,task_07,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_07_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_dict_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.04s ==============================
+",,False,False,1,3,0.5536
+2,2026-09-16T13:07:06.669158+00:00,06393ccf-efa6-4328-942d-c9bf9d611dee,task_07,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_07_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_dict_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.02s ==============================
+",,False,False,1,3,0.4608
+2,2026-09-16T13:07:07.156999+00:00,d649c96c-075d-408f-962d-87a6aa23d4c9,task_07,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_07_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_dict_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.02s ==============================
+",,False,False,1,3,0.4701
+2,2026-09-16T13:07:07.661803+00:00,8acc295f-852b-436c-a705-d07dea731b9b,task_07,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_07_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_dict_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.02s ==============================
+",,False,False,1,3,0.4865
+2,2026-09-16T13:07:08.179453+00:00,5425bae6-131d-445e-9280-43bb69cd1bb6,task_08,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_08_baseline_1
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_text_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.03s ==============================
+",,False,False,1,3,0.5006
+2,2026-09-16T13:07:08.647779+00:00,fadb1aec-259f-4670-bf5d-bf8546008d6d,task_08,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_08_baseline_2
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_text_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.03s ==============================
+",,False,False,1,3,0.4365
+2,2026-09-16T13:07:09.169166+00:00,3615f543-168f-4cdc-b74c-769a95d3bdb5,task_08,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_08_baseline_3
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_text_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.02s ==============================
+",,False,False,1,3,0.488
+2,2026-09-16T13:07:09.659007+00:00,d097f835-1108-491c-8462-7019775a1dc5,task_08,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_08_baseline_4
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_text_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.03s ==============================
+",,False,False,1,3,0.4757
+2,2026-09-16T13:07:10.178432+00:00,7a96b36e-2b3e-48d4-bcc6-bda3a7461ecf,task_08,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_08_baseline_5
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_text_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.03s ==============================
+",,False,False,1,3,0.4962
+2,2026-09-16T13:07:10.669007+00:00,17d2fa99-e6b0-48df-b1b9-e9cdcd4d3fb8,task_08,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_08_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_text_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.02s ==============================
+",,False,False,1,3,0.4705
+2,2026-09-16T13:07:11.170429+00:00,a1afca32-3701-4082-ae7f-fa9fe1df7f41,task_08,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_08_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_text_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.03s ==============================
+",,False,False,1,3,0.4764
+2,2026-09-16T13:07:11.704365+00:00,152984d9-65df-4179-8027-b9e93a55e3dd,task_08,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_08_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_text_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.02s ==============================
+",,False,False,1,3,0.5157
+2,2026-09-16T13:07:12.266573+00:00,4c0d9aa3-8caf-4c72-a310-8d0e9a41a9cc,task_08,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_08_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_text_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.03s ==============================
+",,False,False,1,3,0.5281
+2,2026-09-16T13:07:12.732263+00:00,775033bd-6bc7-4ec5-b0a8-0df599b019e8,task_08,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_08_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 3 items
+
+test_text_utils.py ...                                                   [100%]
+
+============================== 3 passed in 0.02s ==============================
+",,False,False,1,3,0.4516
+2,2026-09-16T13:07:13.293376+00:00,8bd68d8e-d137-4e30-a2f7-ee772ecd1fd2,task_09,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_09_baseline_1
+configfile: .benchmark_pytest.ini
+collected 6 items
+
+test_url_utils.py ......                                                 [100%]
+
+============================== 6 passed in 0.05s ==============================
+",,False,False,1,3,0.5336
+2,2026-09-16T13:07:13.895636+00:00,f12acbc5-0b64-4b6a-b2e9-844fd9c3de5a,task_09,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_09_baseline_2
+configfile: .benchmark_pytest.ini
+collected 6 items
+
+test_url_utils.py ......                                                 [100%]
+
+============================== 6 passed in 0.05s ==============================
+",,False,False,1,3,0.5798
+2,2026-09-16T13:07:14.418732+00:00,81341cae-2d9e-4eec-a314-72c9e67b446d,task_09,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_09_baseline_3
+configfile: .benchmark_pytest.ini
+collected 6 items
+
+test_url_utils.py ......                                                 [100%]
+
+============================== 6 passed in 0.03s ==============================
+",,False,False,1,3,0.4891
+2,2026-09-16T13:07:14.911748+00:00,a1d8e629-2b71-47fa-b083-f2769602f6c4,task_09,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_09_baseline_4
+configfile: .benchmark_pytest.ini
+collected 6 items
+
+test_url_utils.py ......                                                 [100%]
+
+============================== 6 passed in 0.03s ==============================
+",,False,False,1,3,0.4789
+2,2026-09-16T13:07:15.425944+00:00,b49eeaf7-8907-4ed8-b9d1-dc01b37f7257,task_09,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_09_baseline_5
+configfile: .benchmark_pytest.ini
+collected 6 items
+
+test_url_utils.py ......                                                 [100%]
+
+============================== 6 passed in 0.04s ==============================
+",,False,False,1,3,0.4964
+2,2026-09-16T13:07:15.923298+00:00,fb625c2a-78a0-4527-b5fb-14f72399b328,task_09,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_09_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 6 items
+
+test_url_utils.py ......                                                 [100%]
+
+============================== 6 passed in 0.04s ==============================
+",,False,False,1,3,0.4705
+2,2026-09-16T13:07:16.502022+00:00,b64bd26e-5987-4944-a26c-9dd54c79b771,task_09,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_09_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 6 items
+
+test_url_utils.py ......                                                 [100%]
+
+============================== 6 passed in 0.05s ==============================
+",,False,False,1,3,0.5548
+2,2026-09-16T13:07:16.943298+00:00,2bc7bd7c-2ee2-4a09-a043-8cd73dacf72f,task_09,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_09_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 6 items
+
+test_url_utils.py ......                                                 [100%]
+
+============================== 6 passed in 0.03s ==============================
+",,False,False,1,3,0.4213
+2,2026-09-16T13:07:17.429465+00:00,d970b985-5e7c-4b0d-8985-43be59b7430b,task_09,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_09_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 6 items
+
+test_url_utils.py ......                                                 [100%]
+
+============================== 6 passed in 0.03s ==============================
+",,False,False,1,3,0.4724
+2,2026-09-16T13:07:17.887256+00:00,e0dd89aa-fe1e-4bed-9efb-d0681435d627,task_09,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_09_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 6 items
+
+test_url_utils.py ......                                                 [100%]
+
+============================== 6 passed in 0.03s ==============================
+",,False,False,1,3,0.4408
+2,2026-09-16T13:07:18.319709+00:00,2e9c99f7-b387-4d81-9307-4d96d22a0820,task_10,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_10_baseline_1
+configfile: .benchmark_pytest.ini
+collected 6 items
+
+test_csv_utils.py ......                                                 [100%]
+
+============================== 6 passed in 0.03s ==============================
+",,False,False,1,3,0.4184
+2,2026-09-16T13:07:18.793255+00:00,5059a726-5e83-4fba-8e9d-b0cf3e0ab917,task_10,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_10_baseline_2
+configfile: .benchmark_pytest.ini
+collected 6 items
+
+test_csv_utils.py ......                                                 [100%]
+
+============================== 6 passed in 0.05s ==============================
+",,False,False,1,3,0.4501
+2,2026-09-16T13:07:19.337247+00:00,3130e493-9efc-4829-8f84-c129399a6587,task_10,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_10_baseline_3
+configfile: .benchmark_pytest.ini
+collected 6 items
+
+test_csv_utils.py ......                                                 [100%]
+
+============================== 6 passed in 0.03s ==============================
+",,False,False,1,3,0.5253
+2,2026-09-16T13:07:19.827429+00:00,f436d326-7e14-4b90-8525-96cb3b7342f1,task_10,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_10_baseline_4
+configfile: .benchmark_pytest.ini
+collected 6 items
+
+test_csv_utils.py ......                                                 [100%]
+
+============================== 6 passed in 0.02s ==============================
+",,False,False,1,3,0.4689
+2,2026-09-16T13:07:20.308198+00:00,dc88097d-663c-4642-958f-1b6d8cb5acef,task_10,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_10_baseline_5
+configfile: .benchmark_pytest.ini
+collected 6 items
+
+test_csv_utils.py ......                                                 [100%]
+
+============================== 6 passed in 0.03s ==============================
+",,False,False,1,3,0.4679
+2,2026-09-16T13:07:20.804626+00:00,f722bce0-bafc-4871-a871-b70d8c9f5db1,task_10,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_10_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 6 items
+
+test_csv_utils.py ......                                                 [100%]
+
+============================== 6 passed in 0.02s ==============================
+",,False,False,1,3,0.4764
+2,2026-09-16T13:07:21.367509+00:00,c22f2774-3332-4d3e-bd35-924343bb9b05,task_10,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_10_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 6 items
+
+test_csv_utils.py ......                                                 [100%]
+
+============================== 6 passed in 0.07s ==============================
+",,False,False,1,3,0.538
+2,2026-09-16T13:07:21.884833+00:00,b08d88bc-afa9-4773-9e92-3f7ee16c629e,task_10,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_10_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 6 items
+
+test_csv_utils.py ......                                                 [100%]
+
+============================== 6 passed in 0.03s ==============================
+",,False,False,1,3,0.5
+2,2026-09-16T13:07:22.365714+00:00,97e3cf95-3064-48d4-9434-6a7a439c49e1,task_10,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_10_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 6 items
+
+test_csv_utils.py ......                                                 [100%]
+
+============================== 6 passed in 0.03s ==============================
+",,False,False,1,3,0.4621
+2,2026-09-16T13:07:22.857270+00:00,5639e730-4712-4e29-b618-cdf7f5abbc5e,task_10,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_10_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 6 items
+
+test_csv_utils.py ......                                                 [100%]
+
+============================== 6 passed in 0.03s ==============================
+",,False,False,1,3,0.4656
+2,2026-09-16T13:07:23.397729+00:00,68100410-612e-435e-8cd9-111980c65ab3,task_11,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_11_baseline_1
+configfile: .benchmark_pytest.ini
+collected 7 items
+
+test_file_utils.py .......                                               [100%]
+
+============================== 7 passed in 0.07s ==============================
+",,False,False,1,3,0.527
+2,2026-09-16T13:07:24.149185+00:00,d51c43e5-7db7-451b-890e-757f83a0afa1,task_11,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_11_baseline_2
+configfile: .benchmark_pytest.ini
+collected 7 items
+
+test_file_utils.py .......                                               [100%]
+
+============================== 7 passed in 0.10s ==============================
+",,False,False,1,3,0.7014
+2,2026-09-16T13:07:24.742061+00:00,0e0b176e-d415-47d1-a167-40e5815c289a,task_11,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_11_baseline_3
+configfile: .benchmark_pytest.ini
+collected 7 items
+
+test_file_utils.py .......                                               [100%]
+
+============================== 7 passed in 0.11s ==============================
+",,False,False,1,3,0.5751
+2,2026-09-16T13:07:25.359666+00:00,beda5d67-38e7-491b-a64a-2ae3d38a2c7f,task_11,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_11_baseline_4
+configfile: .benchmark_pytest.ini
+collected 7 items
+
+test_file_utils.py .......                                               [100%]
+
+============================== 7 passed in 0.09s ==============================
+",,False,False,1,3,0.5919
+2,2026-09-16T13:07:26.123067+00:00,f1654c3a-a32f-4d48-9028-59eac6829c00,task_11,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_11_baseline_5
+configfile: .benchmark_pytest.ini
+collected 7 items
+
+test_file_utils.py .......                                               [100%]
+
+============================== 7 passed in 0.11s ==============================
+",,False,False,1,3,0.7299
+2,2026-09-16T13:07:26.693649+00:00,b45a2067-0c49-4939-854a-25108aacab37,task_11,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_11_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 7 items
+
+test_file_utils.py .......                                               [100%]
+
+============================== 7 passed in 0.09s ==============================
+",,False,False,1,3,0.5343
+2,2026-09-16T13:07:27.208217+00:00,fae61381-004c-47c2-a297-8e68141cafe3,task_11,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_11_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 7 items
+
+test_file_utils.py .......                                               [100%]
+
+============================== 7 passed in 0.06s ==============================
+",,False,False,1,3,0.4757
+2,2026-09-16T13:07:27.731762+00:00,d1d758a0-e3df-40c0-aeec-68b455fa8f50,task_11,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_11_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 7 items
+
+test_file_utils.py .......                                               [100%]
+
+============================== 7 passed in 0.06s ==============================
+",,False,False,1,3,0.5035
+2,2026-09-16T13:07:28.395051+00:00,acc3b7f9-5476-4722-81be-b6f7d7d6aac4,task_11,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_11_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 7 items
+
+test_file_utils.py .......                                               [100%]
+
+============================== 7 passed in 0.09s ==============================
+",,False,False,1,3,0.6474
+2,2026-09-16T13:07:28.939887+00:00,e7adeba7-9163-4e1b-947e-875dbaf7c734,task_11,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_11_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 7 items
+
+test_file_utils.py .......                                               [100%]
+
+============================== 7 passed in 0.07s ==============================
+",,False,False,1,3,0.5019
+2,2026-09-16T13:07:29.427193+00:00,1c47bba4-677b-414e-92f1-da32be03cae4,task_12,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_12_baseline_1
+configfile: .benchmark_pytest.ini
+collected 7 items
+
+test_config_utils.py .......                                             [100%]
+
+============================== 7 passed in 0.03s ==============================
+",,False,False,1,3,0.4571
+2,2026-09-16T13:07:29.947535+00:00,ada045af-2a54-43ab-86e7-48532c2602a8,task_12,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_12_baseline_2
+configfile: .benchmark_pytest.ini
+collected 7 items
+
+test_config_utils.py .......                                             [100%]
+
+============================== 7 passed in 0.03s ==============================
+",,False,False,1,3,0.4886
+2,2026-09-16T13:07:30.457071+00:00,c134d9d3-4d00-4d39-a61e-f8f2bcb48df1,task_12,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_12_baseline_3
+configfile: .benchmark_pytest.ini
+collected 7 items
+
+test_config_utils.py .......                                             [100%]
+
+============================== 7 passed in 0.03s ==============================
+",,False,False,1,3,0.4614
+2,2026-09-16T13:07:31.013842+00:00,8ef07563-7c90-43fb-a3ef-f5d9239c25a0,task_12,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_12_baseline_4
+configfile: .benchmark_pytest.ini
+collected 7 items
+
+test_config_utils.py .......                                             [100%]
+
+============================== 7 passed in 0.04s ==============================
+",,False,False,1,3,0.5264
+2,2026-09-16T13:07:31.425715+00:00,9b9bd7a3-809a-431f-88bb-f91a685340fe,task_12,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_12_baseline_5
+configfile: .benchmark_pytest.ini
+collected 7 items
+
+test_config_utils.py .......                                             [100%]
+
+============================== 7 passed in 0.02s ==============================
+",,False,False,1,3,0.3866
+2,2026-09-16T13:07:31.919254+00:00,29f81dbd-63a0-4130-99a6-3838804ec3cd,task_12,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_12_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 7 items
+
+test_config_utils.py .......                                             [100%]
+
+============================== 7 passed in 0.02s ==============================
+",,False,False,1,3,0.4784
+2,2026-09-16T13:07:32.353718+00:00,a804f6aa-ce35-4e14-87ef-dd0ce8d86bc2,task_12,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_12_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 7 items
+
+test_config_utils.py .......                                             [100%]
+
+============================== 7 passed in 0.04s ==============================
+",,False,False,1,3,0.4166
+2,2026-09-16T13:07:32.851771+00:00,8a58d60c-6c63-44fb-911d-ecc20b4b3d6c,task_12,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_12_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 7 items
+
+test_config_utils.py .......                                             [100%]
+
+============================== 7 passed in 0.04s ==============================
+",,False,False,1,3,0.4737
+2,2026-09-16T13:07:33.325580+00:00,5b9d6fbb-6e0e-4ded-89f7-700a3f6734ad,task_12,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_12_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 7 items
+
+test_config_utils.py .......                                             [100%]
+
+============================== 7 passed in 0.02s ==============================
+",,False,False,1,3,0.4575
+2,2026-09-16T13:07:33.828306+00:00,2a6c690d-708d-4409-9cd5-d9c43bb311ba,task_12,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_12_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 7 items
+
+test_config_utils.py .......                                             [100%]
+
+============================== 7 passed in 0.05s ==============================
+",,False,False,1,3,0.4854
+2,2026-09-16T13:07:34.328457+00:00,c0f6b289-3c10-4f90-950a-2c710432b9b2,task_13,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_13_baseline_1
+configfile: .benchmark_pytest.ini
+collected 28 items
+
+test_validation_utils.py ............................                    [100%]
+
+============================= 28 passed in 0.05s ==============================
+",,False,False,1,3,0.4602
+2,2026-09-16T13:07:34.814796+00:00,fc00938d-3ff6-4c19-835a-76206a9e7091,task_13,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_13_baseline_2
+configfile: .benchmark_pytest.ini
+collected 28 items
+
+test_validation_utils.py ............................                    [100%]
+
+============================= 28 passed in 0.06s ==============================
+",,False,False,1,3,0.4685
+2,2026-09-16T13:07:35.287847+00:00,cad27d41-1ed2-47c5-a9c0-8f7940dd0237,task_13,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_13_baseline_3
+configfile: .benchmark_pytest.ini
+collected 28 items
+
+test_validation_utils.py ............................                    [100%]
+
+============================= 28 passed in 0.05s ==============================
+",,False,False,1,3,0.4529
+2,2026-09-16T13:07:35.794364+00:00,79ccfa27-670f-4488-9771-78e9862991a4,task_13,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_13_baseline_4
+configfile: .benchmark_pytest.ini
+collected 28 items
+
+test_validation_utils.py ............................                    [100%]
+
+============================= 28 passed in 0.05s ==============================
+",,False,False,1,3,0.4887
+2,2026-09-16T13:07:36.328469+00:00,0b1f3411-6c8d-4b89-b599-0e7b8ed83b01,task_13,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_13_baseline_5
+configfile: .benchmark_pytest.ini
+collected 28 items
+
+test_validation_utils.py ............................                    [100%]
+
+============================= 28 passed in 0.06s ==============================
+",,False,False,1,3,0.5004
+2,2026-09-16T13:07:36.847045+00:00,cf62dec1-1a8b-486d-9764-8975410bf859,task_13,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_13_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 28 items
+
+test_validation_utils.py ............................                    [100%]
+
+============================= 28 passed in 0.06s ==============================
+",,False,False,1,3,0.4972
+2,2026-09-16T13:07:37.367955+00:00,e32c80e7-5c85-4211-8273-51cdcef34124,task_13,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_13_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 28 items
+
+test_validation_utils.py ............................                    [100%]
+
+============================= 28 passed in 0.06s ==============================
+",,False,False,1,3,0.5046
+2,2026-09-16T13:07:37.887739+00:00,7a0061c3-855d-403a-8022-0472fae9ba87,task_13,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_13_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 28 items
+
+test_validation_utils.py ............................                    [100%]
+
+============================= 28 passed in 0.06s ==============================
+",,False,False,1,3,0.4948
+2,2026-09-16T13:07:38.409937+00:00,07727f01-c589-4783-91f4-93cf764ceb7a,task_13,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_13_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 28 items
+
+test_validation_utils.py ............................                    [100%]
+
+============================= 28 passed in 0.05s ==============================
+",,False,False,1,3,0.5059
+2,2026-09-16T13:07:38.930582+00:00,890ffd75-b86c-4039-8ed8-e9c00ec28195,task_13,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_13_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 28 items
+
+test_validation_utils.py ............................                    [100%]
+
+============================= 28 passed in 0.06s ==============================
+",,False,False,1,3,0.4975
+2,2026-09-16T13:07:39.519089+00:00,a8dca69b-7243-417f-b0ac-a5257d1b3c5e,task_14,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_14_baseline_1
+configfile: .benchmark_pytest.ini
+collected 42 items
+
+test_string_utils.py .....................                               [ 50%]
+test_string_utils_task14.py .....................                        [100%]
+
+============================= 42 passed in 0.08s ==============================
+",,False,False,1,3,0.5516
+2,2026-09-16T13:07:40.212964+00:00,49cc6700-a6ca-4566-b040-1e7d4146d16b,task_14,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_14_baseline_2
+configfile: .benchmark_pytest.ini
+collected 42 items
+
+test_string_utils.py .....................                               [ 50%]
+test_string_utils_task14.py .....................                        [100%]
+
+============================= 42 passed in 0.09s ==============================
+",,False,False,1,3,0.635
+2,2026-09-16T13:07:40.789441+00:00,2b938534-8d4b-419f-9bf7-d9d14d907bb9,task_14,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_14_baseline_3
+configfile: .benchmark_pytest.ini
+collected 42 items
+
+test_string_utils.py .....................                               [ 50%]
+test_string_utils_task14.py .....................                        [100%]
+
+============================= 42 passed in 0.12s ==============================
+",,False,False,1,3,0.5253
+2,2026-09-16T13:07:41.333862+00:00,469f0d69-c8eb-4908-bb66-ce1e2250672b,task_14,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_14_baseline_4
+configfile: .benchmark_pytest.ini
+collected 42 items
+
+test_string_utils.py .....................                               [ 50%]
+test_string_utils_task14.py .....................                        [100%]
+
+============================= 42 passed in 0.10s ==============================
+",,False,False,1,3,0.4974
+2,2026-09-16T13:07:41.893112+00:00,4dd38d61-cc20-4aae-a0af-d98d8868914f,task_14,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_14_baseline_5
+configfile: .benchmark_pytest.ini
+collected 42 items
+
+test_string_utils.py .....................                               [ 50%]
+test_string_utils_task14.py .....................                        [100%]
+
+============================= 42 passed in 0.13s ==============================
+",,False,False,1,3,0.5276
+2,2026-09-16T13:07:42.506642+00:00,614d8ae7-f58a-47be-97c3-6267af0a69ce,task_14,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_14_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 42 items
+
+test_string_utils.py .....................                               [ 50%]
+test_string_utils_task14.py .....................                        [100%]
+
+============================= 42 passed in 0.12s ==============================
+",,False,False,1,3,0.5858
+2,2026-09-16T13:07:43.030759+00:00,731c09f7-fbda-4a42-879d-5eb31fd4738e,task_14,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_14_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 42 items
+
+test_string_utils.py .....................                               [ 50%]
+test_string_utils_task14.py .....................                        [100%]
+
+============================= 42 passed in 0.10s ==============================
+",,False,False,1,3,0.4971
+2,2026-09-16T13:07:43.598388+00:00,2b75bbb9-6d29-4856-922f-0e74bdfa0287,task_14,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_14_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 42 items
+
+test_string_utils.py .....................                               [ 50%]
+test_string_utils_task14.py .....................                        [100%]
+
+============================= 42 passed in 0.09s ==============================
+",,False,False,1,3,0.5219
+2,2026-09-16T13:07:44.112623+00:00,48f88c47-f8ec-437d-83a1-6fea89765414,task_14,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_14_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 42 items
+
+test_string_utils.py .....................                               [ 50%]
+test_string_utils_task14.py .....................                        [100%]
+
+============================= 42 passed in 0.08s ==============================
+",,False,False,1,3,0.4965
+2,2026-09-16T13:07:44.623157+00:00,f9763e7f-3eed-4fdb-820a-4ea910b5fd88,task_14,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_14_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 42 items
+
+test_string_utils.py .....................                               [ 50%]
+test_string_utils_task14.py .....................                        [100%]
+
+============================= 42 passed in 0.08s ==============================
+",,False,False,1,3,0.4933
+2,2026-09-16T13:07:45.109862+00:00,2a6646df-31a8-4220-ab65-a4f9012d54eb,task_15,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_15_baseline_1
+configfile: .benchmark_pytest.ini
+collected 15 items
+
+test_sql_utils.py ...............                                        [100%]
+
+============================= 15 passed in 0.04s ==============================
+",,False,False,1,3,0.4671
+2,2026-09-16T13:07:45.634975+00:00,58b85177-d7b5-42b3-a664-6f07c8547fb8,task_15,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_15_baseline_2
+configfile: .benchmark_pytest.ini
+collected 15 items
+
+test_sql_utils.py ...............                                        [100%]
+
+============================= 15 passed in 0.04s ==============================
+",,False,False,1,3,0.4754
+2,2026-09-16T13:07:46.157804+00:00,47ebcf4f-b3cf-485c-ad5b-47afa753da41,task_15,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_15_baseline_3
+configfile: .benchmark_pytest.ini
+collected 15 items
+
+test_sql_utils.py ...............                                        [100%]
+
+============================= 15 passed in 0.05s ==============================
+",,False,False,1,3,0.5068
+2,2026-09-16T13:07:46.640084+00:00,8e63418a-87fa-4758-93d9-3b9840852b85,task_15,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_15_baseline_4
+configfile: .benchmark_pytest.ini
+collected 15 items
+
+test_sql_utils.py ...............                                        [100%]
+
+============================= 15 passed in 0.05s ==============================
+",,False,False,1,3,0.4566
+2,2026-09-16T13:07:47.131916+00:00,a9deb592-e0bb-4613-9a04-ec1261ab893a,task_15,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_15_baseline_5
+configfile: .benchmark_pytest.ini
+collected 15 items
+
+test_sql_utils.py ...............                                        [100%]
+
+============================= 15 passed in 0.04s ==============================
+",,False,False,1,3,0.4695
+2,2026-09-16T13:07:47.654719+00:00,ea891147-7000-4793-a4e3-4c8e6f70e4ca,task_15,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_15_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 15 items
+
+test_sql_utils.py ...............                                        [100%]
+
+============================= 15 passed in 0.04s ==============================
+",,False,False,1,3,0.5079
+2,2026-09-16T13:07:48.100489+00:00,787f81f8-f221-491f-8b93-29ff3897faf2,task_15,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_15_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 15 items
+
+test_sql_utils.py ...............                                        [100%]
+
+============================= 15 passed in 0.04s ==============================
+",,False,False,1,3,0.4297
+2,2026-09-16T13:07:48.610302+00:00,30b7437a-d5dd-40e1-9fcd-de4916aa2fb0,task_15,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_15_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 15 items
+
+test_sql_utils.py ...............                                        [100%]
+
+============================= 15 passed in 0.04s ==============================
+",,False,False,1,3,0.4958
+2,2026-09-16T13:07:49.067826+00:00,23e75330-ef69-48a6-ae0b-c6ae70511601,task_15,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_15_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 15 items
+
+test_sql_utils.py ...............                                        [100%]
+
+============================= 15 passed in 0.04s ==============================
+",,False,False,1,3,0.4374
+2,2026-09-16T13:07:49.602493+00:00,3a24d50e-9cd4-4521-a98b-497494ea8911,task_15,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_15_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 15 items
+
+test_sql_utils.py ...............                                        [100%]
+
+============================= 15 passed in 0.05s ==============================
+",,False,False,1,3,0.5203
+2,2026-09-16T13:07:50.449960+00:00,2cce9f69-9415-40a4-a27b-fa0771cd4444,task_16,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_16_baseline_1
+configfile: .benchmark_pytest.ini
+collected 13 items
+
+test_auth_utils.py .............                                         [100%]
+
+============================= 13 passed in 0.45s ==============================
+",,False,False,1,3,0.8322
+2,2026-09-16T13:07:51.237922+00:00,a1a0bfa0-76ab-4edf-8b84-4f45f80b8fcf,task_16,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_16_baseline_2
+configfile: .benchmark_pytest.ini
+collected 13 items
+
+test_auth_utils.py .............                                         [100%]
+
+============================= 13 passed in 0.38s ==============================
+",,False,False,1,3,0.7623
+2,2026-09-16T13:07:52.077658+00:00,e1d2f656-0ebf-4825-8c5d-28323ada8f93,task_16,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_16_baseline_3
+configfile: .benchmark_pytest.ini
+collected 13 items
+
+test_auth_utils.py .............                                         [100%]
+
+============================= 13 passed in 0.39s ==============================
+",,False,False,1,3,0.8135
+2,2026-09-16T13:07:52.913160+00:00,313bbb20-eb12-47cd-8297-abf550a25882,task_16,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_16_baseline_4
+configfile: .benchmark_pytest.ini
+collected 13 items
+
+test_auth_utils.py .............                                         [100%]
+
+============================= 13 passed in 0.40s ==============================
+",,False,False,1,3,0.7929
+2,2026-09-16T13:07:53.717124+00:00,e88636da-b0db-4307-91b6-a124139ddd5e,task_16,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_16_baseline_5
+configfile: .benchmark_pytest.ini
+collected 13 items
+
+test_auth_utils.py .............                                         [100%]
+
+============================= 13 passed in 0.40s ==============================
+",,False,False,1,3,0.7823
+2,2026-09-16T13:07:54.549059+00:00,f1bfa046-37ac-4a06-bc34-17256344d6c6,task_16,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_16_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 13 items
+
+test_auth_utils.py .............                                         [100%]
+
+============================= 13 passed in 0.40s ==============================
+",,False,False,1,3,0.8181
+2,2026-09-16T13:07:55.357363+00:00,af1fcdf4-1a3a-4a9e-a35e-f9ae50c587a2,task_16,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_16_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 13 items
+
+test_auth_utils.py .............                                         [100%]
+
+============================= 13 passed in 0.38s ==============================
+",,False,False,1,3,0.7716
+2,2026-09-16T13:07:56.189559+00:00,33b76736-a6f1-402e-9a47-e2ad3808dbd3,task_16,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_16_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 13 items
+
+test_auth_utils.py .............                                         [100%]
+
+============================= 13 passed in 0.40s ==============================
+",,False,False,1,3,0.8071
+2,2026-09-16T13:07:57.021669+00:00,1f8233f7-8226-4da4-843f-5aff2ce363ed,task_16,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_16_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 13 items
+
+test_auth_utils.py .............                                         [100%]
+
+============================= 13 passed in 0.39s ==============================
+",,False,False,1,3,0.7993
+2,2026-09-16T13:07:57.860107+00:00,976d67d8-b1b5-4727-9795-9146e11c3a6b,task_16,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_16_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 13 items
+
+test_auth_utils.py .............                                         [100%]
+
+============================= 13 passed in 0.39s ==============================
+",,False,False,1,3,0.8027
+2,2026-09-16T13:07:58.398259+00:00,d22d49d2-7744-464c-9999-3f7209482d51,task_17,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_17_baseline_1
+configfile: .benchmark_pytest.ini
+collected 13 items
+
+test_retry_utils.py .............                                        [100%]
+
+============================= 13 passed in 0.03s ==============================
+",,False,False,1,3,0.495
+2,2026-09-16T13:07:58.897743+00:00,c5d9d865-ba3e-4a31-b78c-f76f37377f2a,task_17,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_17_baseline_2
+configfile: .benchmark_pytest.ini
+collected 13 items
+
+test_retry_utils.py .............                                        [100%]
+
+============================= 13 passed in 0.04s ==============================
+",,False,False,1,3,0.4864
+2,2026-09-16T13:07:59.389151+00:00,9646fb18-b564-4ab8-b6f3-23c49b3bd534,task_17,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_17_baseline_3
+configfile: .benchmark_pytest.ini
+collected 13 items
+
+test_retry_utils.py .............                                        [100%]
+
+============================= 13 passed in 0.04s ==============================
+",,False,False,1,3,0.4578
+2,2026-09-16T13:07:59.861284+00:00,200eb832-7354-485e-bc5c-6589f577fa4e,task_17,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_17_baseline_4
+configfile: .benchmark_pytest.ini
+collected 13 items
+
+test_retry_utils.py .............                                        [100%]
+
+============================= 13 passed in 0.04s ==============================
+",,False,False,1,3,0.4521
+2,2026-09-16T13:08:00.362094+00:00,9e54d26c-8043-4fd7-928d-683ba13814bc,task_17,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_17_baseline_5
+configfile: .benchmark_pytest.ini
+collected 13 items
+
+test_retry_utils.py .............                                        [100%]
+
+============================= 13 passed in 0.03s ==============================
+",,False,False,1,3,0.4794
+2,2026-09-16T13:08:00.924728+00:00,ec0e47a4-f9c6-4c7c-91c3-8827089414d6,task_17,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_17_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 13 items
+
+test_retry_utils.py .............                                        [100%]
+
+============================= 13 passed in 0.03s ==============================
+",,False,False,1,3,0.5275
+2,2026-09-16T13:08:01.431849+00:00,8fdc11e8-53b1-4b7b-b9fa-10065c926fbd,task_17,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_17_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 13 items
+
+test_retry_utils.py .............                                        [100%]
+
+============================= 13 passed in 0.04s ==============================
+",,False,False,1,3,0.4672
+2,2026-09-16T13:08:01.938607+00:00,96357d40-2f5e-4d30-a54c-b4185ea9a628,task_17,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_17_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 13 items
+
+test_retry_utils.py .............                                        [100%]
+
+============================= 13 passed in 0.04s ==============================
+",,False,False,1,3,0.4911
+2,2026-09-16T13:08:02.430598+00:00,6377ee88-de43-40be-85ce-27faed0e9358,task_17,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_17_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 13 items
+
+test_retry_utils.py .............                                        [100%]
+
+============================= 13 passed in 0.03s ==============================
+",,False,False,1,3,0.4668
+2,2026-09-16T13:08:02.957044+00:00,cd7508fc-a19e-4549-bf26-0495716a38f5,task_17,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_17_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 13 items
+
+test_retry_utils.py .............                                        [100%]
+
+============================= 13 passed in 0.05s ==============================
+",,False,False,1,3,0.5131
+2,2026-09-16T13:08:03.447353+00:00,9f99dfa1-e863-4527-bb06-181e68276de4,task_18,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_18_baseline_1
+configfile: .benchmark_pytest.ini
+collected 11 items
+
+test_cache_utils.py ...........                                          [100%]
+
+============================= 11 passed in 0.05s ==============================
+",,False,False,1,3,0.4723
+2,2026-09-16T13:08:03.932133+00:00,21d68b2b-fbcf-4a35-b243-4ffff1f9829a,task_18,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_18_baseline_2
+configfile: .benchmark_pytest.ini
+collected 11 items
+
+test_cache_utils.py ...........                                          [100%]
+
+============================= 11 passed in 0.03s ==============================
+",,False,False,1,3,0.4639
+2,2026-09-16T13:08:04.438240+00:00,ead770ea-63bc-447d-a375-d3ef230f08a3,task_18,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_18_baseline_3
+configfile: .benchmark_pytest.ini
+collected 11 items
+
+test_cache_utils.py ...........                                          [100%]
+
+============================= 11 passed in 0.04s ==============================
+",,False,False,1,3,0.4889
+2,2026-09-16T13:08:04.871380+00:00,a0788c8a-fe00-4ec1-8af0-59fb6815c7f2,task_18,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_18_baseline_4
+configfile: .benchmark_pytest.ini
+collected 11 items
+
+test_cache_utils.py ...........                                          [100%]
+
+============================= 11 passed in 0.04s ==============================
+",,False,False,1,3,0.4202
+2,2026-09-16T13:08:05.383355+00:00,3ae7d50a-108c-4e97-86b6-b9b98bdc78a7,task_18,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_18_baseline_5
+configfile: .benchmark_pytest.ini
+collected 11 items
+
+test_cache_utils.py ...........                                          [100%]
+
+============================= 11 passed in 0.05s ==============================
+",,False,False,1,3,0.4967
+2,2026-09-16T13:08:05.884827+00:00,52df2a01-8abd-4768-9a6b-7f42d6987414,task_18,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_18_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 11 items
+
+test_cache_utils.py ...........                                          [100%]
+
+============================= 11 passed in 0.03s ==============================
+",,False,False,1,3,0.4857
+2,2026-09-16T13:08:06.373201+00:00,19cd00fa-f0c9-48f8-86d7-46a2c0e17daa,task_18,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_18_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 11 items
+
+test_cache_utils.py ...........                                          [100%]
+
+============================= 11 passed in 0.04s ==============================
+",,False,False,1,3,0.4529
+2,2026-09-16T13:08:06.872066+00:00,e488e82c-2e2c-4dc8-bd42-fc6163cf2bc2,task_18,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_18_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 11 items
+
+test_cache_utils.py ...........                                          [100%]
+
+============================= 11 passed in 0.04s ==============================
+",,False,False,1,3,0.4768
+2,2026-09-16T13:08:07.431476+00:00,da9643ca-01c0-49b8-b115-bef853ad7780,task_18,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_18_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 11 items
+
+test_cache_utils.py ...........                                          [100%]
+
+============================= 11 passed in 0.05s ==============================
+",,False,False,1,3,0.5198
+2,2026-09-16T13:08:07.962349+00:00,7f6092aa-930c-4ff0-90bc-b6235757db10,task_18,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_18_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 11 items
+
+test_cache_utils.py ...........                                          [100%]
+
+============================= 11 passed in 0.05s ==============================
+",,False,False,1,3,0.5122
+2,2026-09-16T13:08:08.502350+00:00,8098af1f-1362-4c2d-9746-e7e4837e6db3,task_19,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_19_baseline_1
+configfile: .benchmark_pytest.ini
+collected 19 items
+
+test_bug_utils.py ...................                                    [100%]
+
+============================= 19 passed in 0.05s ==============================
+",,False,False,1,3,0.5068
+2,2026-09-16T13:08:09.031794+00:00,867d9654-77c7-46fd-9620-e46faf79a565,task_19,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_19_baseline_2
+configfile: .benchmark_pytest.ini
+collected 19 items
+
+test_bug_utils.py ...................                                    [100%]
+
+============================= 19 passed in 0.05s ==============================
+",,False,False,1,3,0.4847
+2,2026-09-16T13:08:09.515968+00:00,c2b29ea2-d2b2-487a-b788-37bd6a8a9144,task_19,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_19_baseline_3
+configfile: .benchmark_pytest.ini
+collected 19 items
+
+test_bug_utils.py ...................                                    [100%]
+
+============================= 19 passed in 0.06s ==============================
+",,False,False,1,3,0.4683
+2,2026-09-16T13:08:09.929847+00:00,5f8e57e7-02c9-424d-82ce-6cb46cba650d,task_19,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_19_baseline_4
+configfile: .benchmark_pytest.ini
+collected 19 items
+
+test_bug_utils.py ...................                                    [100%]
+
+============================= 19 passed in 0.04s ==============================
+",,False,False,1,3,0.3941
+2,2026-09-16T13:08:10.412045+00:00,152a43bd-11e3-4223-b282-b82b123892dc,task_19,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_19_baseline_5
+configfile: .benchmark_pytest.ini
+collected 19 items
+
+test_bug_utils.py ...................                                    [100%]
+
+============================= 19 passed in 0.04s ==============================
+",,False,False,1,3,0.4674
+2,2026-09-16T13:08:10.914976+00:00,ca354831-395b-4b36-a2a7-a78d733afe92,task_19,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_19_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 19 items
+
+test_bug_utils.py ...................                                    [100%]
+
+============================= 19 passed in 0.05s ==============================
+",,False,False,1,3,0.4883
+2,2026-09-16T13:08:11.383527+00:00,46d3a8a8-d963-4824-9565-4d59bab1cccc,task_19,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_19_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 19 items
+
+test_bug_utils.py ...................                                    [100%]
+
+============================= 19 passed in 0.04s ==============================
+",,False,False,1,3,0.4389
+2,2026-09-16T13:08:11.855922+00:00,d544ade6-f7c6-49de-9985-409c546862b9,task_19,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_19_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 19 items
+
+test_bug_utils.py ...................                                    [100%]
+
+============================= 19 passed in 0.06s ==============================
+",,False,False,1,3,0.4588
+2,2026-09-16T13:08:12.340577+00:00,83a814a6-85c6-4d43-8329-ab039ed1c458,task_19,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_19_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 19 items
+
+test_bug_utils.py ...................                                    [100%]
+
+============================= 19 passed in 0.05s ==============================
+",,False,False,1,3,0.4678
+2,2026-09-16T13:08:12.858558+00:00,e67ef1a9-21f4-441c-9acf-9a0ad0f09137,task_19,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_19_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 19 items
+
+test_bug_utils.py ...................                                    [100%]
+
+============================= 19 passed in 0.06s ==============================
+",,False,False,1,3,0.5035
+2,2026-09-16T13:08:13.327424+00:00,64defd97-3e67-43ca-a268-39433e640530,task_20,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_20_baseline_1
+configfile: .benchmark_pytest.ini
+collected 15 items
+
+test_feature.py ...............                                          [100%]
+
+============================= 15 passed in 0.05s ==============================
+",,False,False,1,3,0.451
+2,2026-09-16T13:08:13.767310+00:00,79aeb6d6-6c33-42f7-b85a-cad4e7b808cf,task_20,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_20_baseline_2
+configfile: .benchmark_pytest.ini
+collected 15 items
+
+test_feature.py ...............                                          [100%]
+
+============================= 15 passed in 0.04s ==============================
+",,False,False,1,3,0.4129
+2,2026-09-16T13:08:14.277748+00:00,8e5f449d-ea14-4fa3-9a1a-ac92ae603321,task_20,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_20_baseline_3
+configfile: .benchmark_pytest.ini
+collected 15 items
+
+test_feature.py ...............                                          [100%]
+
+============================= 15 passed in 0.04s ==============================
+",,False,False,1,3,0.4849
+2,2026-09-16T13:08:14.724168+00:00,8414e140-44b3-4aa3-adc9-2a29d42fc399,task_20,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_20_baseline_4
+configfile: .benchmark_pytest.ini
+collected 15 items
+
+test_feature.py ...............                                          [100%]
+
+============================= 15 passed in 0.05s ==============================
+",,False,False,1,3,0.4212
+2,2026-09-16T13:08:15.324700+00:00,998fcc14-39a2-4fd2-a417-267c2f91e770,task_20,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_20_baseline_5
+configfile: .benchmark_pytest.ini
+collected 15 items
+
+test_feature.py ...............                                          [100%]
+
+============================= 15 passed in 0.04s ==============================
+",,False,False,1,3,0.5521
+2,2026-09-16T13:08:15.880809+00:00,9475d006-eb4b-41c6-a035-9b00ea5eb953,task_20,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_20_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 15 items
+
+test_feature.py ...............                                          [100%]
+
+============================= 15 passed in 0.06s ==============================
+",,False,False,1,3,0.4992
+2,2026-09-16T13:08:16.398384+00:00,f3948bbc-f3fe-438b-9cfd-0aa1552d594c,task_20,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_20_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 15 items
+
+test_feature.py ...............                                          [100%]
+
+============================= 15 passed in 0.06s ==============================
+",,False,False,1,3,0.4997
+2,2026-09-16T13:08:16.847578+00:00,4162b697-38e6-4b99-8fab-a2be37f00045,task_20,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_20_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 15 items
+
+test_feature.py ...............                                          [100%]
+
+============================= 15 passed in 0.03s ==============================
+",,False,False,1,3,0.4274
+2,2026-09-16T13:08:17.346838+00:00,fa3f77b1-1b06-4472-bea5-7cadce8b58a8,task_20,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_20_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 15 items
+
+test_feature.py ...............                                          [100%]
+
+============================= 15 passed in 0.04s ==============================
+",,False,False,1,3,0.4555
+2,2026-09-16T13:08:17.820812+00:00,419d3d22-46eb-482b-a461-3c6c2649e901,task_20,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_20_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 15 items
+
+test_feature.py ...............                                          [100%]
+
+============================= 15 passed in 0.05s ==============================
+",,False,False,1,3,0.4408
+2,2026-09-16T13:08:18.313351+00:00,351ec500-b56b-4afc-9daa-f475dd3f41c1,task_21,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_21_baseline_1
+configfile: .benchmark_pytest.ini
+collected 21 items
+
+test_text_utils.py .....................                                 [100%]
+
+============================= 21 passed in 0.05s ==============================
+",,False,False,1,3,0.4772
+2,2026-09-16T13:08:18.844295+00:00,511dccab-387d-49b0-b2aa-e8e364be6fd4,task_21,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_21_baseline_2
+configfile: .benchmark_pytest.ini
+collected 21 items
+
+test_text_utils.py .....................                                 [100%]
+
+============================= 21 passed in 0.06s ==============================
+",,False,False,1,3,0.485
+2,2026-09-16T13:08:19.401054+00:00,5a37221a-093c-4805-b7e1-8e8cddedfd51,task_21,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_21_baseline_3
+configfile: .benchmark_pytest.ini
+collected 21 items
+
+test_text_utils.py .....................                                 [100%]
+
+============================= 21 passed in 0.07s ==============================
+",,False,False,1,3,0.5237
+2,2026-09-16T13:08:19.876855+00:00,946cc9e2-a4e8-46ce-9e4b-a783c6d055c0,task_21,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_21_baseline_4
+configfile: .benchmark_pytest.ini
+collected 21 items
+
+test_text_utils.py .....................                                 [100%]
+
+============================= 21 passed in 0.04s ==============================
+",,False,False,1,3,0.4245
+2,2026-09-16T13:08:20.398104+00:00,4458ec0f-aa68-42ae-88f0-eb41bc5be781,task_21,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_21_baseline_5
+configfile: .benchmark_pytest.ini
+collected 21 items
+
+test_text_utils.py .....................                                 [100%]
+
+============================= 21 passed in 0.05s ==============================
+",,False,False,1,3,0.492
+2,2026-09-16T13:08:20.914688+00:00,18423364-6924-4771-8cab-c0be8ef67642,task_21,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_21_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 21 items
+
+test_text_utils.py .....................                                 [100%]
+
+============================= 21 passed in 0.04s ==============================
+",,False,False,1,3,0.5012
+2,2026-09-16T13:08:21.556491+00:00,045bd8e1-b032-4fff-a876-5e09a061589c,task_21,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_21_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 21 items
+
+test_text_utils.py .....................                                 [100%]
+
+============================= 21 passed in 0.05s ==============================
+",,False,False,1,3,0.6136
+2,2026-09-16T13:08:22.010799+00:00,39c77ac8-3acd-473b-a17b-cc1ec47f1ecf,task_21,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_21_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 21 items
+
+test_text_utils.py .....................                                 [100%]
+
+============================= 21 passed in 0.06s ==============================
+",,False,False,1,3,0.4272
+2,2026-09-16T13:08:22.605642+00:00,a2712c78-0a8d-414b-898c-57e9b504ed8f,task_21,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_21_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 21 items
+
+test_text_utils.py .....................                                 [100%]
+
+============================= 21 passed in 0.05s ==============================
+",,False,False,1,3,0.5787
+2,2026-09-16T13:08:23.190138+00:00,3aa42a6f-6025-446a-a2ca-2d1ac4e62b9f,task_21,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_21_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 21 items
+
+test_text_utils.py .....................                                 [100%]
+
+============================= 21 passed in 0.09s ==============================
+",,False,False,1,3,0.5523
+2,2026-09-16T13:08:23.780073+00:00,e9f40365-5ea7-46b2-abeb-11b88ce78c55,task_22,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_22_baseline_1
+configfile: .benchmark_pytest.ini
+collected 43 items
+
+test_cache_utils.py ..................                                   [ 41%]
+test_config_utils.py .........................                           [100%]
+
+============================= 43 passed in 0.11s ==============================
+",,False,False,1,3,0.5586
+2,2026-09-16T13:08:24.325345+00:00,6957f515-474d-45c3-9dd4-6bbc6205975b,task_22,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_22_baseline_2
+configfile: .benchmark_pytest.ini
+collected 43 items
+
+test_cache_utils.py ..................                                   [ 41%]
+test_config_utils.py .........................                           [100%]
+
+============================= 43 passed in 0.11s ==============================
+",,False,False,1,3,0.5227
+2,2026-09-16T13:08:24.909253+00:00,5bbba1aa-475b-4022-a689-eeb708a5e7c3,task_22,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_22_baseline_3
+configfile: .benchmark_pytest.ini
+collected 43 items
+
+test_cache_utils.py ..................                                   [ 41%]
+test_config_utils.py .........................                           [100%]
+
+============================= 43 passed in 0.10s ==============================
+",,False,False,1,3,0.5392
+2,2026-09-16T13:08:25.467409+00:00,367100a4-adb4-4008-8004-3fc221efaad7,task_22,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_22_baseline_4
+configfile: .benchmark_pytest.ini
+collected 43 items
+
+test_cache_utils.py ..................                                   [ 41%]
+test_config_utils.py .........................                           [100%]
+
+============================= 43 passed in 0.12s ==============================
+",,False,False,1,3,0.5277
+2,2026-09-16T13:08:26.105822+00:00,445c3d2b-dc69-407a-af03-14ceb6b042f3,task_22,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_22_baseline_5
+configfile: .benchmark_pytest.ini
+collected 43 items
+
+test_cache_utils.py ..................                                   [ 41%]
+test_config_utils.py .........................                           [100%]
+
+============================= 43 passed in 0.13s ==============================
+",,False,False,1,3,0.5931
+2,2026-09-16T13:08:26.745271+00:00,a10c9e4a-e4bb-4089-95f8-312d42fb52e3,task_22,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_22_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 43 items
+
+test_cache_utils.py ..................                                   [ 41%]
+test_config_utils.py .........................                           [100%]
+
+============================= 43 passed in 0.11s ==============================
+",,False,False,1,3,0.5645
+2,2026-09-16T13:08:27.310203+00:00,5b924151-9b73-4fd5-b787-5f29eb5ad9e7,task_22,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_22_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 43 items
+
+test_cache_utils.py ..................                                   [ 41%]
+test_config_utils.py .........................                           [100%]
+
+============================= 43 passed in 0.11s ==============================
+",,False,False,1,3,0.5166
+2,2026-09-16T13:08:27.826908+00:00,ba30b9ea-4526-4bdc-b424-f87a7fd5e10f,task_22,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_22_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 43 items
+
+test_cache_utils.py ..................                                   [ 41%]
+test_config_utils.py .........................                           [100%]
+
+============================= 43 passed in 0.10s ==============================
+",,False,False,1,3,0.4954
+2,2026-09-16T13:08:28.374756+00:00,319cc1e2-915a-4df4-9fae-fc4de61e7145,task_22,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_22_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 43 items
+
+test_cache_utils.py ..................                                   [ 41%]
+test_config_utils.py .........................                           [100%]
+
+============================= 43 passed in 0.12s ==============================
+",,False,False,1,3,0.5254
+2,2026-09-16T13:08:28.919009+00:00,ab3098da-3e73-4bb9-92a2-eee5264fa916,task_22,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_22_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 43 items
+
+test_cache_utils.py ..................                                   [ 41%]
+test_config_utils.py .........................                           [100%]
+
+============================= 43 passed in 0.10s ==============================
+",,False,False,1,3,0.5238
+2,2026-09-16T13:08:29.453960+00:00,3bab4ccc-49ba-4fec-a7ec-c4d54df832e9,task_23,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_23_baseline_1
+configfile: .benchmark_pytest.ini
+collected 25 items
+
+test_file_utils.py .........................                             [100%]
+
+============================= 25 passed in 0.05s ==============================
+",,False,False,1,3,0.5136
+2,2026-09-16T13:08:29.975916+00:00,996d0df5-6703-4993-9b26-820dae9ec6e6,task_23,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_23_baseline_2
+configfile: .benchmark_pytest.ini
+collected 25 items
+
+test_file_utils.py .........................                             [100%]
+
+============================= 25 passed in 0.06s ==============================
+",,False,False,1,3,0.5036
+2,2026-09-16T13:08:30.532544+00:00,ff06086f-4fad-498e-867a-6378f59f9682,task_23,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_23_baseline_3
+configfile: .benchmark_pytest.ini
+collected 25 items
+
+test_file_utils.py .........................                             [100%]
+
+============================= 25 passed in 0.05s ==============================
+",,False,False,1,3,0.5137
+2,2026-09-16T13:08:31.065106+00:00,a801768f-19f3-4456-9af6-c0669e9aefa6,task_23,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_23_baseline_4
+configfile: .benchmark_pytest.ini
+collected 25 items
+
+test_file_utils.py .........................                             [100%]
+
+============================= 25 passed in 0.07s ==============================
+",,False,False,1,3,0.5092
+2,2026-09-16T13:08:31.586878+00:00,acd5c2d7-fb7c-468f-a90c-7a492e240585,task_23,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_23_baseline_5
+configfile: .benchmark_pytest.ini
+collected 25 items
+
+test_file_utils.py .........................                             [100%]
+
+============================= 25 passed in 0.05s ==============================
+",,False,False,1,3,0.4951
+2,2026-09-16T13:08:32.127896+00:00,70ef71ca-1411-40aa-9e2a-5d9065b2fcb2,task_23,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_23_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 25 items
+
+test_file_utils.py .........................                             [100%]
+
+============================= 25 passed in 0.07s ==============================
+",,False,False,1,3,0.5246
+2,2026-09-16T13:08:32.768585+00:00,9f2fefa0-90fc-4b72-a64e-8f5c379f5e19,task_23,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_23_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 25 items
+
+test_file_utils.py .........................                             [100%]
+
+============================= 25 passed in 0.06s ==============================
+",,False,False,1,3,0.6023
+2,2026-09-16T13:08:33.310578+00:00,0f0904b0-2f2b-4993-b1ab-24b38d9d23bb,task_23,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_23_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 25 items
+
+test_file_utils.py .........................                             [100%]
+
+============================= 25 passed in 0.05s ==============================
+",,False,False,1,3,0.4954
+2,2026-09-16T13:08:33.769102+00:00,5551b94d-e51c-4c3a-b4d7-c00c52b9dc09,task_23,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_23_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 25 items
+
+test_file_utils.py .........................                             [100%]
+
+============================= 25 passed in 0.06s ==============================
+",,False,False,1,3,0.4408
+2,2026-09-16T13:08:34.419222+00:00,5d8cf7b6-471a-41bd-a3f9-d2febe8006c2,task_23,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_23_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 25 items
+
+test_file_utils.py .........................                             [100%]
+
+============================= 25 passed in 0.06s ==============================
+",,False,False,1,3,0.6097
+2,2026-09-16T13:08:34.914174+00:00,d35e8354-1ce8-4e90-a242-b3e489f840a8,task_24,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_24_baseline_1
+configfile: .benchmark_pytest.ini
+collected 31 items
+
+test_json_utils.py ...............................                       [100%]
+
+============================= 31 passed in 0.06s ==============================
+",,False,False,1,3,0.4631
+2,2026-09-16T13:08:35.427784+00:00,cfd7698a-b5c6-4093-a5b5-082b4ddf6442,task_24,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_24_baseline_2
+configfile: .benchmark_pytest.ini
+collected 31 items
+
+test_json_utils.py ...............................                       [100%]
+
+============================= 31 passed in 0.07s ==============================
+",,False,False,1,3,0.4936
+2,2026-09-16T13:08:35.976187+00:00,c438eb8c-ebfd-41bd-b655-c4b99274c159,task_24,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_24_baseline_3
+configfile: .benchmark_pytest.ini
+collected 31 items
+
+test_json_utils.py ...............................                       [100%]
+
+============================= 31 passed in 0.08s ==============================
+",,False,False,1,3,0.5333
+2,2026-09-16T13:08:36.480267+00:00,f26945c4-2ef5-4e7a-aa6b-99dfd187783d,task_24,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_24_baseline_4
+configfile: .benchmark_pytest.ini
+collected 31 items
+
+test_json_utils.py ...............................                       [100%]
+
+============================= 31 passed in 0.09s ==============================
+",,False,False,1,3,0.4883
+2,2026-09-16T13:08:36.982082+00:00,97d5fad7-a579-446a-85e7-1fde5af84541,task_24,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_24_baseline_5
+configfile: .benchmark_pytest.ini
+collected 31 items
+
+test_json_utils.py ...............................                       [100%]
+
+============================= 31 passed in 0.08s ==============================
+",,False,False,1,3,0.4777
+2,2026-09-16T13:08:37.553398+00:00,9b429e35-f932-4494-914d-07a8d6857d8a,task_24,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_24_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 31 items
+
+test_json_utils.py ...............................                       [100%]
+
+============================= 31 passed in 0.07s ==============================
+",,False,False,1,3,0.5423
+2,2026-09-16T13:08:38.126077+00:00,dac5a3f8-8bb4-4d9b-8012-05b151324272,task_24,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_24_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 31 items
+
+test_json_utils.py ...............................                       [100%]
+
+============================= 31 passed in 0.09s ==============================
+",,False,False,1,3,0.5533
+2,2026-09-16T13:08:38.738964+00:00,fd3493e7-b26e-4d7d-a401-0f75d39d5c3b,task_24,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_24_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 31 items
+
+test_json_utils.py ...............................                       [100%]
+
+============================= 31 passed in 0.07s ==============================
+",,False,False,1,3,0.5963
+2,2026-09-16T13:08:39.287807+00:00,fb75953c-fb14-483c-ba1e-1cdf5d725f26,task_24,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_24_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 31 items
+
+test_json_utils.py ...............................                       [100%]
+
+============================= 31 passed in 0.07s ==============================
+",,False,False,1,3,0.5326
+2,2026-09-16T13:08:39.800643+00:00,9c5c4af6-6b5c-48fd-89b7-9496bfdd8247,task_24,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_24_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 31 items
+
+test_json_utils.py ...............................                       [100%]
+
+============================= 31 passed in 0.06s ==============================
+",,False,False,1,3,0.4896
+2,2026-09-16T13:08:40.389439+00:00,8a7a387d-939a-4710-81b2-ee12c69df559,task_25,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_25_baseline_1
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_date_utils.py ...................................                   [100%]
+
+============================= 35 passed in 0.08s ==============================
+",,False,False,1,3,0.5718
+2,2026-09-16T13:08:40.947718+00:00,de3f9ca4-291b-4585-9121-94d4e914df9a,task_25,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_25_baseline_2
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_date_utils.py ...................................                   [100%]
+
+============================= 35 passed in 0.06s ==============================
+",,False,False,1,3,0.5311
+2,2026-09-16T13:08:41.466139+00:00,e576e3b1-abfd-4978-b598-7649351f0855,task_25,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_25_baseline_3
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_date_utils.py ...................................                   [100%]
+
+============================= 35 passed in 0.07s ==============================
+",,False,False,1,3,0.503
+2,2026-09-16T13:08:42.012208+00:00,865d794b-d232-448b-8272-756c0e3ac89a,task_25,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_25_baseline_4
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_date_utils.py ...................................                   [100%]
+
+============================= 35 passed in 0.07s ==============================
+",,False,False,1,3,0.513
+2,2026-09-16T13:08:42.537514+00:00,cd3e8e2e-7ce1-431d-9edf-b8d8991cc7fb,task_25,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_25_baseline_5
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_date_utils.py ...................................                   [100%]
+
+============================= 35 passed in 0.08s ==============================
+",,False,False,1,3,0.5012
+2,2026-09-16T13:08:43.085422+00:00,670542d8-3ecd-4fc4-b907-67bfcf72d87b,task_25,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_25_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_date_utils.py ...................................                   [100%]
+
+============================= 35 passed in 0.07s ==============================
+",,False,False,1,3,0.5262
+2,2026-09-16T13:08:43.644318+00:00,8254a09d-a473-47f8-a71b-770ac5b917db,task_25,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_25_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_date_utils.py ...................................                   [100%]
+
+============================= 35 passed in 0.06s ==============================
+",,False,False,1,3,0.521
+2,2026-09-16T13:08:44.204781+00:00,825f7d8a-9d2b-4bcd-866e-618ece27fc57,task_25,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_25_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_date_utils.py ...................................                   [100%]
+
+============================= 35 passed in 0.07s ==============================
+",,False,False,1,3,0.5321
+2,2026-09-16T13:08:44.693798+00:00,269faddf-64fd-4ca8-9222-0ea67657d82c,task_25,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_25_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_date_utils.py ...................................                   [100%]
+
+============================= 35 passed in 0.07s ==============================
+",,False,False,1,3,0.4719
+2,2026-09-16T13:08:45.218035+00:00,9f9b68a7-7a10-4d83-8f69-6f683e9c747d,task_25,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_25_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_date_utils.py ...................................                   [100%]
+
+============================= 35 passed in 0.07s ==============================
+",,False,False,1,3,0.5095
+2,2026-09-16T13:08:45.818352+00:00,373145b8-5a03-45dd-abd0-12acb40a6f55,task_26,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_26_baseline_1
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_price_utils.py ...................................                  [100%]
+
+============================= 35 passed in 0.07s ==============================
+",,False,False,1,3,0.5776
+2,2026-09-16T13:08:46.356802+00:00,a3706f5b-0a23-4da6-a737-65a60083830d,task_26,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_26_baseline_2
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_price_utils.py ...................................                  [100%]
+
+============================= 35 passed in 0.07s ==============================
+",,False,False,1,3,0.5112
+2,2026-09-16T13:08:46.970643+00:00,87ff8dbb-cdbc-4ce2-b8a6-02503763e0bd,task_26,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_26_baseline_3
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_price_utils.py ...................................                  [100%]
+
+============================= 35 passed in 0.07s ==============================
+",,False,False,1,3,0.5923
+2,2026-09-16T13:08:47.607307+00:00,6b0299c2-ae5c-468e-a2e4-1a0f7e4d3984,task_26,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_26_baseline_4
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_price_utils.py ...................................                  [100%]
+
+============================= 35 passed in 0.07s ==============================
+",,False,False,1,3,0.6201
+2,2026-09-16T13:08:48.124119+00:00,9347161c-65aa-4776-894c-4fce43deec45,task_26,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_26_baseline_5
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_price_utils.py ...................................                  [100%]
+
+============================= 35 passed in 0.06s ==============================
+",,False,False,1,3,0.4918
+2,2026-09-16T13:08:48.662792+00:00,0dc68b62-47ff-4038-9bde-d8fb34f1a35d,task_26,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_26_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_price_utils.py ...................................                  [100%]
+
+============================= 35 passed in 0.06s ==============================
+",,False,False,1,3,0.5089
+2,2026-09-16T13:08:49.169638+00:00,04bf0a63-9ff9-47b2-a11b-c06343251bb4,task_26,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_26_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_price_utils.py ...................................                  [100%]
+
+============================= 35 passed in 0.06s ==============================
+",,False,False,1,3,0.4771
+2,2026-09-16T13:08:49.705608+00:00,2bc5b372-6c5a-4da2-ba55-3a5454fcd8cf,task_26,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_26_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_price_utils.py ...................................                  [100%]
+
+============================= 35 passed in 0.05s ==============================
+",,False,False,1,3,0.5162
+2,2026-09-16T13:08:50.305772+00:00,5d7fcd22-4494-4b86-82b7-52ea618da992,task_26,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_26_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_price_utils.py ...................................                  [100%]
+
+============================= 35 passed in 0.08s ==============================
+",,False,False,1,3,0.5845
+2,2026-09-16T13:08:50.831484+00:00,e94798e5-8dc4-4d03-a5f6-2173609b9b7b,task_26,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_26_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_price_utils.py ...................................                  [100%]
+
+============================= 35 passed in 0.06s ==============================
+",,False,False,1,3,0.5096
+2,2026-09-16T13:08:51.336487+00:00,b2ecbec6-0262-4091-b732-095108c0d62d,task_27,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_27_baseline_1
+configfile: .benchmark_pytest.ini
+collected 26 items
+
+test_user_utils.py ..........................                            [100%]
+
+============================= 26 passed in 0.04s ==============================
+",,False,False,1,3,0.4835
+2,2026-09-16T13:08:51.839233+00:00,81138f10-d690-4d1d-8ea8-b800921a926f,task_27,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_27_baseline_2
+configfile: .benchmark_pytest.ini
+collected 26 items
+
+test_user_utils.py ..........................                            [100%]
+
+============================= 26 passed in 0.05s ==============================
+",,False,False,1,3,0.4888
+2,2026-09-16T13:08:52.317889+00:00,07c95cef-63af-4d6a-ba78-b8ec1b375081,task_27,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_27_baseline_3
+configfile: .benchmark_pytest.ini
+collected 26 items
+
+test_user_utils.py ..........................                            [100%]
+
+============================= 26 passed in 0.04s ==============================
+",,False,False,1,3,0.464
+2,2026-09-16T13:08:52.809613+00:00,e6af5085-8b29-43c8-89e3-439fce08d6f2,task_27,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_27_baseline_4
+configfile: .benchmark_pytest.ini
+collected 26 items
+
+test_user_utils.py ..........................                            [100%]
+
+============================= 26 passed in 0.06s ==============================
+",,False,False,1,3,0.4634
+2,2026-09-16T13:08:53.285642+00:00,4861b765-d891-44c6-b0e8-a6b21239ca16,task_27,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_27_baseline_5
+configfile: .benchmark_pytest.ini
+collected 26 items
+
+test_user_utils.py ..........................                            [100%]
+
+============================= 26 passed in 0.05s ==============================
+",,False,False,1,3,0.4562
+2,2026-09-16T13:08:53.795349+00:00,2e883e8d-62e1-4a57-9b4f-60e9fb82ec18,task_27,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_27_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 26 items
+
+test_user_utils.py ..........................                            [100%]
+
+============================= 26 passed in 0.05s ==============================
+",,False,False,1,3,0.4921
+2,2026-09-16T13:08:54.303712+00:00,760d9477-88b3-4e6c-b4a2-29794c32f3ed,task_27,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_27_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 26 items
+
+test_user_utils.py ..........................                            [100%]
+
+============================= 26 passed in 0.04s ==============================
+",,False,False,1,3,0.4817
+2,2026-09-16T13:08:54.793495+00:00,c324e3d8-6ae5-4847-9378-ce4d6947f01a,task_27,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_27_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 26 items
+
+test_user_utils.py ..........................                            [100%]
+
+============================= 26 passed in 0.04s ==============================
+",,False,False,1,3,0.4743
+2,2026-09-16T13:08:55.294656+00:00,de1b17fb-ec7a-4eeb-95a5-3f7aa496f225,task_27,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_27_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 26 items
+
+test_user_utils.py ..........................                            [100%]
+
+============================= 26 passed in 0.05s ==============================
+",,False,False,1,3,0.4416
+2,2026-09-16T13:08:55.781185+00:00,6f5f205e-3a6f-4775-838e-f9cf541c4a83,task_27,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_27_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 26 items
+
+test_user_utils.py ..........................                            [100%]
+
+============================= 26 passed in 0.05s ==============================
+",,False,False,1,3,0.4697
+2,2026-09-16T13:08:56.379484+00:00,3e89786c-2ef7-452b-87ee-47ed3cebb2da,task_28,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_28_baseline_1
+configfile: .benchmark_pytest.ini
+collected 53 items
+
+test_number_utils.py ................................................... [ 96%]
+..                                                                       [100%]
+
+============================= 53 passed in 0.11s ==============================
+",,False,False,1,3,0.5728
+2,2026-09-16T13:08:56.902191+00:00,38e6401b-4d1a-406f-9c3c-cf3e6eb4d6a2,task_28,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_28_baseline_2
+configfile: .benchmark_pytest.ini
+collected 53 items
+
+test_number_utils.py ................................................... [ 96%]
+..                                                                       [100%]
+
+============================= 53 passed in 0.08s ==============================
+",,False,False,1,3,0.5081
+2,2026-09-16T13:08:57.441877+00:00,f66f886a-cac8-43c1-8b54-3579006286d0,task_28,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_28_baseline_3
+configfile: .benchmark_pytest.ini
+collected 53 items
+
+test_number_utils.py ................................................... [ 96%]
+..                                                                       [100%]
+
+============================= 53 passed in 0.09s ==============================
+",,False,False,1,3,0.5222
+2,2026-09-16T13:08:58.092090+00:00,e3d17d8a-6b33-4cdb-a910-19ced78521dd,task_28,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_28_baseline_4
+configfile: .benchmark_pytest.ini
+collected 53 items
+
+test_number_utils.py ................................................... [ 96%]
+..                                                                       [100%]
+
+============================= 53 passed in 0.08s ==============================
+",,False,False,1,3,0.6286
+2,2026-09-16T13:08:58.684406+00:00,3ee1aa89-796b-4993-b80c-e92c97bcccf3,task_28,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_28_baseline_5
+configfile: .benchmark_pytest.ini
+collected 53 items
+
+test_number_utils.py ................................................... [ 96%]
+..                                                                       [100%]
+
+============================= 53 passed in 0.10s ==============================
+",,False,False,1,3,0.5623
+2,2026-09-16T13:08:59.341570+00:00,cc224e72-41a2-4406-b1d7-45bc1ff80963,task_28,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_28_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 70 items
+
+test_number_utils.py ................................................... [ 72%]
+...................                                                      [100%]
+
+============================= 70 passed in 0.17s ==============================
+",,False,False,1,3,0.6152
+2,2026-09-16T13:08:59.885973+00:00,d4920b61-e237-4386-a765-af7919148ed7,task_28,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_28_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 70 items
+
+test_number_utils.py ................................................... [ 72%]
+...................                                                      [100%]
+
+============================= 70 passed in 0.11s ==============================
+",,False,False,1,3,0.5169
+2,2026-09-16T13:09:00.496716+00:00,ef690cbf-03d1-498a-b96a-d68dd22c53a4,task_28,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_28_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 70 items
+
+test_number_utils.py ................................................... [ 72%]
+...................                                                      [100%]
+
+============================= 70 passed in 0.10s ==============================
+",,False,False,1,3,0.5807
+2,2026-09-16T13:09:01.012960+00:00,ded0f097-9697-4846-a094-5035a8a542c6,task_28,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_28_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 70 items
+
+test_number_utils.py ................................................... [ 72%]
+...................                                                      [100%]
+
+============================= 70 passed in 0.10s ==============================
+",,False,False,1,3,0.4928
+2,2026-09-16T13:09:01.554258+00:00,83869738-ca5a-447a-a159-0fc8a82a087e,task_28,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_28_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 70 items
+
+test_number_utils.py ................................................... [ 72%]
+...................                                                      [100%]
+
+============================= 70 passed in 0.09s ==============================
+",,False,False,1,3,0.5258
+2,2026-09-16T13:09:02.099177+00:00,0745aaca-ef24-4365-84a1-69f6ae863cc2,task_29,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_29_baseline_1
+configfile: .benchmark_pytest.ini
+collected 4 items
+
+test_task_29.py ....                                                     [100%]
+
+============================== 4 passed in 0.02s ==============================
+",,False,False,1,3,0.4871
+2,2026-09-16T13:09:02.558450+00:00,92cfee70-4603-4316-b3d2-d4b3a0c0113d,task_29,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_29_baseline_2
+configfile: .benchmark_pytest.ini
+collected 4 items
+
+test_task_29.py ....                                                     [100%]
+
+============================== 4 passed in 0.02s ==============================
+",,False,False,1,3,0.4392
+2,2026-09-16T13:09:03.057245+00:00,9ae84a26-f598-4a5e-baca-7460b8c2d0c5,task_29,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_29_baseline_3
+configfile: .benchmark_pytest.ini
+collected 4 items
+
+test_task_29.py ....                                                     [100%]
+
+============================== 4 passed in 0.02s ==============================
+",,False,False,1,3,0.4803
+2,2026-09-16T13:09:03.587263+00:00,be9d1c43-5b37-439c-8d73-7e4aabe34a39,task_29,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_29_baseline_4
+configfile: .benchmark_pytest.ini
+collected 4 items
+
+test_task_29.py ....                                                     [100%]
+
+============================== 4 passed in 0.04s ==============================
+",,False,False,1,3,0.4989
+2,2026-09-16T13:09:04.075031+00:00,230edb40-88c7-41ed-90a7-449ad0dce73d,task_29,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_29_baseline_5
+configfile: .benchmark_pytest.ini
+collected 4 items
+
+test_task_29.py ....                                                     [100%]
+
+============================== 4 passed in 0.02s ==============================
+",,False,False,1,3,0.4629
+2,2026-09-16T13:09:04.652566+00:00,11a1c50b-d186-405f-9b92-a3437592532b,task_29,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_29_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 9 items
+
+test_task_29.py .........                                                [100%]
+
+============================== 9 passed in 0.03s ==============================
+",,False,False,1,3,0.5396
+2,2026-09-16T13:09:05.224698+00:00,2b1ad78a-0e71-490f-86ba-14ca308cf530,task_29,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_29_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 9 items
+
+test_task_29.py .........                                                [100%]
+
+============================== 9 passed in 0.05s ==============================
+",,False,False,1,3,0.5399
+2,2026-09-16T13:09:05.692163+00:00,69d86080-8ea9-4ab8-94ef-8264a5351b91,task_29,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_29_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 9 items
+
+test_task_29.py .........                                                [100%]
+
+============================== 9 passed in 0.03s ==============================
+",,False,False,1,3,0.4395
+2,2026-09-16T13:09:06.226840+00:00,62914565-b343-4b16-9efe-ae7d1f269413,task_29,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_29_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 9 items
+
+test_task_29.py .........                                                [100%]
+
+============================== 9 passed in 0.04s ==============================
+",,False,False,1,3,0.5082
+2,2026-09-16T13:09:06.732673+00:00,084a0fc4-a923-4929-bb72-7cdd6bd208ae,task_29,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_29_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 9 items
+
+test_task_29.py .........                                                [100%]
+
+============================== 9 passed in 0.04s ==============================
+",,False,False,1,3,0.4819
+2,2026-09-16T13:09:07.192871+00:00,530f89b2-be3c-480a-9396-e5714487b6db,task_30,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_30_baseline_1
+configfile: .benchmark_pytest.ini
+collected 4 items
+
+test_order.py ....                                                       [100%]
+
+============================== 4 passed in 0.02s ==============================
+",,False,False,1,3,0.4337
+2,2026-09-16T13:09:07.680919+00:00,98f4e190-f729-4175-b70d-7895f7e4623c,task_30,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_30_baseline_2
+configfile: .benchmark_pytest.ini
+collected 4 items
+
+test_order.py ....                                                       [100%]
+
+============================== 4 passed in 0.03s ==============================
+",,False,False,1,3,0.4699
+2,2026-09-16T13:09:08.178978+00:00,cd856478-65c0-418c-8d82-d8b19eb4426a,task_30,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_30_baseline_3
+configfile: .benchmark_pytest.ini
+collected 4 items
+
+test_order.py ....                                                       [100%]
+
+============================== 4 passed in 0.03s ==============================
+",,False,False,1,3,0.4723
+2,2026-09-16T13:09:08.596498+00:00,b9b4d00d-e46a-43fd-a37d-bb6827fc9d45,task_30,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_30_baseline_4
+configfile: .benchmark_pytest.ini
+collected 4 items
+
+test_order.py ....                                                       [100%]
+
+============================== 4 passed in 0.02s ==============================
+",,False,False,1,3,0.4023
+2,2026-09-16T13:09:09.046730+00:00,e452e8a8-6c47-495c-b533-9f76681ff74f,task_30,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_30_baseline_5
+configfile: .benchmark_pytest.ini
+collected 4 items
+
+test_order.py ....                                                       [100%]
+
+============================== 4 passed in 0.03s ==============================
+",,False,False,1,3,0.4276
+2,2026-09-16T13:09:09.585156+00:00,90314460-bcc1-4af4-94dd-051c40765d21,task_30,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_30_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 14 items
+
+test_order.py ..............                                             [100%]
+
+============================= 14 passed in 0.04s ==============================
+",,False,False,1,3,0.5061
+2,2026-09-16T13:09:10.003446+00:00,b07635a2-20b2-4ebb-83f9-c321c042a33e,task_30,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_30_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 14 items
+
+test_order.py ..............                                             [100%]
+
+============================= 14 passed in 0.03s ==============================
+",,False,False,1,3,0.3987
+2,2026-09-16T13:09:10.513979+00:00,6ee9cea8-7141-46ad-802d-d408c6b2f5f8,task_30,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_30_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 14 items
+
+test_order.py ..............                                             [100%]
+
+============================= 14 passed in 0.05s ==============================
+",,False,False,1,3,0.4921
+2,2026-09-16T13:09:11.010078+00:00,2a9305de-237e-41b0-b51f-fd6c759325a2,task_30,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_30_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 14 items
+
+test_order.py ..............                                             [100%]
+
+============================= 14 passed in 0.04s ==============================
+",,False,False,1,3,0.4697
+2,2026-09-16T13:09:11.523035+00:00,9e9c6719-7a8b-486b-a4a3-8403af9d50b3,task_30,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_30_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 14 items
+
+test_order.py ..............                                             [100%]
+
+============================= 14 passed in 0.05s ==============================
+",,False,False,1,3,0.4894
+2,2026-09-16T13:09:12.039505+00:00,90bda29b-f690-4794-8b39-69e258bec30d,task_31,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_31_baseline_1
+configfile: .benchmark_pytest.ini
+collected 25 items
+
+test_task_31.py ....................                                     [ 80%]
+test_user_utils.py .....                                                 [100%]
+
+============================= 25 passed in 0.06s ==============================
+",,False,False,1,3,0.4898
+2,2026-09-16T13:09:12.556491+00:00,a0c2bc47-9158-4e47-82cd-7e5240f34e39,task_31,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_31_baseline_2
+configfile: .benchmark_pytest.ini
+collected 25 items
+
+test_task_31.py ....................                                     [ 80%]
+test_user_utils.py .....                                                 [100%]
+
+============================= 25 passed in 0.05s ==============================
+",,False,False,1,3,0.488
+2,2026-09-16T13:09:13.076578+00:00,cccaba92-d5a4-40ba-adab-6751623e4c01,task_31,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_31_baseline_3
+configfile: .benchmark_pytest.ini
+collected 25 items
+
+test_task_31.py ....................                                     [ 80%]
+test_user_utils.py .....                                                 [100%]
+
+============================= 25 passed in 0.06s ==============================
+",,False,False,1,3,0.4987
+2,2026-09-16T13:09:13.593300+00:00,f81f6c96-81c3-4c50-8ad4-cc78b9a18e62,task_31,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_31_baseline_4
+configfile: .benchmark_pytest.ini
+collected 25 items
+
+test_task_31.py ....................                                     [ 80%]
+test_user_utils.py .....                                                 [100%]
+
+============================= 25 passed in 0.07s ==============================
+",,False,False,1,3,0.4861
+2,2026-09-16T13:09:14.123568+00:00,4de3cc6e-9706-4685-bec0-d2b66a4c029e,task_31,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_31_baseline_5
+configfile: .benchmark_pytest.ini
+collected 25 items
+
+test_task_31.py ....................                                     [ 80%]
+test_user_utils.py .....                                                 [100%]
+
+============================= 25 passed in 0.07s ==============================
+",,False,False,1,3,0.5008
+2,2026-09-16T13:09:14.675541+00:00,c38611fa-f074-4fd7-828b-5f031547c980,task_31,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_31_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_task_31.py ....................                                     [ 57%]
+test_user_utils.py ...............                                       [100%]
+
+============================= 35 passed in 0.07s ==============================
+",,False,False,1,3,0.5099
+2,2026-09-16T13:09:15.166235+00:00,102988bb-5921-4c2f-9e21-5d68adb15f5e,task_31,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_31_agent_02_2
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_task_31.py ....................                                     [ 57%]
+test_user_utils.py ...............                                       [100%]
+
+============================= 35 passed in 0.08s ==============================
+",,False,False,1,3,0.4712
+2,2026-09-16T13:09:15.698540+00:00,4e59193a-7a34-4455-a922-59cb69a556cf,task_31,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_31_agent_02_3
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_task_31.py ....................                                     [ 57%]
+test_user_utils.py ...............                                       [100%]
+
+============================= 35 passed in 0.09s ==============================
+",,False,False,1,3,0.5145
+2,2026-09-16T13:09:16.306185+00:00,6444f166-fad4-4c51-9ef9-120e230bbe1e,task_31,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_31_agent_02_4
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_task_31.py ....................                                     [ 57%]
+test_user_utils.py ...............                                       [100%]
+
+============================= 35 passed in 0.09s ==============================
+",,False,False,1,3,0.5769
+2,2026-09-16T13:09:17.046135+00:00,40a17b4a-a3db-4f7c-bb4b-ccb6b3b6d73a,task_31,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_31_agent_02_5
+configfile: .benchmark_pytest.ini
+collected 35 items
+
+test_task_31.py ....................                                     [ 57%]
+test_user_utils.py ...............                                       [100%]
+
+============================= 35 passed in 0.07s ==============================
+",,False,False,1,3,0.7197
+2,2026-09-16T13:09:17.940322+00:00,bbd626fe-b231-422f-b3c5-8217cb543139,task_32,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_baseline_1
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.02s ==============================
+",,False,False,1,3,0.8604
+2,2026-09-16T13:09:18.993797+00:00,58c402ba-b0dd-4dca-ac7e-e40ff823c0df,task_32,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_baseline_2
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.02s ==============================
+",,False,False,1,3,1.0002
+2,2026-09-16T13:09:20.008739+00:00,ce444cbb-1150-4a5a-b05b-4ee98e4d5eb7,task_32,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_baseline_3
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.02s ==============================
+",,False,False,1,3,0.9921
+2,2026-09-16T13:09:20.915961+00:00,fd6bf226-5ed9-49b8-91b7-affd0db97b51,task_32,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_baseline_4
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.04s ==============================
+",,False,False,1,3,0.8594
+2,2026-09-16T13:09:21.835691+00:00,64dc8370-ac46-4cb3-b34c-c3ca17ead4ff,task_32,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_baseline_5
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.02s ==============================
+",,False,False,1,3,0.8989
+2,2026-09-16T13:09:22.818296+00:00,07d3b72d-faad-4110-8ae8-097aa36aa89e,task_32,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_agent_02_1
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.02s ==============================
+",,False,False,1,3,0.9344
+2,2026-09-16T13:09:23.809678+00:00,d387f337-f4af-472f-b54a-eb67f8d413e6,task_32,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_agent_02_2
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.04s ==============================
+",,False,False,1,3,0.9711
+2,2026-09-16T13:09:24.739329+00:00,f4f6875e-3e0c-436d-b6dc-8a8433d83787,task_32,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_agent_02_3
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.02s ==============================
+",,False,False,1,3,0.9075
+2,2026-09-16T13:09:25.728957+00:00,02d6ea1b-677b-49f5-bf49-67f58973330a,task_32,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_agent_02_4
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.02s ==============================
+",,False,False,1,3,0.9491
+2,2026-09-16T13:09:26.743248+00:00,d4e26812-7e01-4618-951c-0c5feea3dd6f,task_32,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_agent_02_5
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.02s ==============================
+",,False,False,1,3,0.9828
