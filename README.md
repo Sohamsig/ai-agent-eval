@@ -3,6 +3,8 @@
 A task-based evaluation framework for testing coding agents against
 visible tests and hidden tests.
 
+![Tests](https://github.com/Sohamsig/ai-agent-eval/actions/workflows/tests.yml/badge.svg)
+
 ## Features
 
 - Baseline and agent evaluation
