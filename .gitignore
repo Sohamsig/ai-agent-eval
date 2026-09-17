@@ -32,3 +32,18 @@ results/attempts.csv
 backups/
 
 parser_snippet.txt
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Backup files
+*.backup
+
+# Generated evaluation results
+results/*.csv
+results/*.json
+
+# Local archives and backups
+*.zip
+local-results-backup/
