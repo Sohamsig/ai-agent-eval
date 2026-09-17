@@ -56,6 +56,7 @@ AGENTS = [
     "baseline",
     "agent_02",
     "agent_03",
+    "agent_04",
 ]
 
 RUNS_PER_AGENT = 5
