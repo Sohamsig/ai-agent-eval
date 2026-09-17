@@ -1,131 +1,206 @@
 # AI Agent Evaluation Framework
 
-A task-based evaluation framework for testing coding agents against
-visible tests and hidden tests.
+A task-based evaluation framework for testing coding agents against visible tests and hidden tests.
 
 ![Tests](https://github.com/Sohamsig/ai-agent-eval/actions/workflows/tests.yml/badge.svg)
 
 ## Features
 
-- Baseline and agent evaluation
-- Multiple independent runs
-- Hidden-test verification
-- Attempt and recovery tracking
-- CSV result generation
-- Success-rate comparison
-- Failure classification
+* Baseline and agent evaluation
+* Multiple independent runs
+* Hidden-test verification
+* Attempt and recovery tracking
+* CSV result generation
+* Success-rate comparison
+* Failure classification
+* Duplicate-run detection
+* Runtime measurement
+* Pass@1 reporting
 
 ## Completed Evaluation
 
-| Task | Agent | Runs | Success Rate |
-|------|-------|------|--------------|
-| task_32 | baseline | 5 | 100% |
-| task_32 | agent_02 | 5 | 100% |
+| Task      | Agent      | Runs | Success Rate |
+| --------- | ---------- | ---: | -----------: |
+| `task_32` | `baseline` |    5 |         100% |
+| `task_32` | `agent_02` |    5 |         100% |
 
 ## Tech Stack
 
-- Python
-- Pytest
-- CSV
-- PowerShell
-- Git
+* Python
+* Pytest
+* CSV
+* PowerShell
+* Git
 
 ## Run Tests
 
+Run the tests for a specific task:
+
 ```powershell
 python -m pytest .\tasks\task_32 -q
+```
 
-## Agent Benchmark Results
+Run evaluator tests:
 
-The benchmark evaluated two agents across 32 tasks, with 5 runs per agent.
+```powershell
+python -m pytest evaluator/tests -q
+```
 
-| Metric | Baseline | Agent 02 |
-|---|---:|---:|
-| Total tasks | 32 | 32 |
-| Total evaluations | 160 | 160 |
-| Success rate | 100% | 100% |
-| Average execution time | 1.064 seconds | 1.107 seconds |
-| Faster tasks | 17 | 15 |
-
-### Summary
-
-- Both agents achieved a 100% success rate.
-- Baseline was faster on 17 tasks.
-- Agent 02 was faster on 15 tasks.
-- Baseline average execution time: 1.064 seconds.
-- Agent 02 average execution time: 1.107 seconds.
-
-### Benchmark Artifacts
-
-- `results/agent_speed_comparison.csv`
-- `results/final_benchmark_summary.csv`
-- `results/benchmark_chart.png`
-- `results/plot_benchmark.py`
-- `results/benchmark_summary.md`
-- `results/benchmark_report.json`
-- `results/FINAL_BENCHMARK_REPORT.md`
-
-## 📊 Agent Benchmark Results
-
-The evaluation framework was tested across 32 software-engineering tasks.
-
-| Metric | Baseline | Agent 02 |
-|--------|----------|----------|
-| Total Evaluations | 160 | 160 |
-| Success Rate | 100% | 100% |
-| Average Execution Time | 1.064s | 1.107s |
-
-### Summary
-
-- Total tasks: 32
-- Total evaluations: 320
-- Baseline faster on 17 tasks
-- Agent 02 faster on 15 tasks
-- Both agents achieved a 100% success rate
-
-![Benchmark Chart](results/benchmark_chart.png)
-
-📄 [Read the full benchmark report](results/FINAL_BENCHMARK_REPORT.md)
-
-## Run Tests Locally
-
-Run all 33 task test suites independently:
+Run all task test suites:
 
 ```powershell
 .\run_all_tests.ps1
+```
 
 ## Benchmark Results
 
-The benchmark evaluates coding agents across 32 software-engineering tasks.
+The current controlled evaluation contains **359 benchmark runs across 32 software-engineering tasks**.
 
-### Current Results
-
-| Metric | Result |
-|---|---:|
-| Total benchmark rows | 341 |
-| Unique logical runs | 341 |
-| Duplicate groups | 0 |
-| Overall success rate | 100% |
-| Baseline runs | 160 |
-| Agent 02 runs | 170 |
-| Agent 03 runs | 11 |
+| Metric                  | Result |
+| ----------------------- | -----: |
+| Tasks                   |     32 |
+| Recorded benchmark rows |    359 |
+| Unique logical runs     |    359 |
+| Duplicate groups        |      0 |
+| Successful runs         |    358 |
+| Failed runs             |      1 |
+| Overall success rate    | 99.72% |
+| Pass@1                  | 99.72% |
+| Hidden-test failures    |      0 |
+| Recovery attempts       |      0 |
 
 ### Agent Results
 
-| Agent | Runs | Success Rate |
-|---|---:|---:|
-| `baseline` | 160 | 100% |
-| `agent_02` | 170 | 100% |
-| `agent_03` | 11 | 100% |
+| Agent      | Runs | Successful Runs | Failed Runs | Success Rate | Pass@1 |
+| ---------- | ---: | --------------: | ----------: | -----------: | -----: |
+| `baseline` |  165 |             165 |           0 |         100% |   100% |
+| `agent_02` |  176 |             176 |           0 |         100% |   100% |
+| `agent_03` |   18 |              17 |           1 |       94.44% | 94.44% |
 
-### Evaluation Metrics
+### Recorded Failure
 
-- **Success rate:** Percentage of benchmark runs that completed successfully.
-- **Pass@1:** Whether the first generated solution passed the evaluation tests.
-- **Recovery attempts:** Additional attempts made after an initial failure.
-- **Average attempts:** Average number of attempts used per benchmark run.
-- **Duplicate groups:** Logical runs that appear more than once in the result dataset.
+One controlled generation-failure experiment was recorded to verify failure classification.
 
-### Important Note
+| Field             | Value                       |
+| ----------------- | --------------------------- |
+| Task              | `task_27`                   |
+| Agent             | `agent_03`                  |
+| Failure type      | `generation_failed`         |
+| Reason            | `Unsupported task: task_27` |
+| Tests executed    | No                          |
+| Recovery attempts | 0                           |
 
-The current dataset contains 341 recorded benchmark runs. Results are based on the available benchmark sample and should not be interpreted as a universal measure of coding-agent performance.
+This failure is intentionally included as part of the Phase 4 controlled evaluation experiment.
+
+## Evaluation Metrics
+
+### Success Rate
+
+The percentage of benchmark runs that completed successfully.
+
+### Pass@1
+
+The percentage of runs whose first generated solution passed the evaluation tests.
+
+### Recovery Attempts
+
+Additional attempts made after an initial generation or test failure.
+
+### Average Attempts
+
+The average number of attempts used per benchmark run.
+
+### Runtime
+
+The execution duration recorded for each benchmark run.
+
+### Failure Classification
+
+The framework classifies failures such as:
+
+* `generation_failed`
+* `test_failure`
+* `recovery_not_implemented`
+* Other configured failure categories
+
+### Duplicate Detection
+
+The reporting pipeline detects repeated logical runs using run identifiers and legacy task-agent-run keys.
+
+## Benchmark Artifacts
+
+Generated benchmark artifacts are stored in the `results/` directory.
+
+* `results/results_v2.csv`
+* `results/attempts_v2.csv`
+* `results/benchmark_report_v2.json`
+* `results/trajectory_task_27_agent_02_run_1.json`
+* `results/trajectory_task_32_agent_02_run_1.json`
+* `results/trajectory_task_32_agent_02_run_2.json`
+* `results/trajectory_task_32_agent_02_run_3.json`
+
+## Generate the Benchmark Report
+
+Generate the latest research-oriented report with:
+
+```powershell
+python -m evaluator.generate_report
+```
+
+The command generates:
+
+```text
+results/benchmark_report_v2.json
+```
+
+The report includes:
+
+* Benchmark-wide metrics
+* Agent-level comparison
+* Task-wise results
+* Pass@1
+* Recovery analysis
+* Failure categories
+* Hidden-test analysis
+* Duplicate-run analysis
+* Known limitations
+
+## Project Structure
+
+```text
+ai-agent-eval/
+├── evaluator/
+│   ├── evaluate.py
+│   ├── generate_report.py
+│   ├── reporting.py
+│   ├── schemas.py
+│   └── tests/
+├── tasks/
+│   ├── task_01/
+│   ├── task_02/
+│   ├── ...
+│   └── task_32/
+├── results/
+│   ├── results_v2.csv
+│   ├── attempts_v2.csv
+│   ├── benchmark_report_v2.json
+│   └── trajectory_*.json
+├── run_all_tests.ps1
+├── requirements.txt
+└── README.md
+```
+
+## Limitations
+
+* The benchmark currently contains a limited number of tasks.
+* Agent implementations are limited in diversity.
+* Results apply only to the available benchmark dataset.
+* A 100% result does not prove general coding-agent reliability.
+* Task difficulty is not yet calibrated across all tasks.
+* Hidden-test coverage is limited to the available task fixtures.
+* Runtime measurements depend on the local execution environment.
+* The benchmark does not yet measure code quality or maintainability.
+
+## Important Note
+
+The current results are based on a controlled local benchmark dataset. They should not be interpreted as a universal measure of coding-agent performance. Future work will expand task diversity, add recovery policies, improve attempt-level logging, and evaluate additional coding-agent adapters.

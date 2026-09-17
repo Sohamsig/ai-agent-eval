@@ -3604,3 +3604,254 @@ __hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSE
 
 ============================== 6 passed in 0.03s ==============================
 ",,False,False,1,3,0.9219
+2,2026-09-17T06:38:04.741502+00:00,1df3d8f2-4bfb-4247-b85a-2f2359a16d8a,task_32,baseline,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_baseline_1
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.02s ==============================
+",,False,False,1,3,1.1558
+2,2026-09-17T06:38:05.810663+00:00,0218271b-0186-47bf-ac07-58d1f63cc650,task_32,baseline,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_baseline_2
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.03s ==============================
+",,False,False,1,3,1.0405
+2,2026-09-17T06:38:06.708324+00:00,98a8b34e-5cc1-4ced-993e-896f7c849e6a,task_32,baseline,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_baseline_3
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.02s ==============================
+",,False,False,1,3,0.8571
+2,2026-09-17T06:38:07.661964+00:00,64cfc383-9abd-427b-9020-372cbe8948a9,task_32,baseline,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_baseline_4
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.02s ==============================
+",,False,False,1,3,0.9087
+2,2026-09-17T06:38:08.962510+00:00,7c24a142-5307-4f93-b8df-b9e1493e118a,task_32,baseline,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_baseline_5
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.03s ==============================
+",,False,False,1,3,1.2182
+2,2026-09-17T06:38:09.941236+00:00,a6f96381-0c81-4154-a87f-eebf8267a435,task_32,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_agent_02_1
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.02s ==============================
+",,False,False,1,3,0.9323
+2,2026-09-17T06:38:10.907428+00:00,126dfd4b-1b4b-43a3-bd53-164fcec7fdb4,task_32,agent_02,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_agent_02_2
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.02s ==============================
+",,False,False,1,3,0.9304
+2,2026-09-17T06:38:11.853694+00:00,7fa42d85-da40-4564-88d8-d58d001860f5,task_32,agent_02,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_agent_02_3
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.02s ==============================
+",,False,False,1,3,0.9171
+2,2026-09-17T06:38:12.811066+00:00,605f4504-b2c9-448b-be5e-884f9893c47e,task_32,agent_02,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_agent_02_4
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.02s ==============================
+",,False,False,1,3,0.9299
+2,2026-09-17T06:38:13.750444+00:00,262a84ed-0d23-412d-a320-80c85c82b806,task_32,agent_02,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_agent_02_5
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.02s ==============================
+",,False,False,1,3,0.9049
+2,2026-09-17T06:38:14.660659+00:00,9ee55527-1f42-45bf-bb45-434a5160b212,task_32,agent_03,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_agent_03_1
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.02s ==============================
+",,False,False,1,3,0.8513
+2,2026-09-17T06:38:15.601199+00:00,373ca058-778b-46f5-a05e-e7d2b4c8047d,task_32,agent_03,2,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_agent_03_2
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.03s ==============================
+",,False,False,1,3,0.9096
+2,2026-09-17T06:38:16.579763+00:00,e0759f96-79f3-4092-8066-63b278a77f5e,task_32,agent_03,3,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_agent_03_3
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.03s ==============================
+",,False,False,1,3,0.9481
+2,2026-09-17T06:38:17.498025+00:00,f1ebb6db-a16a-40bd-a611-4f7b1821c1d3,task_32,agent_03,4,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_agent_03_4
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.03s ==============================
+",,False,False,1,3,0.8933
+2,2026-09-17T06:38:18.426574+00:00,8f26204c-47eb-47e2-a860-2e2b95522ddf,task_32,agent_03,5,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_agent_03_5
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.02s ==============================
+",,False,False,1,3,0.8816
+2,2026-09-17T10:07:22.073721+00:00,294f1d95-69f8-46af-90d2-991d29b97555,task_32,agent_03,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\soham\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_32_agent_03_1
+configfile: .benchmark_pytest.ini
+collecting ... collected 6 items
+
+__hidden_tests__/test_task_32_hidden.py::test_negative_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_string_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_boolean_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_zero_timeout_is_valid PASSED
+__hidden_tests__/test_task_32_hidden.py::test_none_timeout_rejected PASSED
+__hidden_tests__/test_task_32_hidden.py::test_missing_timeout_uses_default PASSED
+
+============================== 6 passed in 0.03s ==============================
+",,False,False,1,3,1.561
+2,2026-09-17T10:12:11.844410+00:00,63bef7d4-9e07-498c-a739-66cc7d7c836d,task_27,agent_02,1,True,True,True,,,,,True,success,,0,False,"============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\soham\ai-agent-eval\workspaces\task_27_agent_02_1
+configfile: .benchmark_pytest.ini
+collected 26 items
+
+test_user_utils.py ..........................                            [100%]
+
+============================= 26 passed in 0.10s ==============================
+",,False,False,1,3,0.9306
+2,2026-09-17T10:14:33.526952+00:00,7f78d6fa-4896-4bae-921e-7d7836e2dd02,task_27,agent_03,1,False,False,False,,,,,False,generation_failed,Unsupported task: task_27,,False,,Unsupported task: task_27,False,False,0,3,0.0018
