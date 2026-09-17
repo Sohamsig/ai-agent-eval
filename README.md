@@ -94,3 +94,38 @@ Run all 33 task test suites independently:
 ```powershell
 .\run_all_tests.ps1
 
+## Benchmark Results
+
+The benchmark evaluates coding agents across 32 software-engineering tasks.
+
+### Current Results
+
+| Metric | Result |
+|---|---:|
+| Total benchmark rows | 341 |
+| Unique logical runs | 341 |
+| Duplicate groups | 0 |
+| Overall success rate | 100% |
+| Baseline runs | 160 |
+| Agent 02 runs | 170 |
+| Agent 03 runs | 11 |
+
+### Agent Results
+
+| Agent | Runs | Success Rate |
+|---|---:|---:|
+| `baseline` | 160 | 100% |
+| `agent_02` | 170 | 100% |
+| `agent_03` | 11 | 100% |
+
+### Evaluation Metrics
+
+- **Success rate:** Percentage of benchmark runs that completed successfully.
+- **Pass@1:** Whether the first generated solution passed the evaluation tests.
+- **Recovery attempts:** Additional attempts made after an initial failure.
+- **Average attempts:** Average number of attempts used per benchmark run.
+- **Duplicate groups:** Logical runs that appear more than once in the result dataset.
+
+### Important Note
+
+The current dataset contains 341 recorded benchmark runs. Results are based on the available benchmark sample and should not be interpreted as a universal measure of coding-agent performance.
