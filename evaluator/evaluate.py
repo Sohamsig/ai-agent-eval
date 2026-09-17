@@ -57,6 +57,7 @@ AGENTS = [
     "agent_02",
     "agent_03",
     "agent_04",
+    "agent_05",
 ]
 
 RUNS_PER_AGENT = 5
@@ -2721,24 +2722,22 @@ def evaluate_with_retries(
             )
 
         if repaired_solution is None:
-
-            print(
-                "[Recovery] Agent does not "
-                "provide repair()."
-            )
-
-            if result.get("failure_type") != "recovery_error":
+            if result.get("failure_type") == "recovery_error":
+                print("[Recovery] Repair failed with an exception.")
+            else:
+                print(
+                    "[Recovery] Agent does not provide "
+                    "repair()."
+                )
                 result[
                     "failure_type"
                 ] = "recovery_not_implemented"
-
-            logger.add(
-                "recovery_not_implemented",
-                {},
-            )
+                logger.add(
+                    "recovery_not_implemented",
+                    {}
+                )
 
             break
-
 
         current_solution = (
             repaired_solution
@@ -3491,4 +3490,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
 
