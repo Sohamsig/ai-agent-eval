@@ -2698,6 +2698,7 @@ def evaluate_with_retries(
         except Exception as exc:
 
             repaired_solution = None
+            result["failure_type"] = "recovery_error"
 
             logger.add(
                 "recovery_failed",
@@ -2725,9 +2726,10 @@ def evaluate_with_retries(
                 "provide repair()."
             )
 
-            result[
-                "failure_type"
-            ] = "recovery_not_implemented"
+            if result.get("failure_type") != "recovery_error":
+                result[
+                    "failure_type"
+                ] = "recovery_not_implemented"
 
             logger.add(
                 "recovery_not_implemented",
