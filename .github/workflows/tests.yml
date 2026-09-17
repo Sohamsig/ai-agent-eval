@@ -26,6 +26,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
 
+      - name: Run evaluator tests
+        run: |
+          python -m pytest evaluator/tests -q
+
       - name: Run each task independently
         shell: bash
         run: |
