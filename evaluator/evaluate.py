@@ -2679,6 +2679,9 @@ def evaluate_with_retries(
             },
         )
 
+        # Recovery was attempted even if repair() is missing or fails.
+        result["recovery_attempted"] = True
+
         try:
 
             repaired_solution = (
@@ -2733,9 +2736,6 @@ def evaluate_with_retries(
 
             break
 
-        result[
-            "recovery_attempted"
-        ] = True
 
         current_solution = (
             repaired_solution
