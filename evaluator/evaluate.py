@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import argparse
 import csv
@@ -12,6 +12,7 @@ import subprocess
 import sys
 import time
 import traceback
+
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -54,6 +55,7 @@ HIDDEN_TESTS_ROOT = EVALUATOR_ROOT / "hidden_tests"
 AGENTS = [
     "baseline",
     "agent_02",
+    "agent_03",
 ]
 
 RUNS_PER_AGENT = 5
@@ -2197,9 +2199,48 @@ def evaluate_with_retries(
             )
 
         print()
-        print(
-            "[Agent] Applying solution..."
-        )
+        # Stop immediately when the agent fails to generate a solution.
+        if solution.get("status") != "completed":
+            result["failure_type"] = "generation_failed"
+            result["generation_success"] = False
+            result["tests_executed"] = False
+            result["tests_passed"] = False
+            result["final_success"] = False
+            result["attempts_used"] = 0
+        
+            message = solution.get(
+                "message",
+                "Agent failed to generate a solution.",
+            )
+        
+            result["stderr"] = message
+        
+            print()
+            print("[Agent] Generation failed. Skipping tests.")
+        
+            result["duration_seconds"] = round(
+                time.perf_counter() - evaluation_start,
+                4,
+            )
+        
+            logger.add(
+                "generation_failed",
+                {
+                    "message": message,
+                    "failure_type": "generation_failed",
+                },
+            )
+        
+            trajectory_path = (
+                RESULTS_ROOT
+                / f"trajectory_{task_id}_{agent}_run_{run_number}.json"
+            )
+        
+            logger.save(trajectory_path)
+            append_final_result(result)
+            return result
+        
+        print("[Agent] Applying solution...")
 
         written = apply_agent_solution(
             repo_path,
@@ -3447,3 +3488,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
