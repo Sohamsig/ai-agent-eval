@@ -8,6 +8,12 @@ AgentReliability evaluates software-engineering agents through isolated task wor
 
 <img width="402" height="747" alt="image" src="https://github.com/user-attachments/assets/5c4433d6-079d-4b2e-abfd-6f43a5e3bacd" />
 
+## 🎥 Project Demo
+
+> A short demonstration of AgentReliability evaluating coding agents, detecting failures, tracking recovery, and generating reliability metrics.
+
+[▶️ Watch AgentReliability Demo]()
+
 ## Why AgentReliability?
 
 A coding agent that succeeds on its first attempt behaves differently from an agent that fails, performs recovery, and eventually succeeds.
