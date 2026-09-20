@@ -6,8 +6,7 @@ A reproducible, task-based evaluation framework for measuring coding-agent relia
 
 AgentReliability evaluates software-engineering agents through isolated task workspaces, repeatable test execution, hidden-test verification, failure classification, recovery tracking, attempt-level logging, runtime measurement, and statistical reporting.
 
-![Uploading AgentReliability.png…]()
-
+<img width="402" height="747" alt="image" src="https://github.com/user-attachments/assets/5c4433d6-079d-4b2e-abfd-6f43a5e3bacd" />
 
 ## Why AgentReliability?
 
