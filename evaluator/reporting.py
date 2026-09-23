@@ -306,39 +306,52 @@ def failure_categories(
 def hidden_test_analysis(
     rows: list[dict[str, Any]],
 ) -> dict[str, Any]:
-    """Estimate hidden-test failures from recorded output."""
+    """Analyze recorded hidden-test execution results."""
     hidden_test_failures = 0
     hidden_test_successes = 0
+    hidden_test_not_executed = 0
 
     for row in rows:
         stdout = str(row.get("stdout") or "")
         stderr = str(row.get("stderr") or "")
         output = f"{stdout}\n{stderr}".lower()
 
-        looks_like_hidden_test = (
-            "hidden" in output
-            or "test_failure" in str(
-                row.get("failure_type") or ""
-            ).lower()
+        hidden_tests_executed = (
+            "__hidden_tests__" in output
+            or "hidden_tests" in output
+            or "test_task_32_hidden.py" in output
         )
 
-        if not looks_like_hidden_test:
-            continue
+        if hidden_tests_executed:
+            hidden_test_passed = (
+                "passed" in output
+                and "failed" not in output
+            )
 
-        if as_bool(row.get("final_success")) is True:
-            hidden_test_successes += 1
+            hidden_test_failed = (
+                "failed" in output
+                or "error" in output
+            )
+
+            if hidden_test_failed:
+                hidden_test_failures += 1
+            elif hidden_test_passed:
+                hidden_test_successes += 1
+            else:
+                hidden_test_not_executed += 1
         else:
-            hidden_test_failures += 1
+            hidden_test_not_executed += 1
 
     return {
         "hidden_test_failures": hidden_test_failures,
         "hidden_test_successes": hidden_test_successes,
+        "hidden_test_not_executed": hidden_test_not_executed,
         "hidden_test_observations": (
             hidden_test_failures
             + hidden_test_successes
+            + hidden_test_not_executed
         ),
     }
-
 
 def known_limitations() -> list[str]:
     """Document current benchmark limitations."""
@@ -546,3 +559,4 @@ def build_report(
             - known_outcomes
         ),
     }
+

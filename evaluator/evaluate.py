@@ -574,9 +574,16 @@ def apply_agent_solution(
         # Do not copy agent-generated files into every task.
         # ----------------------------------------------------
 
+        relative_filename = Path(filename)
+
+        task_prefix = Path("tasks") / task_id
+
+        if relative_filename.parts[:2] == task_prefix.parts:
+            relative_filename = Path(*relative_filename.parts[2:])
+
         package_destination = (
             task_package
-            / Path(filename)
+            / relative_filename
         )
 
         package_destination.parent.mkdir(
@@ -958,6 +965,7 @@ def run_tests(
     workspace: Path,
     task_id: str,
     test_command: str,
+    execution_mode: str = "local",
 ) -> dict[str, Any]:
     """
     Run tests inside an isolated workspace.
@@ -1213,17 +1221,62 @@ def run_tests(
     # --------------------------------------------------------
 
     try:
-        completed = subprocess.run(
-            command,
-            cwd=str(workspace),
-            env=env,
-            capture_output=True,
-            text=True,
-            encoding="utf-8",
-            errors="replace",
-            timeout=120,
-            shell=False,
-        )
+        if execution_mode == "docker":
+            # Docker runs Linux, so never pass the host Windows Python executable.
+            # Build a Linux-compatible command without changing local execution.
+            docker_command_args = list(command)
+            docker_command_args[0] = "python"
+
+            # The evaluator creates the config using the host Windows path.
+            # Inside the container the workspace is mounted at /workspace.
+            # Translate host workspace paths into container paths.
+            workspace_prefix = str(workspace)
+            for index, argument in enumerate(docker_command_args):
+                if argument.startswith(workspace_prefix):
+                    relative_path = Path(argument).relative_to(workspace)
+                    docker_command_args[index] = "/workspace/" + relative_path.as_posix()
+
+            # Translate the pytest config path explicitly.
+            for index, argument in enumerate(docker_command_args):
+                if argument == str(pytest_config):
+                    docker_command_args[index] = "/workspace/.benchmark_pytest.ini"
+            docker_command = [
+                "docker",
+                "run",
+                "--rm",
+                "--network",
+                "none",
+                "-v",
+                f"{workspace}:/workspace",
+                "-w",
+                "/workspace",
+                "agentreliability-test:latest",
+                *docker_command_args,
+            ]
+
+            completed = subprocess.run(
+                docker_command,
+                cwd=str(workspace),
+                env=env,
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                errors="replace",
+                timeout=120,
+                shell=False,
+            )
+        else:
+            completed = subprocess.run(
+                command,
+                cwd=str(workspace),
+                env=env,
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                errors="replace",
+                timeout=120,
+                shell=False,
+            )
 
         stdout = completed.stdout or ""
         stderr = completed.stderr or ""
@@ -1810,11 +1863,11 @@ class TrajectoryLogger:
 # ============================================================
 
 RESULTS_CSV = (
-    RESULTS_ROOT / "results_v2.csv"
+    RESULTS_ROOT / "results_v2_execution.csv"
 )
 
 ATTEMPTS_CSV = (
-    RESULTS_ROOT / "attempts_v2.csv"
+    RESULTS_ROOT / "attempts_v2_execution.csv"
 )
 
 
@@ -1868,11 +1921,16 @@ def append_attempt_result(
     test_result: dict[str, Any],
     generation_success: bool,
     run_id: str,
+    experiment_id: str = "default",
+    execution_mode: str = "local",
 ) -> None:
+
     record = normalize_attempt_record({
         "schema_version": "2",
         "timestamp": utc_now(),
         "run_id": run_id,
+        "experiment_id": experiment_id,
+        "execution_mode": execution_mode,
         "attempt_id": new_attempt_id(),
         "task_id": task_id,
         "agent": agent,
@@ -2030,6 +2088,8 @@ def evaluate_with_retries(
     test_command: str,
     run_number: int,
     max_attempts: int,
+    execution_mode: str = "local",
+    experiment_id: str = "default",
 ) -> dict[str, Any]:
 
     logger = TrajectoryLogger(
@@ -2045,6 +2105,8 @@ def evaluate_with_retries(
     result: dict[str, Any] = {
         "schema_version": "2",
         "run_id": new_run_id(),
+        "experiment_id": experiment_id,
+        "execution_mode": execution_mode,
         "task_id": task_id,
         "agent": agent,
         "run_number": run_number,
@@ -2333,6 +2395,7 @@ def evaluate_with_retries(
             workspace=repo_path,
             task_id=task_id,
             test_command=test_command,
+            execution_mode=execution_mode,
         )
 
         result["tests_executed"] = test_result.get(
@@ -2412,6 +2475,8 @@ def evaluate_with_retries(
                 "generation_success"
             ],
             run_id=result["run_id"],
+            experiment_id=result["experiment_id"],
+            execution_mode=execution_mode,
         )
 
         # ----------------------------------------------------
@@ -2722,22 +2787,24 @@ def evaluate_with_retries(
             )
 
         if repaired_solution is None:
-            if result.get("failure_type") == "recovery_error":
-                print("[Recovery] Repair failed with an exception.")
-            else:
-                print(
-                    "[Recovery] Agent does not provide "
-                    "repair()."
-                )
+
+            print(
+                "[Recovery] Agent does not "
+                "provide repair()."
+            )
+
+            if result.get("failure_type") != "recovery_error":
                 result[
                     "failure_type"
                 ] = "recovery_not_implemented"
-                logger.add(
-                    "recovery_not_implemented",
-                    {}
-                )
+
+            logger.add(
+                "recovery_not_implemented",
+                {},
+            )
 
             break
+
 
         current_solution = (
             repaired_solution
@@ -2873,6 +2940,8 @@ def run_agent(
     task_id: str,
     agent: str,
     run_number: int,
+    execution_mode: str = "local",
+    experiment_id: str = "default",
 ) -> dict[str, Any]:
 
     print()
@@ -2912,6 +2981,8 @@ def run_agent(
         test_command=test_command,
         run_number=run_number,
         max_attempts=MAX_ATTEMPTS,
+        execution_mode=execution_mode,
+        experiment_id=experiment_id,
     )
 
     print()
@@ -3010,6 +3081,8 @@ def evaluate_task(
     task_id: str,
     agents: list[str],
     runs_per_agent: int,
+    execution_mode: str = "local",
+    experiment_id: str = "default",
 ) -> list[dict[str, Any]]:
 
     if task_id not in TASKS:
@@ -3037,6 +3110,8 @@ def evaluate_task(
                 task_id=task_id,
                 agent=agent,
                 run_number=run_number,
+                execution_mode=execution_mode,
+                experiment_id=experiment_id,
             )
 
             results.append(
@@ -3205,6 +3280,32 @@ def clean_workspaces() -> None:
                 pass
 
 
+
+def experiment_id_exists(
+    experiment_id: str,
+) -> bool:
+    """Return True when an execution-aware result already uses this ID."""
+
+    if not RESULTS_CSV.exists():
+        return False
+
+    try:
+        with RESULTS_CSV.open(
+            "r",
+            newline="",
+            encoding="utf-8",
+        ) as file:
+
+            reader = csv.DictReader(file)
+
+            return any(
+                row.get("experiment_id") == experiment_id
+                for row in reader
+            )
+
+    except OSError:
+        return False
+
 # ============================================================
 # MAIN
 # ============================================================
@@ -3241,6 +3342,23 @@ def main() -> None:
         default=RUNS_PER_AGENT,
         help=(
             "Number of runs per agent"
+        ),
+    )
+
+    parser.add_argument(
+        "--execution-mode",
+        choices=["local", "docker"],
+        default="local",
+        help=(
+            "Test execution mode: local or docker"
+        ),
+    )
+
+    parser.add_argument(
+        "--experiment-id",
+        default="default",
+        help=(
+            "Identifier for this evaluation experiment"
         ),
     )
 
@@ -3349,6 +3467,23 @@ def main() -> None:
     if args.reset_results:
         reset_results()
 
+    # --------------------------------------------------------
+    # Validate experiment ID
+    # --------------------------------------------------------
+
+    if experiment_id_exists(args.experiment_id):
+
+        print()
+        print(
+            f"ERROR: Experiment ID already exists: "
+            f"{args.experiment_id}"
+        )
+        print(
+            "Use a new --experiment-id for a new "
+            "evaluation batch."
+        )
+
+        sys.exit(1)
     # --------------------------------------------------------
     # Clean workspaces
     # --------------------------------------------------------
@@ -3459,6 +3594,8 @@ def main() -> None:
             task_id=task_id,
             agents=selected_agents,
             runs_per_agent=args.runs,
+            execution_mode=args.execution_mode,
+            experiment_id=args.experiment_id,
         )
 
         all_results.extend(
@@ -3490,5 +3627,17 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
+
+
+
+
+
+
+
+
+
+
 
 

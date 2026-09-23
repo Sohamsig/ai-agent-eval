@@ -44,6 +44,24 @@ def test_retry_workflow_recovers_after_failed_initial_solution(
     def fake_append_final_result(*args, **kwargs):
         pass
 
+    class FakeAgentAdapter:
+        def generate(self, task_id, workspace):
+            return {
+                "status": "completed",
+                "files": {
+                    "actual_task_file.py": "VALUE = 1\n",
+                },
+            }
+
+        def repair(self, task_id, workspace, context):
+            repair_calls.append("repair")
+            return {
+                "status": "completed",
+                "files": {
+                    "actual_task_file.py": "VALUE = 42\n",
+                },
+            }
+
     monkeypatch.setattr(
         "evaluator.evaluate.run_tests",
         fake_run_tests,
@@ -75,34 +93,8 @@ def test_retry_workflow_recovers_after_failed_initial_solution(
     )
 
     monkeypatch.setattr(
-        "evaluator.evaluate.generate_solution",
-        lambda *args, **kwargs: {
-            "status": "completed",
-            "files": {
-                "actual_task_file.py": "VALUE = 1\n",
-            },
-        },
-    )
-
-    monkeypatch.setattr(
-        "evaluator.evaluate.load_agent",
-        lambda *args, **kwargs: type(
-            "FakeAgent",
-            (),
-            {
-                "repair": staticmethod(
-                    lambda task_id, workspace, context: (
-                        repair_calls.append("repair")
-                        or {
-                            "status": "completed",
-                            "files": {
-                                "actual_task_file.py": "VALUE = 42\n",
-                            },
-                        }
-                    )
-                )
-            },
-        ),
+        "evaluator.evaluate.create_agent_adapter",
+        lambda *args, **kwargs: FakeAgentAdapter(),
     )
 
     result = evaluate_with_retries(
