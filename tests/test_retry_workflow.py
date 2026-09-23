@@ -45,7 +45,7 @@ def test_retry_workflow_recovers_after_failed_initial_solution(
         pass
 
     class FakeAgentAdapter:
-        def generate(self, task_id, workspace):
+        def solve(self, task_id, workspace):
             return {
                 "status": "completed",
                 "files": {
@@ -93,7 +93,7 @@ def test_retry_workflow_recovers_after_failed_initial_solution(
     )
 
     monkeypatch.setattr(
-        "evaluator.evaluate.create_agent_adapter",
+        "evaluator.evaluate.load_agent",
         lambda *args, **kwargs: FakeAgentAdapter(),
     )
 
@@ -112,3 +112,4 @@ def test_retry_workflow_recovers_after_failed_initial_solution(
     assert result["attempts_used"] == 2
     assert result["failure_type"] == "success"
     assert repair_calls == ["repair"]
+
