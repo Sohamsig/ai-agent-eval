@@ -9,8 +9,6 @@ AgentReliability evaluates software-engineering agents through isolated task wor
 <<<<<<< HEAD
 <img width="402" height="747" alt="image" src="https://github.com/user-attachments/assets/5c4433d6-079d-4b2e-abfd-6f43a5e3bacd" />
 
-=======
->>>>>>> 3ab964b (Add AgentReliability evaluation framework and research artifacts)
 ## Why AgentReliability?
 
 A coding agent that succeeds on its first attempt behaves differently from an agent that fails, performs recovery, and eventually succeeds.
