@@ -47,6 +47,24 @@ AgentReliability records the execution process so researchers can study:
 * Agent-level comparison
 * Reproducible benchmark artifacts
 
+  ## 📖 Research & Technical Write-up
+
+I documented the design, evaluation methodology, experiments, and lessons learned while building AgentReliability in a detailed Medium article.
+
+**Read the full write-up → [AgentReliability: Measuring the Reliability of AI Coding Agents](https://medium.com/@soham.babrekar/agentreliability-measuring-the-process-not-just-the-outcome-a3b534c2d9e6?postPublishedType=repub)**
+
+The article covers:
+
+- Why pass/fail alone is insufficient for coding-agent evaluation
+- Task-based evaluation methodology
+- Failure and recovery tracking
+- Repeatability and eventual success
+- Attempt-level execution data
+- Hidden and visible test validation
+- Runtime measurement
+- Reproducible experiments
+- Lessons learned while building the evaluation framework
+
 ## Tech Stack
 
 * Python
